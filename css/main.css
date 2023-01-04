@@ -55,19 +55,23 @@ p.abstract {
 }
 
 table.schedule {
-  width: 100%;
+  width: 95%;
   border-collapse: collapse;
 }
+
 table.schedule td {
   padding: 1ex 1em;
 }
+
 table.schedule tr:hover {
   background-color: #E4E0F5;
 }
+
 table.schedule tr.cancelled, table.schedule tr.cancelled:hover {
   background-color: #f0f0f0;
   color: #555555;
 }
+
 table.schedule thead {
   font-weight: bold;
 }
