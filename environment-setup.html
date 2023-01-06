@@ -166,6 +166,15 @@ href="https://git-scm.com/">Git</a>. This is also how we will submit our
 homework assignments. Installation is straightforward but there are many
 options. Choose the default for all except for the editor, which may say
 “vim”. Choose “Visual Studio Code” instead.</p>
+<p>Go to <a href="https://github.com">Github</a> and sign up for a free
+account with your email address. The email will be necessary for pushing
+changes to your Github Classroom assignments. Set up credentials on your
+local machine after installing Git with the commands below (replace
+<code>USERNAME</code> with your Github username, and
+<code>NAME@EMAIL.com</code> with your Github email address):</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">&quot;USERNAME&quot;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">&quot;NAME@EMAIL.com&quot;</span></span></code></pre></div>
 <h4 id="windows-1">Windows</h4>
 <p>Download the latest version from <a href="https://git-scm.com"
 class="uri">https://git-scm.com</a>: <a
@@ -173,8 +182,8 @@ href="https://github.com/git-for-windows/git/releases/download/v2.39.0.windows.2
 class="button">Git-2.39.0-64-bit.exe</a></p>
 <h4 id="macos-1">macOS</h4>
 <p>Use Homebrew to install Git on macOS:</p>
-<div class="sourceCode" id="cb7"><pre
-class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install git</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install git</span></code></pre></div>
 <h4 id="linux-1">Linux</h4>
 <p>Install with your package manager. Git’s website has instructions for
 many distributions: <a href="https://git-scm.com/download/linux"
@@ -209,8 +218,8 @@ class="button">Download</a> (.deb)</td>
 </tbody>
 </table>
 <p>On macOS you can also use Homebrew, if you prefer:</p>
-<div class="sourceCode" id="cb8"><pre
-class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install visual-studio-code</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install visual-studio-code</span></code></pre></div>
 <h4 id="recommended-extensions">Recommended Extensions</h4>
 <p>Visual Studio Code is quite capable on its own, but there are
 extensions that can make it even more useful for certain uses. I suggest
@@ -259,8 +268,8 @@ Environment</h4>
 <p>Enter the following command into Visual Studio Code’s terminal (you
 may need to replace <code>python3</code> with <code>py</code> on
 Windows):</p>
-<div class="sourceCode" id="cb9"><pre
-class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv env</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv env</span></code></pre></div>
 <p>This calls the Python module <code>venv</code>, which creates virtual
 environments, and has it create one called “env” (you can name it
 whatever you like, but let’s stick with “env”). If successful, it will
@@ -310,16 +319,20 @@ environment directs Python to use the packages within the folder and not
 those installed elsewhere on your computer. Users on macOS or Linux can
 simply run the following command (and let me know if it doesn’t
 work):</p>
-<div class="sourceCode" id="cb10"><pre
-class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> env/bin/activate</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> env/bin/activate</span></code></pre></div>
 <p>Windows users may have more work to do, because Windows by default
-blocks you from running “untrusted” scripts. To allow the current
-session to activate the virtual environment, you can change Visual
-Studio Code’s settings so PowerShell can run these scripts. Open the
-settings by typing <kbd>Ctrl-,</kbd> or use the menu <em>File</em> &gt;
+blocks you from running “untrusted” scripts. First, we want to ensure
+that Windows PowerShell is being used as our default terminal in VSCode.
+We can do this by searching for <code>terminal</code> in the Command
+Palette (<kbd>[Cmd]Ctrl-Shift-P</kbd>) and selecting PowerShell as the
+default. Then, to allow the current session to activate the virtual
+environment, you can change Visual Studio Code’s settings so PowerShell
+can run these scripts. One thing to try is to open the settings by
+typing <kbd>Ctrl-,</kbd> or use the menu <em>File</em> &gt;
 <em>Preferences</em> &gt; <em>Settings</em>, then search for the
 following setting:</p>
-<pre><code>terminal.integrated.shellArgs.windows</code></pre>
+<pre><code>`terminal.integrated.shellArgs.windows`</code></pre>
 <figure>
 <img src="static/windows-find-executionpolicy-setting.png"
 alt="Finding the Setting" />
@@ -340,14 +353,30 @@ applies when a terminal is started and not one that is running, you will
 need to close the terminal (click the garbage bin icon), then start a
 new terminal. If that doesn’t work, try restarting Visual Studio Code.
 Now, in the new terminal, try to execute the following:</p>
-<div class="sourceCode" id="cb12"><pre
-class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span><span class="dt">\e</span>nv<span class="dt">\S</span>cripts<span class="dt">\A</span>ctivate.ps1</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span><span class="dt">\e</span>nv<span class="dt">\S</span>cripts<span class="dt">\A</span>ctivate.ps1</span></code></pre></div>
 <p>If successful, you’ll see (env) at the beginning of the next prompt.
 If you see any errors, please let me know. While the environment is
 active, using <code>python</code> (instead of <code>python3</code> or
 <code>py</code>) should use the Python version included in the virtual
 environment.</p>
 <p><em>Thanks to the following Stack Overflow answer</em>: <a
+href="https://stackoverflow.com/a/61281420/1441112"
+class="uri">https://stackoverflow.com/a/61281420/1441112</a></p>
+<p>With newer versions of Windows, you may need to additionally disable
+the setting that tries to install Python from the Microsoft Store. You
+can do this by navigating to the ‘Apps and programs’ section of the
+settings page and deselecting the shortcut option there.</p>
+<p>Another concern with Windows is that <code>bash</code> commands are
+not enabled by default in PowerShell, resulting in errors. The
+<code>Bash</code> program is installed by Git and used for committing
+and pushing changes, among other things. To ensure that bash commands
+are enabled, run the following command in your terminal:</p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> set-ExecutionPolicy RemoteSigned <span class="at">-Scope</span> CurrentUser</span></code></pre></div>
+<p><em>Thanks to <a
+href="https://www.c-sharpcorner.com/article/how-to-fix-ps1-can-not-be-loaded-because-running-scripts-is-disabled-on-this-sys/">THIS</a>
+blog post and related Stack Overflow answer</em>: <a
 href="https://stackoverflow.com/a/61281420/1441112"
 class="uri">https://stackoverflow.com/a/61281420/1441112</a></p>
 <h2 id="test-it-out">Test It Out</h2>
@@ -358,8 +387,8 @@ Dependency</h4>
 <p>We will use <a href="https://pytest.org/">pytest</a> for automatic
 evaluation of our homework assignments. Once the virtual environment is
 active, run the following command:</p>
-<div class="sourceCode" id="cb13"><pre
-class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pytest</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pytest</span></code></pre></div>
 <p>If it says the <code>pip</code> command is not found, ensure your
 virtual environment is active. If it is and still cannot find it, then
 try <code>pip3</code> or <code>python -m pip</code> instead. If it still
@@ -371,8 +400,8 @@ Module</h4>
 <p>Create a new file in Visual Studio Code (<kbd>Ctrl-n</kbd> or
 <em>File</em> &gt; <em>New File</em>). Type the following into the
 file:</p>
-<div class="sourceCode" id="cb14"><pre
-class="sourceCode python terminal"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;hello&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode python terminal"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;hello&#39;</span>)</span></code></pre></div>
 <p>Then save (<kbd>Ctrl-s</kbd> or <em>File</em> &gt; <em>Save</em>) the
 file to <code>hello.py</code> in your current workspace. Once it is
 saved, you should see the code become colored (syntax-highlighting).
