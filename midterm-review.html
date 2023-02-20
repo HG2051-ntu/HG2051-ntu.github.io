@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>HG2051 – HG2051 AY2022-23 – Midterm Review</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #f8f8f2;  }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #a6e22e; } /* Attribute */
+code span.bn { color: #ae81ff; } /* BaseN */
+code span.bu { color: #66d9ef; } /* BuiltIn */
+code span.cf { color: #f92672; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #e6db74; } /* Char */
+code span.cn { color: #ae81ff; } /* Constant */
+code span.co { color: #88846f; font-style: italic; } /* Comment */
+code span.cv { color: #88846f; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #e6db74; font-style: italic; } /* Documentation */
+code span.dt { color: #66d9ef; } /* DataType */
+code span.dv { color: #ae81ff; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #b08000; } /* Float */
+code span.fu { color: #a6e22e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #e6db74; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #f92672; font-weight: bold; } /* Keyword */
+code span.op { color: #f92672; } /* Operator */
+code span.ot { } /* Other */
+code span.pp { color: #66d9ef; } /* Preprocessor */
+code span.sc { color: #ae81ff; } /* SpecialChar */
+code span.ss { color: #ffe792; } /* SpecialString */
+code span.st { color: #ffe792; } /* String */
+code span.va { color: #f8f8f2; } /* Variable */
+code span.vs { color: #e6db74; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css?v=1" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">HG2051 AY2022-23 – Midterm Review</h1>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#mid-term-quiz-topics"
+id="toc-mid-term-quiz-topics">Mid-term Quiz Topics</a></li>
+<li><a href="#learning-objectives" id="toc-learning-objectives">Learning
+Objectives</a>
+<ul>
+<li><a href="#pythonprogramming"
+id="toc-pythonprogramming">Python/Programming</a>
+<ul>
+<li><a href="#modes-of-programming" id="toc-modes-of-programming">Modes
+of Programming</a></li>
+<li><a href="#expressions-statements-definitions"
+id="toc-expressions-statements-definitions">Expressions, Statements,
+Definitions</a></li>
+<li><a href="#data-types" id="toc-data-types">Data Types</a></li>
+<li><a href="#constants" id="toc-constants">Constants</a></li>
+<li><a href="#control-structures" id="toc-control-structures">Control
+Structures</a></li>
+<li><a href="#built-in-functions" id="toc-built-in-functions">Built-in
+Functions</a></li>
+<li><a href="#raw-data" id="toc-raw-data">Raw data</a></li>
+<li><a href="#pandas" id="toc-pandas">Pandas</a></li>
+</ul></li>
+<li><a href="#nlpcl" id="toc-nlpcl">NLP/CL</a>
+<ul>
+<li><a href="#concepts" id="toc-concepts">Concepts</a></li>
+<li><a href="#tools" id="toc-tools">Tools</a></li>
+</ul></li>
+<li><a href="#software-engineering"
+id="toc-software-engineering">Software Engineering</a>
+<ul>
+<li><a href="#working-on-a-system" id="toc-working-on-a-system">Working
+on a System</a></li>
+<li><a href="#version-control" id="toc-version-control">Version
+Control</a></li>
+<li><a href="#programming-concerns-and-techniques"
+id="toc-programming-concerns-and-techniques">Programming Concerns and
+Techniques</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<main>
+<h1 id="mid-term-quiz-topics">Mid-term Quiz Topics</h1>
+<ul>
+<li>Python/Programming
+<ul>
+<li>REPL, Notebook, Module</li>
+<li>Assignment</li>
+<li>Data types (<code>int</code>, <code>str</code>, <code>float</code>,
+<code>tuple</code>, <code>list</code>, <code>set</code>,
+<code>dict</code>)</li>
+<li>Constants (<code>True</code>, <code>False</code>,
+<code>None</code>)</li>
+<li>Control Structures
+(<code>if</code>/<code>elif</code>/<code>else</code>, <code>for</code>,
+<code>while</code>, comprehensions)</li>
+<li>Built-in Functions (<code>print()</code>, <code>len()</code>,
+<code>range()</code>, <code>open()</code>, <code>enumerate()</code>,
+<code>any()</code>, <code>all()</code>)</li>
+<li>Functions (arguments, default arguments, <code>return</code>)</li>
+<li>Raw data (<code>open()</code>, <code>str.encode()</code>,
+<code>bytes.decode()</code>, <code>urllib.request.urlopen()</code>)</li>
+<li>Pandas (<code>read_csv()</code>, <code>read_excel</code>,
+<code>to_csv()</code>, <code>to_excel</code>)</li>
+</ul></li>
+<li>NLP/CL
+<ul>
+<li>Basic tokenization</li>
+<li>Text normalization (purpose, kinds of normalization)</li>
+<li>Types vs Tokens</li>
+<li>Frequency Distributions, Conditional Frequency Distributions</li>
+<li>Text corpora (Gutenberg, Brown, annotated corpora)</li>
+<li>Lexical resources (word lists, stopwords, pronouncing dictionaries,
+WordNet)</li>
+</ul></li>
+<li>Software Engineering
+<ul>
+<li>Paths and folders</li>
+<li>Git (purpose, usage)</li>
+<li>Efficiency (e.g., which function is faster)</li>
+<li>Mutability of data structures</li>
+<li>Side-effects of functions</li>
+<li>Unicode (purpose, what is it)</li>
+<li>Files and Streams (purpose, difference from
+strings/bytestrings)</li>
+<li>Virtual Environments (purpose, troubleshooting)</li>
+</ul></li>
+</ul>
+<h1 id="learning-objectives">Learning Objectives</h1>
+<h2 id="pythonprogramming">Python/Programming</h2>
+<p>This category is for programming concepts, techniques, and structures
+as used in Python.</p>
+<h3 id="modes-of-programming">Modes of Programming</h3>
+<p>Python is a very flexible language that can be used in multiple
+ways.</p>
+<h4 id="repl">REPL</h4>
+<p>REPL (Read-Evaluate-Print-Loop) describes the way the computer
+operates an <em>interactive interpreter</em> such as Python’s IDLE
+interpreter. The computer reads what the user entered, evaluates it,
+prints the output, and loops (starts this process again). When you see
+code written with <code>&gt;&gt;&gt;</code> on the left side, it is
+showing what you would see in an interactive interpreter:</p>
+<pre><code>&gt;&gt;&gt; print(&quot;hello&quot;)
+hello</code></pre>
+<p>You can start an interactive interpreter by running the Python
+command in a terminal without any arguments:</p>
+<pre><code>$ python
+Python 3.8.2 (default, Jul 16 2020, 14:00:26)
+[GCC 9.3.0] on linux
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt;</code></pre>
+<p>The REPL mode of Python is useful for quick experiments and
+debugging, but it is not easy to revise what has been entered so it is
+not convenient for larger programs.</p>
+<h4 id="module">Module</h4>
+<p>Perhaps the most common way to write Python code is in a
+<em>module</em>. A module is just a <code>.py</code> file containing
+Python code. The file is saved on the computer and it is not run until
+it is loaded and processed by a Python process. Modules meant to be
+imported by other modules are generally called <em>libraries</em>, while
+modules meant to be run directly are called <em>scripts</em>. Imagine
+you had a file <code>hello.py</code> with the following contents:</p>
+<pre><code>print(&#39;hello&#39;)</code></pre>
+<p>You can then run this script at the command line and see its output
+as follows (depending on your system and environment, the
+<code>python3</code> command may be <code>python</code>,
+<code>py</code>, or something else):</p>
+<pre><code>$ python3 hello.py
+hello</code></pre>
+<p>Using modules to write Python code is the most versatile mode and is
+recommended for most uses.</p>
+<h4 id="notebook">Notebook</h4>
+<p>A mode of using Python popular for demostration or pegagogical
+purposes is the notebook. It mixes human language text with Python code
+and sometimes provides a more friendly view of the output (e.g.,
+rendered charts and tables). This style of programming is called
+<em>literate programming</em>. It looks something like this:</p>
+<figure>
+<img src="static/notebook.png"
+alt="Example of using a Python notebook" />
+<figcaption aria-hidden="true">Example of using a Python
+notebook</figcaption>
+</figure>
+<p>Example of using a Python notebook</p>
+<h3 id="expressions-statements-definitions">Expressions, Statements,
+Definitions</h3>
+<h4 id="assignment">Assignment</h4>
+<pre><code>&gt;&gt;&gt; x = 3            # assign the value 3 to the variable named &#39;x&#39;
+&gt;&gt;&gt; x = x + 1        # evaluate the expression &#39;x + 1&#39; then assign its result to x
+&gt;&gt;&gt; x
+4
+&gt;&gt;&gt; x += 1           # shorthand for the above
+&gt;&gt;&gt; x
+5
+&gt;&gt;&gt; x = &#39;foo&#39;        # variables can be reassigned to values of a different type
+&gt;&gt;&gt; x.upper()        # an expression involving the variable does not change its value
+&#39;FOO&#39;
+&gt;&gt;&gt; x
+&#39;foo&#39;
+&gt;&gt;&gt; x = [1]          # ...
+&gt;&gt;&gt; x.append(2)      # unless the value is mutable
+&gt;&gt;&gt; x
+[1, 2]
+&gt;&gt;&gt; x = x.append(3)  # be careful not to reassign to function that return None (don&#39;t do this)
+&gt;&gt;&gt; x is None
+True</code></pre>
+<h4 id="functions">Functions</h4>
+<pre><code>def myfunction(x, y, z=0):  # define a function named &#39;myfunction&#39; with 3 parameters;
+                            # x and y are required, z has a default value so it is optional
+    return x * y * z        # return a value so the caller can make use of it
+                            # if there is no return statement, the function returns None</code></pre>
+<p>Once a function is defined, call it by its name:</p>
+<pre><code>&gt;&gt;&gt; myfunction(1, 2)
+0
+&gt;&gt;&gt; myfunction(1, 2, 3)
+6</code></pre>
+<h3 id="data-types">Data Types</h3>
+<h4 id="int"><code>int</code></h4>
+<p>Integer types represent positive or negative whole numbers.</p>
+<pre><code>&gt;&gt;&gt; 1024           # literal integers are base-10
+1024
+&gt;&gt;&gt; int(3.14159)   # int() casts floats to integers
+3
+&gt;&gt;&gt; int(&#39;101&#39;)     # int() casts strings to integers
+101
+&gt;&gt;&gt; int(&#39;101&#39;, 2)  # an explicit base can be given
+5
+&gt;&gt;&gt; 20 // 3        # floor division drops any remainder
+6</code></pre>
+<h4 id="float"><code>float</code></h4>
+<p>Floating-point numbers represent numbers with a fractional
+component.</p>
+<pre><code>&gt;&gt;&gt; 3.14           # literal floats include a decimal
+3.14
+&gt;&gt;&gt; 6.02e23        # and/or an exponent
+6.02e+23
+&gt;&gt;&gt; float(3)       # float() casts from integers
+3.0
+&gt;&gt;&gt; float(&#39;3.14&#39;)  # and strings (but only base-10)
+3.14
+&gt;&gt;&gt; 20 / 3         # regular division results in a float
+6.666666666666667
+&gt;&gt;&gt; 20 / 5         # even when there&#39;s no remainder
+4.0</code></pre>
+<h4 id="str"><code>str</code></h4>
+<p>Strings are sequences of characters.</p>
+<pre><code>&gt;&gt;&gt; &#39;a string&#39;         # strings are surrounded by single quotes
+&#39;a string&#39;
+&gt;&gt;&gt; &quot;another string&quot;   # or double quotes
+&#39;another string&#39;
+&gt;&gt;&gt; &#39;&#39;&#39;yet
+... another&#39;&#39;&#39;         # or three single/double quotes (newlines allowed)
+&gt;&gt;&gt; &#39;もう一つ&#39;          # unicode is ok
+&#39;もう一つ&#39;</code></pre>
+<p><strong>Useful string methods:</strong></p>
+<ul>
+<li><a
+href="https://docs.python.org/3/library/stdtypes.html#str.split">str.split()</a>
+– return the list of tokens in the string</li>
+<li><a
+href="https://docs.python.org/3/library/stdtypes.html#str.lower">str.lower()</a>
+– return the string with all cased characters downcased</li>
+</ul>
+<h4 id="list"><code>list</code></h4>
+<p>Lists are mutable sequences of values.</p>
+<pre><code>&gt;&gt;&gt; x = []           # make an empty list
+&gt;&gt;&gt; x = list()       # this works, too
+&gt;&gt;&gt; x.append(1)      # add a single value
+&gt;&gt;&gt; x.extend([2,3])  # add multiple values
+&gt;&gt;&gt; x
+[1, 2, 3]
+&gt;&gt;&gt; x[1:]            # slice from the 2nd element
+[2, 3]
+&gt;&gt;&gt; x[:-1]           # slice until 1 before the last element
+[1, 2]
+&gt;&gt;&gt; len(x)           # find how many elements are on the list
+3
+&gt;&gt;&gt; x.count(3)       # count how many times a particular element occurs
+1
+&gt;&gt;&gt; 4 in x           # use &#39;in&#39; to check for membership
+False</code></pre>
+<h4 id="tuple"><code>tuple</code></h4>
+<p>Tuples are immutable sequences of values.</p>
+<pre><code>&gt;&gt;&gt; ()                       # make an empty tuple
+()
+&gt;&gt;&gt; tuple()                  # or use the function
+()
+&gt;&gt;&gt; (1)                      # but this doesn&#39;t work (it looks like an expression)
+1
+&gt;&gt;&gt; 1, 2                     # use commas to create tuples in general
+(1, 2)
+&gt;&gt;&gt; 1,                       # even for single items
+(1,)
+&gt;&gt;&gt; (1, 2)                   # but often we need parentheses around them
+(1, 2)
+&gt;&gt;&gt; x = tuple([1, 1, 2, 3])  # create tuples from an iterable
+&gt;&gt;&gt; x[1:-1]                  # slicing works as expected
+(1, 2)
+&gt;&gt;&gt; x.count(1)               # many list operations work on tuples (but not mutating ones)
+2</code></pre>
+<h4 id="set"><code>set</code></h4>
+<p>Sets are containers of unique values.</p>
+<pre><code>&gt;&gt;&gt; set()              # use the function to create an empty set (&#39;{}&#39; creates a dictionary)
+set()
+&gt;&gt;&gt; {1, 2}             # Use braces with comma-separated values to create non-empty sets
+{1, 2}
+&gt;&gt;&gt; {1, 1, 2, 3}       # repeated values are dropped
+{1, 2, 3}
+&gt;&gt;&gt; x = {1, 2}
+&gt;&gt;&gt; x | {3}            # | is the operator for set-union
+{1, 2, 3}
+&gt;&gt;&gt; x &amp; {2}            # &amp; is the operator for set-intersection
+{2}
+&gt;&gt;&gt; x.add(3)           # use add() to add a single value
+&gt;&gt;&gt; x.update([3, 4])   # use update() to add multiple values (duplicates still dropped)
+&gt;&gt;&gt; x
+{1, 2, 3, 4}
+&gt;&gt;&gt; 2 in x             # check for membership
+True</code></pre>
+<h4 id="dict"><code>dict</code></h4>
+<p>Dictionaries are much like sets but they associate keys to
+values.</p>
+<pre><code>&gt;&gt;&gt; {}                          # create an empty dict with {}
+{}
+&gt;&gt;&gt; dict()                      # the function works, too
+{}
+&gt;&gt;&gt; {&#39;a&#39;: 1, &#39;b&#39;: 2}            # keys (&#39;a&#39; and &#39;b&#39;) map to values (1, 2)
+{&#39;a&#39;: 1, &#39;b&#39;: 2}
+&gt;&gt;&gt; d = {&#39;a&#39;: 1}
+&gt;&gt;&gt; d[&#39;b&#39;] = 2                  # assign a single key to a value
+&gt;&gt;&gt; d.update({&#39;c&#39;: 3, &#39;d&#39;: 4})  # update() to assign multiple keys to values
+&gt;&gt;&gt; d[&#39;c&#39;]                      # retrieve the value associated with a key
+3
+&gt;&gt;&gt; d[&#39;b&#39;] = 1                  # keys are unique; here &#39;b&#39; is reassigned
+&gt;&gt;&gt; d                           # but values need not be unique
+{&#39;a&#39;: 1, &#39;b&#39;: 1, &#39;c&#39;: 3, &#39;d&#39;: 4}
+&gt;&gt;&gt; len(d)                      # len() gets the number of keys
+4
+&gt;&gt;&gt; list(d)                     # list(d) returns the list of keys
+[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]
+&gt;&gt;&gt; &#39;b&#39; in d                    # check for membership of keys
+True
+&gt;&gt;&gt; 1 in d                      # cannot check for membership of values this way
+False</code></pre>
+<h3 id="constants">Constants</h3>
+<p>A constant is a special type of variable whose value cannot be
+changed. However, we don’t really use constants in Python since any
+variable can be reassigned. It is good to know, however, which variable
+names (like ‘list’, ‘dict’, etc..) should be avoided so you don’t
+accidentally reassign key functions. Naming constant variables in all
+capital letters is a convention to separate them from ordinary
+variables, however, it does not actually prevent reassignment.</p>
+<h4 id="true-false">True &amp; False</h4>
+<p>Boolean operators that identify values.</p>
+<h4 id="none">None</h4>
+<p>An operator that identifies presence/absence.</p>
+<h3 id="control-structures">Control Structures</h3>
+<h4 id="if">if</h4>
+<p>An <code>if</code> statement is used for a <em>conditional
+block</em>—code that is executed only if a condition is true. See the
+Python Tutorial’s section on <a
+href="https://docs.python.org/3/tutorial/controlflow.html#if-statements"><code>if</code>
+Statements</a>.</p>
+<p>Only one thing below will be printed:</p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>    word <span class="op">=</span> <span class="st">&#39;Dog&#39;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> word <span class="kw">in</span> vocabulary:</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(word, <span class="st">&#39;exists in the vocabulary&#39;</span>)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> word.lower() <span class="kw">in</span> vocabulary:</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(word, <span class="st">&#39;exists in vocabulary when case-normalized&#39;</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(word, <span class="st">&#39;does not exist in vocabulary&#39;</span>)</span></code></pre></div>
+<p>Note that if you use multiple <code>if</code> statements instead of
+<code>elif</code> or <code>else</code>, they will be attempted
+regardless of whether the previous conditions were true. In the
+following, both will print if both <code>'Dog'</code> and
+<code>'dog'</code> are in the vocabulary.</p>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>    word <span class="op">=</span> <span class="st">&#39;Dog&#39;</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> word <span class="kw">in</span> vocabulary:</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(word, <span class="st">&#39;exists in the vocabulary&#39;</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> word.lower() <span class="kw">in</span> vocabulary:</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(word, <span class="st">&#39;exists in vocabulary when case-normalized&#39;</span>)</span></code></pre></div>
+<h4 id="for">for</h4>
+<p>A <code>for</code> statement (also called a for-loop) loops over each
+item in an iterable. This generally means the loop is bounded by the
+number of items in the iterable, and it’s used when the iterable items
+themselves are used inside the loop. See the Python Tutorial’s section
+on <a
+href="https://docs.python.org/3/tutorial/controlflow.html#for-statements"><code>for</code>
+Statements</a>.</p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>    numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> number <span class="kw">in</span> numbers:</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>        square <span class="op">=</span> number<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&#39;the square of </span><span class="sc">{</span>number<span class="sc">}</span><span class="ss"> is </span><span class="sc">{</span>square<span class="sc">}</span><span class="ss">&#39;</span>)</span></code></pre></div>
+<h4 id="while">while</h4>
+<p>A <code>while</code> statement (also called a while-loop) loops as
+long as a condition is met. This condition can be just about anything,
+and sometimes it is <code>True</code>, meaning an infinite loop. See the
+Python Tutorial’s example of <a
+href="https://docs.python.org/3/tutorial/introduction.html#first-steps-towards-programming"><code>while</code>
+statements</a>. While-loops are often used when the number of iterations
+is not fixed or known in advance, or when there is no iterable whose
+items are used inside the loop.</p>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>    <span class="co"># print Fibonacci numbers less than 100</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> a <span class="op">&lt;</span> <span class="dv">100</span>:</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(a)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>        tmp <span class="op">=</span> b  <span class="co"># temporary variable for the old value of b</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>        b <span class="op">=</span> b <span class="op">+</span> a</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>        a <span class="op">=</span> tmp</span></code></pre></div>
+<h4 id="comprehensions">Comprehensions</h4>
+<h3 id="built-in-functions">Built-in Functions</h3>
+<h4 id="print">print()</h4>
+<h4 id="len">len()</h4>
+<h4 id="range">range()</h4>
+<h4 id="enumerate">enumerate()</h4>
+<h4 id="any">any()</h4>
+<h4 id="all">all()</h4>
+<h4 id="open">open()</h4>
+<h3 id="raw-data">Raw data</h3>
+<h4 id="open-1">open()</h4>
+<h4 id="str.encode">str.encode()</h4>
+<h4 id="bytes.decode">bytes.decode()</h4>
+<h4 id="urllib.request.urlopen">urllib.request.urlopen()</h4>
+<h3 id="pandas">Pandas</h3>
+<p><strong>Pandas</strong> is a library for working with dataframes, a
+table-like structure that allows for rapid calculations. It also helps
+us to organize data into a human-readable structure. You can used Pandas
+by importing it and initializing a dataframe:</p>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame()</span></code></pre></div>
+<p>You can also use pandas to read and write character-delimited files
+or excel spreadsheets:</p>
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&#39;randomfile.csv&#39;</span>, delimiter<span class="op">=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.to_csv(<span class="st">&#39;randomfile.csv&#39;</span>, sep<span class="op">=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_excel(<span class="st">&#39;randomfile.xlsx&#39;</span>)</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.to_excel(<span class="st">&#39;randomfile.xlsx&#39;</span>)</span></code></pre></div>
+<h2 id="nlpcl">NLP/CL</h2>
+<p>This category is for concepts and techniques related to natural
+language processing or computational linguistics.</p>
+<h3 id="concepts">Concepts</h3>
+<h4 id="types-vs-tokens">types-vs-tokens</h4>
+<h4 id="tokenization">tokenization</h4>
+<h4 id="normalization">normalization</h4>
+<h4 id="frequency-distributions">Frequency Distributions</h4>
+<h4 id="conditional-frequency-distributions">Conditional Frequency
+Distributions</h4>
+<h4 id="text-corpora">Text Corpora</h4>
+<h4 id="lexical-resources">Lexical Resources</h4>
+<h3 id="tools">Tools</h3>
+<h4 id="nltk">NLTK</h4>
+<h2 id="software-engineering">Software Engineering</h2>
+<p>This category is for practices of software engineering as well as
+programming concepts that are relevant to programming languages beyond
+Python.</p>
+<h3 id="working-on-a-system">Working on a System</h3>
+<h4 id="paths-and-folders">Paths and folders</h4>
+<h4 id="virtual-environments">Virtual Environments</h4>
+<h4 id="files-and-streams">Files and Streams</h4>
+<h4 id="unicode">Unicode</h4>
+<h3 id="version-control">Version Control</h3>
+<h4 id="git">Git</h4>
+<h3 id="programming-concerns-and-techniques">Programming Concerns and
+Techniques</h3>
+<h4 id="efficiency">Efficiency</h4>
+<h4 id="mutability">Mutability</h4>
+<h4 id="side-effects">Side-effects</h4>
+</main>
+</body>
+</html>
