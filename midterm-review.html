@@ -129,7 +129,7 @@ Techniques</a></li>
 <main>
 <h1 id="mid-term-quiz-topics">Mid-term Quiz Topics</h1>
 <ul>
-<li>Python/Programming
+<li><span class="py">Python/Programming</span>
 <ul>
 <li>REPL, Notebook, Module</li>
 <li>Assignment</li>
@@ -150,7 +150,7 @@ Techniques</a></li>
 <li>Pandas (<code>read_csv()</code>, <code>read_excel</code>,
 <code>to_csv()</code>, <code>to_excel</code>)</li>
 </ul></li>
-<li>NLP/CL
+<li><span class="nlp">NLP/CL</span>
 <ul>
 <li>Basic tokenization</li>
 <li>Text normalization (purpose, kinds of normalization)</li>
@@ -160,7 +160,7 @@ Techniques</a></li>
 <li>Lexical resources (word lists, stopwords, pronouncing dictionaries,
 WordNet)</li>
 </ul></li>
-<li>Software Engineering
+<li><span class="eng">Software Engineering</span>
 <ul>
 <li>Paths and folders</li>
 <li>Git (purpose, usage)</li>
@@ -180,26 +180,29 @@ as used in Python.</p>
 <h3 id="modes-of-programming">Modes of Programming</h3>
 <p>Python is a very flexible language that can be used in multiple
 ways.</p>
-<h4 id="repl">REPL</h4>
+<h4 id="repl"><span class="py">REPL</span></h4>
 <p>REPL (Read-Evaluate-Print-Loop) describes the way the computer
 operates an <em>interactive interpreter</em> such as Python’s IDLE
 interpreter. The computer reads what the user entered, evaluates it,
 prints the output, and loops (starts this process again). When you see
 code written with <code>&gt;&gt;&gt;</code> on the left side, it is
 showing what you would see in an interactive interpreter:</p>
-<pre><code>&gt;&gt;&gt; print(&quot;hello&quot;)
-hello</code></pre>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="st">&quot;hello&quot;</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    hello</span></code></pre></div>
 <p>You can start an interactive interpreter by running the Python
 command in a terminal without any arguments:</p>
-<pre><code>$ python
-Python 3.8.2 (default, Jul 16 2020, 14:00:26)
-[GCC 9.3.0] on linux
-Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
-&gt;&gt;&gt;</code></pre>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>    <span class="ex">$</span> python</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>    Python <span class="fl">3.8.2</span> (default, Jul <span class="dv">16</span> <span class="dv">2020</span>, <span class="dv">14</span>:<span class="dv">00</span>:<span class="dv">26</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    [GCC <span class="fl">9.3.0</span>] on linux</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    Type <span class="st">&quot;help&quot;</span>, <span class="st">&quot;copyright&quot;</span>, <span class="st">&quot;credits&quot;</span> <span class="kw">or</span> <span class="st">&quot;license&quot;</span> <span class="cf">for</span> more information.</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span></span></code></pre></div>
 <p>The REPL mode of Python is useful for quick experiments and
 debugging, but it is not easy to revise what has been entered so it is
 not convenient for larger programs.</p>
-<h4 id="module">Module</h4>
+<h4 id="module"><span class="py">Module</span></h4>
 <p>Perhaps the most common way to write Python code is in a
 <em>module</em>. A module is just a <code>.py</code> file containing
 Python code. The file is saved on the computer and it is not run until
@@ -207,16 +210,18 @@ it is loaded and processed by a Python process. Modules meant to be
 imported by other modules are generally called <em>libraries</em>, while
 modules meant to be run directly are called <em>scripts</em>. Imagine
 you had a file <code>hello.py</code> with the following contents:</p>
-<pre><code>print(&#39;hello&#39;)</code></pre>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;hello&#39;</span>)</span></code></pre></div>
 <p>You can then run this script at the command line and see its output
 as follows (depending on your system and environment, the
 <code>python3</code> command may be <code>python</code>,
 <code>py</code>, or something else):</p>
-<pre><code>$ python3 hello.py
-hello</code></pre>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>    <span class="ex">$</span> python3 hello.py</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">hello</span></span></code></pre></div>
 <p>Using modules to write Python code is the most versatile mode and is
 recommended for most uses.</p>
-<h4 id="notebook">Notebook</h4>
+<h4 id="notebook"><span class="py">Notebook</span></h4>
 <p>A mode of using Python popular for demostration or pegagogical
 purposes is the notebook. It mixes human language text with Python code
 and sometimes provides a more friendly view of the output (e.g.,
@@ -228,77 +233,82 @@ alt="Example of using a Python notebook" />
 <figcaption aria-hidden="true">Example of using a Python
 notebook</figcaption>
 </figure>
-<p>Example of using a Python notebook</p>
 <h3 id="expressions-statements-definitions">Expressions, Statements,
 Definitions</h3>
-<h4 id="assignment">Assignment</h4>
-<pre><code>&gt;&gt;&gt; x = 3            # assign the value 3 to the variable named &#39;x&#39;
-&gt;&gt;&gt; x = x + 1        # evaluate the expression &#39;x + 1&#39; then assign its result to x
-&gt;&gt;&gt; x
-4
-&gt;&gt;&gt; x += 1           # shorthand for the above
-&gt;&gt;&gt; x
-5
-&gt;&gt;&gt; x = &#39;foo&#39;        # variables can be reassigned to values of a different type
-&gt;&gt;&gt; x.upper()        # an expression involving the variable does not change its value
-&#39;FOO&#39;
-&gt;&gt;&gt; x
-&#39;foo&#39;
-&gt;&gt;&gt; x = [1]          # ...
-&gt;&gt;&gt; x.append(2)      # unless the value is mutable
-&gt;&gt;&gt; x
-[1, 2]
-&gt;&gt;&gt; x = x.append(3)  # be careful not to reassign to function that return None (don&#39;t do this)
-&gt;&gt;&gt; x is None
-True</code></pre>
-<h4 id="functions">Functions</h4>
-<pre><code>def myfunction(x, y, z=0):  # define a function named &#39;myfunction&#39; with 3 parameters;
-                            # x and y are required, z has a default value so it is optional
-    return x * y * z        # return a value so the caller can make use of it
-                            # if there is no return statement, the function returns None</code></pre>
+<h4 id="assignment"><span class="py">Assignment</span></h4>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="dv">3</span>            <span class="co"># assign the value 3 to the variable named &#39;x&#39;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span>        <span class="co"># evaluate the expression &#39;x + 1&#39; then assign its result to x</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="dv">4</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x <span class="op">+=</span> <span class="dv">1</span>           <span class="co"># shorthand for the above</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="dv">5</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="st">&#39;foo&#39;</span>        <span class="co"># variables can be reassigned to values of a different type</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x.upper()        <span class="co"># an expression involving the variable does not change its value</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">&#39;FOO&#39;</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">&#39;foo&#39;</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> [<span class="dv">1</span>]          <span class="co"># ...</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x.append(<span class="dv">2</span>)      <span class="co"># unless the value is mutable</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> x.append(<span class="dv">3</span>)  <span class="co"># be careful not to reassign to function that return None (don&#39;t do this)</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x <span class="kw">is</span> <span class="va">None</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="va">True</span></span></code></pre></div>
+<h4 id="functions"><span class="py">Functions</span></h4>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> myfunction(x, y, z<span class="op">=</span><span class="dv">0</span>):  <span class="co"># define a function named &#39;myfunction&#39; with 3 parameters;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>                                <span class="co"># x and y are required, z has a default value so it is optional</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x <span class="op">*</span> y <span class="op">*</span> z        <span class="co"># return a value so the caller can make use of it</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>                                <span class="co"># if there is no return statement, the function returns None</span></span></code></pre></div>
 <p>Once a function is defined, call it by its name:</p>
-<pre><code>&gt;&gt;&gt; myfunction(1, 2)
-0
-&gt;&gt;&gt; myfunction(1, 2, 3)
-6</code></pre>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> myfunction(<span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="dv">0</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> myfunction(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="dv">6</span></span></code></pre></div>
 <h3 id="data-types">Data Types</h3>
-<h4 id="int"><code>int</code></h4>
+<h4 id="int"><span class="py"><code>int</code></span></h4>
 <p>Integer types represent positive or negative whole numbers.</p>
-<pre><code>&gt;&gt;&gt; 1024           # literal integers are base-10
-1024
-&gt;&gt;&gt; int(3.14159)   # int() casts floats to integers
-3
-&gt;&gt;&gt; int(&#39;101&#39;)     # int() casts strings to integers
-101
-&gt;&gt;&gt; int(&#39;101&#39;, 2)  # an explicit base can be given
-5
-&gt;&gt;&gt; 20 // 3        # floor division drops any remainder
-6</code></pre>
-<h4 id="float"><code>float</code></h4>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="dv">1024</span>           <span class="co"># literal integers are base-10</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="dv">1024</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="bu">int</span>(<span class="fl">3.14159</span>)   <span class="co"># int() casts floats to integers</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="dv">3</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="bu">int</span>(<span class="st">&#39;101&#39;</span>)     <span class="co"># int() casts strings to integers</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="dv">101</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="bu">int</span>(<span class="st">&#39;101&#39;</span>, <span class="dv">2</span>)  <span class="co"># an explicit base can be given</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="dv">5</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="dv">20</span> <span class="op">//</span> <span class="dv">3</span>        <span class="co"># floor division drops any remainder</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="dv">6</span></span></code></pre></div>
+<h4 id="float"><span class="py"><code>float</code></span></h4>
 <p>Floating-point numbers represent numbers with a fractional
 component.</p>
-<pre><code>&gt;&gt;&gt; 3.14           # literal floats include a decimal
-3.14
-&gt;&gt;&gt; 6.02e23        # and/or an exponent
-6.02e+23
-&gt;&gt;&gt; float(3)       # float() casts from integers
-3.0
-&gt;&gt;&gt; float(&#39;3.14&#39;)  # and strings (but only base-10)
-3.14
-&gt;&gt;&gt; 20 / 3         # regular division results in a float
-6.666666666666667
-&gt;&gt;&gt; 20 / 5         # even when there&#39;s no remainder
-4.0</code></pre>
-<h4 id="str"><code>str</code></h4>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="fl">3.14</span>           <span class="co"># literal floats include a decimal</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="fl">3.14</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="fl">6.02e23</span>        <span class="co"># and/or an exponent</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="fl">6.02e+23</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="bu">float</span>(<span class="dv">3</span>)       <span class="co"># float() casts from integers</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="fl">3.0</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="bu">float</span>(<span class="st">&#39;3.14&#39;</span>)  <span class="co"># and strings (but only base-10)</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="fl">3.14</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="dv">20</span> <span class="op">/</span> <span class="dv">3</span>         <span class="co"># regular division results in a float</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="fl">6.666666666666667</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="dv">20</span> <span class="op">/</span> <span class="dv">5</span>         <span class="co"># even when there&#39;s no remainder</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="fl">4.0</span></span></code></pre></div>
+<h4 id="str"><span class="py"><code>str</code></span></h4>
 <p>Strings are sequences of characters.</p>
-<pre><code>&gt;&gt;&gt; &#39;a string&#39;         # strings are surrounded by single quotes
-&#39;a string&#39;
-&gt;&gt;&gt; &quot;another string&quot;   # or double quotes
-&#39;another string&#39;
-&gt;&gt;&gt; &#39;&#39;&#39;yet
-... another&#39;&#39;&#39;         # or three single/double quotes (newlines allowed)
-&gt;&gt;&gt; &#39;もう一つ&#39;          # unicode is ok
-&#39;もう一つ&#39;</code></pre>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="st">&#39;a string&#39;</span>         <span class="co"># strings are surrounded by single quotes</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">&#39;a string&#39;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;another string&quot;</span>   <span class="co"># or double quotes</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">&#39;another string&#39;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="st">&#39;&#39;&#39;yet</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="st">    ... another&#39;&#39;&#39;</span>         <span class="co"># or three single/double quotes (newlines allowed)</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="st">&#39;もう一つ&#39;</span>          <span class="co"># unicode is ok</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">&#39;もう一つ&#39;</span></span></code></pre></div>
 <p><strong>Useful string methods:</strong></p>
 <ul>
 <li><a
@@ -308,87 +318,91 @@ href="https://docs.python.org/3/library/stdtypes.html#str.split">str.split()</a>
 href="https://docs.python.org/3/library/stdtypes.html#str.lower">str.lower()</a>
 – return the string with all cased characters downcased</li>
 </ul>
-<h4 id="list"><code>list</code></h4>
+<h4 id="list"><span class="py"><code>list</code></span></h4>
 <p>Lists are mutable sequences of values.</p>
-<pre><code>&gt;&gt;&gt; x = []           # make an empty list
-&gt;&gt;&gt; x = list()       # this works, too
-&gt;&gt;&gt; x.append(1)      # add a single value
-&gt;&gt;&gt; x.extend([2,3])  # add multiple values
-&gt;&gt;&gt; x
-[1, 2, 3]
-&gt;&gt;&gt; x[1:]            # slice from the 2nd element
-[2, 3]
-&gt;&gt;&gt; x[:-1]           # slice until 1 before the last element
-[1, 2]
-&gt;&gt;&gt; len(x)           # find how many elements are on the list
-3
-&gt;&gt;&gt; x.count(3)       # count how many times a particular element occurs
-1
-&gt;&gt;&gt; 4 in x           # use &#39;in&#39; to check for membership
-False</code></pre>
-<h4 id="tuple"><code>tuple</code></h4>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> []           <span class="co"># make an empty list</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="bu">list</span>()       <span class="co"># this works, too</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x.append(<span class="dv">1</span>)      <span class="co"># add a single value</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x.extend([<span class="dv">2</span>,<span class="dv">3</span>])  <span class="co"># add multiple values</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x[<span class="dv">1</span>:]            <span class="co"># slice from the 2nd element</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x[:<span class="op">-</span><span class="dv">1</span>]           <span class="co"># slice until 1 before the last element</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="bu">len</span>(x)           <span class="co"># find how many elements are on the list</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    <span class="dv">3</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x.count(<span class="dv">3</span>)       <span class="co"># count how many times a particular element occurs</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    <span class="dv">1</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="dv">4</span> <span class="kw">in</span> x           <span class="co"># use &#39;in&#39; to check for membership</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>    <span class="va">False</span></span></code></pre></div>
+<h4 id="tuple"><span class="py"><code>tuple</code></span></h4>
 <p>Tuples are immutable sequences of values.</p>
-<pre><code>&gt;&gt;&gt; ()                       # make an empty tuple
-()
-&gt;&gt;&gt; tuple()                  # or use the function
-()
-&gt;&gt;&gt; (1)                      # but this doesn&#39;t work (it looks like an expression)
-1
-&gt;&gt;&gt; 1, 2                     # use commas to create tuples in general
-(1, 2)
-&gt;&gt;&gt; 1,                       # even for single items
-(1,)
-&gt;&gt;&gt; (1, 2)                   # but often we need parentheses around them
-(1, 2)
-&gt;&gt;&gt; x = tuple([1, 1, 2, 3])  # create tuples from an iterable
-&gt;&gt;&gt; x[1:-1]                  # slicing works as expected
-(1, 2)
-&gt;&gt;&gt; x.count(1)               # many list operations work on tuples (but not mutating ones)
-2</code></pre>
-<h4 id="set"><code>set</code></h4>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> ()                       <span class="co"># make an empty tuple</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    ()</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="bu">tuple</span>()                  <span class="co"># or use the function</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    ()</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> (<span class="dv">1</span>)                      <span class="co"># but this doesn&#39;t work (it looks like an expression)</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="dv">1</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span>, <span class="dv">2</span>                     <span class="co"># use commas to create tuples in general</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span>,                       <span class="co"># even for single items</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span>,)</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> (<span class="dv">1</span>, <span class="dv">2</span>)                   <span class="co"># but often we need parentheses around them</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="bu">tuple</span>([<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])  <span class="co"># create tuples from an iterable</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x[<span class="dv">1</span>:<span class="op">-</span><span class="dv">1</span>]                  <span class="co"># slicing works as expected</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x.count(<span class="dv">1</span>)               <span class="co"># many list operations work on tuples (but not mutating ones)</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    <span class="dv">2</span></span></code></pre></div>
+<h4 id="set"><span class="py"><code>set</code></span></h4>
 <p>Sets are containers of unique values.</p>
-<pre><code>&gt;&gt;&gt; set()              # use the function to create an empty set (&#39;{}&#39; creates a dictionary)
-set()
-&gt;&gt;&gt; {1, 2}             # Use braces with comma-separated values to create non-empty sets
-{1, 2}
-&gt;&gt;&gt; {1, 1, 2, 3}       # repeated values are dropped
-{1, 2, 3}
-&gt;&gt;&gt; x = {1, 2}
-&gt;&gt;&gt; x | {3}            # | is the operator for set-union
-{1, 2, 3}
-&gt;&gt;&gt; x &amp; {2}            # &amp; is the operator for set-intersection
-{2}
-&gt;&gt;&gt; x.add(3)           # use add() to add a single value
-&gt;&gt;&gt; x.update([3, 4])   # use update() to add multiple values (duplicates still dropped)
-&gt;&gt;&gt; x
-{1, 2, 3, 4}
-&gt;&gt;&gt; 2 in x             # check for membership
-True</code></pre>
-<h4 id="dict"><code>dict</code></h4>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="bu">set</span>()              <span class="co"># use the function to create an empty set (&#39;{}&#39; creates a dictionary)</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">set</span>()</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> {<span class="dv">1</span>, <span class="dv">2</span>}             <span class="co"># Use braces with comma-separated values to create non-empty sets</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    {<span class="dv">1</span>, <span class="dv">2</span>}</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> {<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>}       <span class="co"># repeated values are dropped</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    {<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>}</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">2</span>}</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x <span class="op">|</span> {<span class="dv">3</span>}            <span class="co"># | is the operator for set-union</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    {<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>}</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x <span class="op">&amp;</span> {<span class="dv">2</span>}            <span class="co"># &amp; is the operator for set-intersection</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    {<span class="dv">2</span>}</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x.add(<span class="dv">3</span>)           <span class="co"># use add() to add a single value</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x.update([<span class="dv">3</span>, <span class="dv">4</span>])   <span class="co"># use update() to add multiple values (duplicates still dropped)</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    {<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>}</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="dv">2</span> <span class="kw">in</span> x             <span class="co"># check for membership</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>    <span class="va">True</span></span></code></pre></div>
+<h4 id="dict"><span class="py"><code>dict</code></span></h4>
 <p>Dictionaries are much like sets but they associate keys to
 values.</p>
-<pre><code>&gt;&gt;&gt; {}                          # create an empty dict with {}
-{}
-&gt;&gt;&gt; dict()                      # the function works, too
-{}
-&gt;&gt;&gt; {&#39;a&#39;: 1, &#39;b&#39;: 2}            # keys (&#39;a&#39; and &#39;b&#39;) map to values (1, 2)
-{&#39;a&#39;: 1, &#39;b&#39;: 2}
-&gt;&gt;&gt; d = {&#39;a&#39;: 1}
-&gt;&gt;&gt; d[&#39;b&#39;] = 2                  # assign a single key to a value
-&gt;&gt;&gt; d.update({&#39;c&#39;: 3, &#39;d&#39;: 4})  # update() to assign multiple keys to values
-&gt;&gt;&gt; d[&#39;c&#39;]                      # retrieve the value associated with a key
-3
-&gt;&gt;&gt; d[&#39;b&#39;] = 1                  # keys are unique; here &#39;b&#39; is reassigned
-&gt;&gt;&gt; d                           # but values need not be unique
-{&#39;a&#39;: 1, &#39;b&#39;: 1, &#39;c&#39;: 3, &#39;d&#39;: 4}
-&gt;&gt;&gt; len(d)                      # len() gets the number of keys
-4
-&gt;&gt;&gt; list(d)                     # list(d) returns the list of keys
-[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]
-&gt;&gt;&gt; &#39;b&#39; in d                    # check for membership of keys
-True
-&gt;&gt;&gt; 1 in d                      # cannot check for membership of values this way
-False</code></pre>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> {}                          <span class="co"># create an empty dict with {}</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    {}</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="bu">dict</span>()                      <span class="co"># the function works, too</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    {}</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">1</span>, <span class="st">&#39;b&#39;</span>: <span class="dv">2</span>}            <span class="co"># keys (&#39;a&#39; and &#39;b&#39;) map to values (1, 2)</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    {<span class="st">&#39;a&#39;</span>: <span class="dv">1</span>, <span class="st">&#39;b&#39;</span>: <span class="dv">2</span>}</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> d <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">1</span>}</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> d[<span class="st">&#39;b&#39;</span>] <span class="op">=</span> <span class="dv">2</span>                  <span class="co"># assign a single key to a value</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> d.update({<span class="st">&#39;c&#39;</span>: <span class="dv">3</span>, <span class="st">&#39;d&#39;</span>: <span class="dv">4</span>})  <span class="co"># update() to assign multiple keys to values</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> d[<span class="st">&#39;c&#39;</span>]                      <span class="co"># retrieve the value associated with a key</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    <span class="dv">3</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> d[<span class="st">&#39;b&#39;</span>] <span class="op">=</span> <span class="dv">1</span>                  <span class="co"># keys are unique; here &#39;b&#39; is reassigned</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> d                           <span class="co"># but values need not be unique</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    {<span class="st">&#39;a&#39;</span>: <span class="dv">1</span>, <span class="st">&#39;b&#39;</span>: <span class="dv">1</span>, <span class="st">&#39;c&#39;</span>: <span class="dv">3</span>, <span class="st">&#39;d&#39;</span>: <span class="dv">4</span>}</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="bu">len</span>(d)                      <span class="co"># len() gets the number of keys</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>    <span class="dv">4</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="bu">list</span>(d)                     <span class="co"># list(d) returns the list of keys</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    [<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;c&#39;</span>, <span class="st">&#39;d&#39;</span>]</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="st">&#39;b&#39;</span> <span class="kw">in</span> d                    <span class="co"># check for membership of keys</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>    <span class="va">True</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span> <span class="kw">in</span> d                      <span class="co"># cannot check for membership of values this way</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>    <span class="va">False</span></span></code></pre></div>
 <h3 id="constants">Constants</h3>
 <p>A constant is a special type of variable whose value cannot be
 changed. However, we don’t really use constants in Python since any
@@ -397,38 +411,38 @@ names (like ‘list’, ‘dict’, etc..) should be avoided so you don’t
 accidentally reassign key functions. Naming constant variables in all
 capital letters is a convention to separate them from ordinary
 variables, however, it does not actually prevent reassignment.</p>
-<h4 id="true-false">True &amp; False</h4>
+<h4 id="true-false"><span class="py">True, False</span></h4>
 <p>Boolean operators that identify values.</p>
-<h4 id="none">None</h4>
+<h4 id="none"><span class="py">None</span></h4>
 <p>An operator that identifies presence/absence.</p>
 <h3 id="control-structures">Control Structures</h3>
-<h4 id="if">if</h4>
+<h4 id="if"><span class="py">if</span></h4>
 <p>An <code>if</code> statement is used for a <em>conditional
 block</em>—code that is executed only if a condition is true. See the
 Python Tutorial’s section on <a
 href="https://docs.python.org/3/tutorial/controlflow.html#if-statements"><code>if</code>
 Statements</a>.</p>
 <p>Only one thing below will be printed:</p>
-<div class="sourceCode" id="cb15"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>    word <span class="op">=</span> <span class="st">&#39;Dog&#39;</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> word <span class="kw">in</span> vocabulary:</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(word, <span class="st">&#39;exists in the vocabulary&#39;</span>)</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> word.lower() <span class="kw">in</span> vocabulary:</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(word, <span class="st">&#39;exists in vocabulary when case-normalized&#39;</span>)</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(word, <span class="st">&#39;does not exist in vocabulary&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>    word <span class="op">=</span> <span class="st">&#39;Dog&#39;</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> word <span class="kw">in</span> vocabulary:</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(word, <span class="st">&#39;exists in the vocabulary&#39;</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> word.lower() <span class="kw">in</span> vocabulary:</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(word, <span class="st">&#39;exists in vocabulary when case-normalized&#39;</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(word, <span class="st">&#39;does not exist in vocabulary&#39;</span>)</span></code></pre></div>
 <p>Note that if you use multiple <code>if</code> statements instead of
 <code>elif</code> or <code>else</code>, they will be attempted
 regardless of whether the previous conditions were true. In the
 following, both will print if both <code>'Dog'</code> and
 <code>'dog'</code> are in the vocabulary.</p>
-<div class="sourceCode" id="cb16"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>    word <span class="op">=</span> <span class="st">&#39;Dog&#39;</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> word <span class="kw">in</span> vocabulary:</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(word, <span class="st">&#39;exists in the vocabulary&#39;</span>)</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> word.lower() <span class="kw">in</span> vocabulary:</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(word, <span class="st">&#39;exists in vocabulary when case-normalized&#39;</span>)</span></code></pre></div>
-<h4 id="for">for</h4>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>    word <span class="op">=</span> <span class="st">&#39;Dog&#39;</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> word <span class="kw">in</span> vocabulary:</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(word, <span class="st">&#39;exists in the vocabulary&#39;</span>)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> word.lower() <span class="kw">in</span> vocabulary:</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(word, <span class="st">&#39;exists in vocabulary when case-normalized&#39;</span>)</span></code></pre></div>
+<h4 id="for"><span class="py">for</span></h4>
 <p>A <code>for</code> statement (also called a for-loop) loops over each
 item in an iterable. This generally means the loop is bounded by the
 number of items in the iterable, and it’s used when the iterable items
@@ -436,12 +450,12 @@ themselves are used inside the loop. See the Python Tutorial’s section
 on <a
 href="https://docs.python.org/3/tutorial/controlflow.html#for-statements"><code>for</code>
 Statements</a>.</p>
-<div class="sourceCode" id="cb17"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>    numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> number <span class="kw">in</span> numbers:</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>        square <span class="op">=</span> number<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&#39;the square of </span><span class="sc">{</span>number<span class="sc">}</span><span class="ss"> is </span><span class="sc">{</span>square<span class="sc">}</span><span class="ss">&#39;</span>)</span></code></pre></div>
-<h4 id="while">while</h4>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>    numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> number <span class="kw">in</span> numbers:</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>        square <span class="op">=</span> number<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&#39;the square of </span><span class="sc">{</span>number<span class="sc">}</span><span class="ss"> is </span><span class="sc">{</span>square<span class="sc">}</span><span class="ss">&#39;</span>)</span></code></pre></div>
+<h4 id="while"><span class="py">while</span></h4>
 <p>A <code>while</code> statement (also called a while-loop) loops as
 long as a condition is met. This condition can be just about anything,
 and sometimes it is <code>True</code>, meaning an infinite loop. See the
@@ -450,76 +464,82 @@ href="https://docs.python.org/3/tutorial/introduction.html#first-steps-towards-p
 statements</a>. While-loops are often used when the number of iterations
 is not fixed or known in advance, or when there is no iterable whose
 items are used inside the loop.</p>
-<div class="sourceCode" id="cb18"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>    <span class="co"># print Fibonacci numbers less than 100</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> a <span class="op">&lt;</span> <span class="dv">100</span>:</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(a)</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>        tmp <span class="op">=</span> b  <span class="co"># temporary variable for the old value of b</span></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>        b <span class="op">=</span> b <span class="op">+</span> a</span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>        a <span class="op">=</span> tmp</span></code></pre></div>
-<h4 id="comprehensions">Comprehensions</h4>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>    <span class="co"># print Fibonacci numbers less than 100</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> a <span class="op">&lt;</span> <span class="dv">100</span>:</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(a)</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>        tmp <span class="op">=</span> b  <span class="co"># temporary variable for the old value of b</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>        b <span class="op">=</span> b <span class="op">+</span> a</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>        a <span class="op">=</span> tmp</span></code></pre></div>
+<h4 id="comprehensions"><span class="py">Comprehensions</span></h4>
 <h3 id="built-in-functions">Built-in Functions</h3>
-<h4 id="print">print()</h4>
-<h4 id="len">len()</h4>
-<h4 id="range">range()</h4>
-<h4 id="enumerate">enumerate()</h4>
-<h4 id="any">any()</h4>
-<h4 id="all">all()</h4>
-<h4 id="open">open()</h4>
+<h4 id="print"><span class="py">print()</span></h4>
+<h4 id="len"><span class="py">len()</span></h4>
+<h4 id="range"><span class="py">range()</span></h4>
+<h4 id="enumerate"><span class="py">enumerate()</span></h4>
+<h4 id="any"><span class="py">any()</span></h4>
+<h4 id="all"><span class="py">all()</span></h4>
+<h4 id="open"><span class="py">open()</span></h4>
 <h3 id="raw-data">Raw data</h3>
-<h4 id="open-1">open()</h4>
-<h4 id="str.encode">str.encode()</h4>
-<h4 id="bytes.decode">bytes.decode()</h4>
-<h4 id="urllib.request.urlopen">urllib.request.urlopen()</h4>
+<h4 id="open-1"><span class="py">open()</span></h4>
+<h4 id="str.encode"><span class="py">str.encode()</span></h4>
+<h4 id="bytes.decode"><span class="py">bytes.decode()</span></h4>
+<h4 id="urllib.request.urlopen"><span
+class="py">urllib.request.urlopen()</span></h4>
 <h3 id="pandas">Pandas</h3>
 <p><strong>Pandas</strong> is a library for working with dataframes, a
 table-like structure that allows for rapid calculations. It also helps
 us to organize data into a human-readable structure. You can used Pandas
 by importing it and initializing a dataframe:</p>
-<div class="sourceCode" id="cb19"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame()</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>    <span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.DataFrame()</span></code></pre></div>
 <p>You can also use pandas to read and write character-delimited files
 or excel spreadsheets:</p>
-<div class="sourceCode" id="cb20"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&#39;randomfile.csv&#39;</span>, delimiter<span class="op">=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.to_csv(<span class="st">&#39;randomfile.csv&#39;</span>, sep<span class="op">=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_excel(<span class="st">&#39;randomfile.xlsx&#39;</span>)</span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.to_excel(<span class="st">&#39;randomfile.xlsx&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.read_csv(<span class="st">&#39;randomfile.csv&#39;</span>, delimiter<span class="op">=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.to_csv(<span class="st">&#39;randomfile.csv&#39;</span>, sep<span class="op">=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.read_excel(<span class="st">&#39;randomfile.xlsx&#39;</span>)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.to_excel(<span class="st">&#39;randomfile.xlsx&#39;</span>)</span></code></pre></div>
 <h2 id="nlpcl">NLP/CL</h2>
 <p>This category is for concepts and techniques related to natural
 language processing or computational linguistics.</p>
 <h3 id="concepts">Concepts</h3>
-<h4 id="types-vs-tokens">types-vs-tokens</h4>
-<h4 id="tokenization">tokenization</h4>
-<h4 id="normalization">normalization</h4>
-<h4 id="frequency-distributions">Frequency Distributions</h4>
-<h4 id="conditional-frequency-distributions">Conditional Frequency
-Distributions</h4>
-<h4 id="text-corpora">Text Corpora</h4>
-<h4 id="lexical-resources">Lexical Resources</h4>
+<h4 id="types-vs-tokens"><span class="nlp">types-vs-tokens</span></h4>
+<h4 id="tokenization"><span class="nlp">tokenization</span></h4>
+<h4 id="normalization"><span class="nlp">normalization</span></h4>
+<h4 id="frequency-distributions"><span class="nlp">Frequency
+Distributions</span></h4>
+<h4 id="conditional-frequency-distributions"><span
+class="nlp">Conditional Frequency Distributions</span></h4>
+<h4 id="text-corpora"><span class="nlp">Text Corpora</span></h4>
+<h4 id="lexical-resources"><span class="nlp">Lexical
+Resources</span></h4>
 <h3 id="tools">Tools</h3>
-<h4 id="nltk">NLTK</h4>
+<h4 id="nltk"><span class="nlp">NLTK</span></h4>
 <h2 id="software-engineering">Software Engineering</h2>
 <p>This category is for practices of software engineering as well as
 programming concepts that are relevant to programming languages beyond
 Python.</p>
 <h3 id="working-on-a-system">Working on a System</h3>
-<h4 id="paths-and-folders">Paths and folders</h4>
-<h4 id="virtual-environments">Virtual Environments</h4>
-<h4 id="files-and-streams">Files and Streams</h4>
-<h4 id="unicode">Unicode</h4>
+<h4 id="paths-and-folders"><span class="eng">Paths and
+folders</span></h4>
+<h4 id="virtual-environments"><span class="eng">Virtual
+Environments</span></h4>
+<h4 id="files-and-streams"><span class="eng">Files and
+Streams</span></h4>
+<h4 id="unicode"><span class="eng">Unicode</span></h4>
 <h3 id="version-control">Version Control</h3>
-<h4 id="git">Git</h4>
+<h4 id="git"><span class="eng">Git</span></h4>
 <h3 id="programming-concerns-and-techniques">Programming Concerns and
 Techniques</h3>
-<h4 id="efficiency">Efficiency</h4>
-<h4 id="mutability">Mutability</h4>
-<h4 id="side-effects">Side-effects</h4>
+<h4 id="efficiency"><span class="eng">Efficiency</span></h4>
+<h4 id="mutability"><span class="eng">Mutability</span></h4>
+<h4 id="side-effects"><span class="eng">Side-effects</span></h4>
 </main>
 </body>
 </html>
