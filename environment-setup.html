@@ -93,6 +93,7 @@ Studio Code</a></li>
 <li><a href="#virtual-environment" id="toc-virtual-environment">Virtual
 Environment</a></li>
 <li><a href="#test-it-out" id="toc-test-it-out">Test It Out</a></li>
+<li><a href="#workflow" id="toc-workflow">Workflow</a></li>
 </ul>
 </nav>
 <main>
@@ -103,8 +104,10 @@ nearly the same experience, regardless of platform (Windows, macOS,
 Linux). We will also create a <a href="#workspace">workspace</a> on our
 computers for storing work, Python dependencies, software preferences,
 etc.; test out the creation of a <a href="#virtual-environment">virtual
-environment</a>; and <a href="#test-it-out">make sure it all
-works</a>.</p>
+environment</a>; and <a href="#test-it-out">make sure it all works</a>.
+Our goal by the end is to have a coding environment that enables a
+programmer’s <a href="#workflow">workflow</a> so we can learn to code
+efficiently and write programs that work.</p>
 <h2 id="python">Python</h2>
 <p>For running the code we write, we will need a <a
 href="https://www.python.org/">Python</a> interpreter. This is perhaps
@@ -192,7 +195,8 @@ class="uri">https://git-scm.com/download/linux</a></p>
 <h2 id="visual-studio-code">Visual Studio Code</h2>
 <p>Visual Studio Code is the program we use to write code. It also
 assists with running tests and tracking changes with Git, as well as
-other advanced features for developers.</p>
+other advanced features for developers, but we will not be exploring
+these for the most part.</p>
 <p>For all platforms you can download an installer from <a
 href="https://code.visualstudio.com/"
 class="uri">https://code.visualstudio.com/</a>.</p>
@@ -243,10 +247,14 @@ when you’ve made some kinds of programming mistakes.</p>
 workspace is a folder (directory) somewhere on your computer (e.g., on
 the Desktop or whatever makes sense to you). Create it in whatever
 method you like (e.g., in Windows Explorer or Finder or in a terminal).
-For these instructions I will assume you named it “HG2051”.</p>
-<p>Once it is created, open Visual Studio Code and open the folder you
-just created via <em>File</em> &gt; <em>Open Folder</em>. You will see
-something like this:</p>
+For these instructions I will assume you named it “HG2051”. This also
+assumes that you know what folders are and how files/folders are
+organized on your computer. We will be going over the basics of this in
+the first week of class, but for now you should try to avoid folder
+names with spaces in them.</p>
+<p>Once your folder is created, open Visual Studio Code and open the
+folder you just created via <em>File</em> &gt; <em>Open Folder</em>. You
+will see something like this:</p>
 <figure>
 <img src="static/empty-workspace.png" alt="Empty HG2051 Workspace" />
 <figcaption aria-hidden="true"><em>Empty HG2051
@@ -262,8 +270,8 @@ depending on which shell and platform you’re using.</p>
 <h2 id="virtual-environment">Virtual Environment</h2>
 <p>The next step here is to create a virtual environment, which is a
 subfolder that contains the Python packages we will use for this course.
-While in principle we could use one virtual environment for the whole
-course, in practice it’s easier to make one for each assignment.</p>
+We will use one virtual environment for the whole course, though it is
+typical to use different environments for different projects.</p>
 <h4 id="creating-the-virtual-environment">Creating the Virtual
 Environment</h4>
 <p>Enter the following command into Visual Studio Code’s terminal (you
@@ -386,8 +394,8 @@ things.</p>
 <h4 id="install-the-pytest-dependency">Install the <code>pytest</code>
 Dependency</h4>
 <p>We will use <a href="https://pytest.org/">pytest</a> for automatic
-evaluation of our homework assignments. Once the virtual environment is
-active, run the following command:</p>
+evaluation of some of our homework assignments. Once the virtual
+environment is active, run the following command:</p>
 <div class="sourceCode" id="cb15"><pre
 class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pytest</span></code></pre></div>
 <p>If it says the <code>pip</code> command is not found, ensure your
@@ -416,6 +424,25 @@ file. You should see “hello” in the terminal output of the command.</p>
 <img src="static/run-hello-py.png" alt="Running hello.py" />
 <figcaption aria-hidden="true"><em>Running hello.py</em></figcaption>
 </figure>
+<p>While it is nice to be able to use the “play” button to run a whole
+script or parts of the code from a script, our goal with this course is
+to learn how to create complete programs that run without errors. For
+this reason, you should avoid using the “play” button for the time
+being.</p>
+<h2 id="workflow">Workflow</h2>
+<p>The workflow we will follow makes use of three elements: the <em>file
+explorer</em>, the <em>editor</em>, and the <em>terminal</em>. You
+should become comfortable with moving between these elements as you
+develop your code. Your file explorer is where your programming files
+are located, along with various subfolders for organizational purposes.
+When you open a file to work on it, it opens in your editor, which
+allows you to write/modify code. After saving your work, you switch to
+the terminal to run the file and check that it functions. Going back and
+forth gives you immediate feedback and allows you to catch errors in
+order to fix them and achieve working code. For more details, a brief
+guide related to this course is provided in <a
+href="using-vscode.html">Using VS Code</a>, with additional links to
+more comprehensive resources.</p>
 </main>
 </body>
 </html>
