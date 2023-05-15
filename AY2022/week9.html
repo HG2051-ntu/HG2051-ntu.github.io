@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>HG2051 – Week 9</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #f8f8f2;  }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #a6e22e; } /* Attribute */
+code span.bn { color: #ae81ff; } /* BaseN */
+code span.bu { color: #66d9ef; } /* BuiltIn */
+code span.cf { color: #f92672; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #e6db74; } /* Char */
+code span.cn { color: #ae81ff; } /* Constant */
+code span.co { color: #88846f; font-style: italic; } /* Comment */
+code span.cv { color: #88846f; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #e6db74; font-style: italic; } /* Documentation */
+code span.dt { color: #66d9ef; } /* DataType */
+code span.dv { color: #ae81ff; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #b08000; } /* Float */
+code span.fu { color: #a6e22e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #e6db74; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #f92672; font-weight: bold; } /* Keyword */
+code span.op { color: #f92672; } /* Operator */
+code span.ot { } /* Other */
+code span.pp { color: #66d9ef; } /* Preprocessor */
+code span.sc { color: #ae81ff; } /* SpecialChar */
+code span.ss { color: #ffe792; } /* SpecialString */
+code span.st { color: #ffe792; } /* String */
+code span.va { color: #f8f8f2; } /* Variable */
+code span.vs { color: #e6db74; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css?v=1" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Week 9</h1>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#learning-objectives" id="toc-learning-objectives">Learning
+Objectives</a></li>
+<li><a href="#in-class-topics" id="toc-in-class-topics">In-class
+topics</a></li>
+<li><a href="#reading" id="toc-reading">Reading</a>
+<ul>
+<li><a href="#higher-order-and-recursive-functions"
+id="toc-higher-order-and-recursive-functions">Higher-order and Recursive
+Functions</a></li>
+<li><a href="#n-grams" id="toc-n-grams">N-grams</a></li>
+<li><a href="#collocations" id="toc-collocations">Collocations</a></li>
+<li><a href="#parts-of-speech"
+id="toc-parts-of-speech">Parts-of-Speech</a></li>
+</ul></li>
+<li><a href="#testing-your-knowledge"
+id="toc-testing-your-knowledge">Testing Your Knowledge</a>
+<ul>
+<li><a href="#questions" id="toc-questions">Questions</a></li>
+<li><a href="#practical-work" id="toc-practical-work">Practical
+Work</a></li>
+</ul></li>
+</ul>
+</nav>
+<main>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<ul>
+<li>Concepts: <span class="eng">higher-order functions</span> <span
+class="eng">recursive functions</span> <span class="py">map()</span>
+<span class="py">filter()</span> <span class="nlp">n-grams</span> <span
+class="nlp">collocations</span> <span class="nlp">part-of-speech
+tags</span></li>
+</ul>
+<p>(color key: <span class="py">Python/Programming</span> <span
+class="nlp">NLP/CL</span> <span class="eng">Software
+Engineering</span>)</p>
+<h2 id="in-class-topics">In-class topics</h2>
+<ul>
+<li>Project 1</li>
+<li>Project 2</li>
+<li>General questions</li>
+</ul>
+<h2 id="reading">Reading</h2>
+<h3 id="higher-order-and-recursive-functions">Higher-order and Recursive
+Functions</h3>
+<h4 id="first-class-functions">First-class Functions</h4>
+<p>By now you know how to define a function. For instance, to square a
+number, you might write:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> square(x):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">**</span> <span class="dv">2</span></span></code></pre></div>
+<p>Note that this definition does two things: (1) it defines the code
+that, when called, accepts the <code>x</code> argument then computes and
+returns the square of <code>x</code>; and (2) it assigns this “function
+object” to the name <code>square</code>. When we invoke the name
+<code>square</code> with parentheses and the appropriate arguments, we
+get a result:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> square(<span class="dv">4</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span></span></code></pre></div>
+<p>And if you just type the function name without calling it in an
+interactive interpreter, Python will tell you it’s a function:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> square</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>function square at <span class="bn">0x7ff9d780f790</span><span class="op">&gt;</span></span></code></pre></div>
+<p>That is, the value of <code>square</code> is the function object.
+This object is a value just like more traditional values in Python, such
+as integers and strings, and we can reassign the function to another
+variable if we like:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> sq <span class="op">=</span> square</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> sq(<span class="dv">4</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span></span></code></pre></div>
+<p>Python is said to have <a
+href="https://en.wikipedia.org/wiki/First-class_function">first-class
+functions</a>, meaning that functions are not merely something to be
+called, but something that can be assigned, passed as arguments to other
+functions, and used as the return value of another function.</p>
+<h4 id="higher-order-functions">Higher-order Functions</h4>
+<p>Functions are said to be <a
+href="https://en.wikipedia.org/wiki/Higher-order_function">higher-order
+functions</a> if they can accept other functions as arguments or if they
+return a function as their result.</p>
+<p>Continuing our example from before, we may wish to generalize
+<code>square()</code> to a function that, given an exponent
+<code>n</code>, returns a function that raises <code>x</code> to the
+power of <code>n</code>:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> power(n):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">def</span> raise_to(x):</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">**</span> n</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> raise_to</span></code></pre></div>
+<p>Then we could create <code>square</code> simply as follows:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> square <span class="op">=</span> power(<span class="dv">2</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> square(<span class="dv">3</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cube <span class="op">=</span> power(<span class="dv">3</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cube(<span class="dv">3</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="dv">27</span></span></code></pre></div>
+<p>You don’t even need to assign the created function to use it:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> power(<span class="dv">3</span>)(<span class="dv">3</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dv">27</span></span></code></pre></div>
+<p>In Python, <a
+href="https://docs.python.org/3/library/functions.html#map">map()</a>
+and <a
+href="https://docs.python.org/3/library/functions.html#filter">filter()</a>
+are built-in functions that take a function as their first argument and
+an iterable as their second argument. The <code>map()</code> function
+applies the function argument to each item in the iterable and yields
+the result:</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">list</span>(<span class="bu">map</span>(square, <span class="bu">range</span>(<span class="dv">10</span>)))  <span class="co"># apply square() to each value in range(10)</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>, <span class="dv">36</span>, <span class="dv">49</span>, <span class="dv">64</span>, <span class="dv">81</span>]</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [square(x) <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>)]  <span class="co"># this does the same thing in a comprehension</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">16</span>, <span class="dv">25</span>, <span class="dv">36</span>, <span class="dv">49</span>, <span class="dv">64</span>, <span class="dv">81</span>]</span></code></pre></div>
+<p><em>Note: <code>list()</code> is necessary to get the full list;
+otherwise <code>map()</code> returns an iterator that yields one value
+at a time.</em></p>
+<p>The <code>filter()</code> function yields values from the iterable if
+the function argument applied to the value evaluates as true.</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">list</span>(<span class="bu">filter</span>(<span class="bu">str</span>.isnumeric, <span class="st">&#39;1 two 3 four 5&#39;</span>.split()))</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>[<span class="st">&#39;1&#39;</span>, <span class="st">&#39;3&#39;</span>, <span class="st">&#39;5&#39;</span>]</span></code></pre></div>
+<p>We can see how this works by using <code>map()</code> to see the
+<code>True</code>/<code>False</code> values, and noting that
+<code>str.isnumeric(x)</code> is the same as <code>x.isnumeric()</code>
+when <code>x</code> is a string:</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&#39;1&#39;</span>.isnumeric()  <span class="co"># the normal way to call `isnumeric()`</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="va">True</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">str</span>.isnumeric(<span class="st">&#39;1&#39;</span>)  <span class="co"># the functional way to call it</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="va">True</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">list</span>(<span class="bu">map</span>(<span class="bu">str</span>.isnumeric, <span class="st">&#39;1 two 3 four 5&#39;</span>.split()))</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>[<span class="va">True</span>, <span class="va">False</span>, <span class="va">True</span>, <span class="va">False</span>, <span class="va">True</span>]</span></code></pre></div>
+<p>To see how higher-order functions might help with NLP, please read
+this short section from the NLTK book:</p>
+<ul>
+<li><a
+href="http://www.nltk.org/book/ch04.html#higher-order-functions">NLTK
+4.5 – Higher-Order Functions</a></li>
+</ul>
+<h4 id="recursive-functions">Recursive Functions</h4>
+<p>You may know of recursive linguistic structures, such as grammatical
+constructs which allow sentences like <em>Kim knows that Sandy knows
+that Pat knows that the dog barked</em>. Similarly, many programming
+languages allow <a
+href="https://en.wikipedia.org/wiki/Recursion_(computer_science)">recursive
+functions</a> which call themselves. For example, you may want to write
+a function that computes the factorial of some integer
+<code>x</code>:</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> factorial(x):</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># e.g., if x is 7, this would return 7 * factorial(6),</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># which returns 6 * factorial(5), etc.</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">*</span> factorial(x <span class="op">-</span> <span class="dv">1</span>)</span></code></pre></div>
+<p>Let’s try it out:</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> factorial(<span class="dv">7</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>Traceback (most recent call last):</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  File <span class="st">&quot;&lt;stdin&gt;&quot;</span>, line <span class="dv">1</span>, <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  File <span class="st">&quot;&lt;stdin&gt;&quot;</span>, line <span class="dv">2</span>, <span class="kw">in</span> factorial</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  File <span class="st">&quot;&lt;stdin&gt;&quot;</span>, line <span class="dv">2</span>, <span class="kw">in</span> factorial</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  File <span class="st">&quot;&lt;stdin&gt;&quot;</span>, line <span class="dv">2</span>, <span class="kw">in</span> factorial</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  [Previous line repeated <span class="dv">996</span> more times]</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>RecursionError: maximum recursion depth exceeded</span></code></pre></div>
+<p>Oops. This did <code>7 * (6 * (5 * ...))</code> but it did not stop
+at 1, so it continued: <code>... * (0 * (-1 * ...))</code>. Recursive
+functions must have a <em>base case</em> which decides when it should
+stop. For instance:</p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> factorial(x):</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> x <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">1</span>  <span class="co"># base case</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span>:</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">*</span> factorial(x <span class="op">-</span> <span class="dv">1</span>)</span></code></pre></div>
+<p>And try again:</p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> factorial(<span class="dv">7</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="dv">5040</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">7</span> <span class="op">*</span> <span class="dv">6</span> <span class="op">*</span> <span class="dv">5</span> <span class="op">*</span> <span class="dv">4</span> <span class="op">*</span> <span class="dv">3</span> <span class="op">*</span> <span class="dv">2</span> <span class="op">*</span> <span class="dv">1</span>  <span class="co"># confirm</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="dv">5040</span></span></code></pre></div>
+<p>For some problems, recursive functions are the natural way to compute
+a result, but they have limits (as seen by the
+<code>RecursionError</code> above) and can lead to very inefficient
+code. Recursive algorithms are often more efficient as an iterative loop
+(<code>for</code>, <code>while</code>, etc.), but the iterative code can
+be less intuitive.</p>
+<h3 id="n-grams">N-grams</h3>
+<p>Bigrams, Trigrams, and more generally n-grams are subsequences of
+some sequence with length 2, 3, or more. In computational linguistics we
+often use n-grams for sequences of tokens, words, characters, etc. The
+NLTK has the <code>nltk.ngrams()</code> function which takes an iterable
+and a number <code>n</code> and yields subsequence tuples of length
+<code>n</code> from the iterable:</p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> nltk</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> four_words <span class="op">=</span> <span class="st">&#39;many dogs chase cats&#39;</span>.split()</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">list</span>(nltk.ngrams(four_words, <span class="dv">1</span>))  <span class="co"># unigrams</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>[(<span class="st">&#39;many&#39;</span>,), (<span class="st">&#39;dogs&#39;</span>,), (<span class="st">&#39;chase&#39;</span>,), (<span class="st">&#39;cats&#39;</span>,)]</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">list</span>(nltk.ngrams(four_words, <span class="dv">2</span>))  <span class="co"># bigrams</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>[(<span class="st">&#39;many&#39;</span>, <span class="st">&#39;dogs&#39;</span>), (<span class="st">&#39;dogs&#39;</span>, <span class="st">&#39;chase&#39;</span>), (<span class="st">&#39;chase&#39;</span>, <span class="st">&#39;cats&#39;</span>)]</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">list</span>(nltk.ngrams(four_words, <span class="dv">3</span>))  <span class="co"># trigrams</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>[(<span class="st">&#39;many&#39;</span>, <span class="st">&#39;dogs&#39;</span>, <span class="st">&#39;chase&#39;</span>), (<span class="st">&#39;dogs&#39;</span>, <span class="st">&#39;chase&#39;</span>, <span class="st">&#39;cats&#39;</span>)]</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">list</span>(nltk.ngrams(four_words, <span class="dv">4</span>))  <span class="co"># 4-grams</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>[(<span class="st">&#39;many&#39;</span>, <span class="st">&#39;dogs&#39;</span>, <span class="st">&#39;chase&#39;</span>, <span class="st">&#39;cats&#39;</span>)]</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">list</span>(nltk.ngrams(four_words, <span class="dv">5</span>))  <span class="co"># 5-grams</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>[]</span></code></pre></div>
+<p><strong>See also:</strong> <a
+href="https://books.google.com/ngrams#">Google’s Ngram Viewer</a></p>
+<p>The items in the n-grams might be complex objects, such as n-grams of
+word-tag pairs:</p>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> nltk.download(<span class="st">&#39;brown&#39;</span>)  <span class="co"># if you don&#39;t have it yet</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">from</span> nltk.corpus <span class="im">import</span> brown</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tagged_sent <span class="op">=</span> brown.tagged_sents()[<span class="dv">0</span>]</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tagged_sent[<span class="dv">0</span>:<span class="dv">3</span>]  <span class="co"># inspect some items</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>[(<span class="st">&#39;The&#39;</span>, <span class="st">&#39;AT&#39;</span>), (<span class="st">&#39;Fulton&#39;</span>, <span class="st">&#39;NP-TL&#39;</span>), (<span class="st">&#39;County&#39;</span>, <span class="st">&#39;NN-TL&#39;</span>)]</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tagged_bigrams <span class="op">=</span> <span class="bu">list</span>(nltk.ngrams(tagged_sent, <span class="dv">2</span>))</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> bigram <span class="kw">in</span> tagged_bigrams[:<span class="dv">2</span>]:  <span class="co"># inspect the first two bigrams</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>...     <span class="bu">print</span>(bigram)                  <span class="co"># note that each bigram is a word-tag pair</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>((<span class="st">&#39;The&#39;</span>, <span class="st">&#39;AT&#39;</span>), (<span class="st">&#39;Fulton&#39;</span>, <span class="st">&#39;NP-TL&#39;</span>))</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>((<span class="st">&#39;Fulton&#39;</span>, <span class="st">&#39;NP-TL&#39;</span>), (<span class="st">&#39;County&#39;</span>, <span class="st">&#39;NN-TL&#39;</span>))</span></code></pre></div>
+<h3 id="collocations">Collocations</h3>
+<p>N-grams of words that occur more often than you would expect in a
+random distribution are called <a
+href="https://en.wikipedia.org/wiki/Collocation">collocations</a>.
+Furthermore, these words may have some special, perhaps
+non-compositional meaning that wouldn’t be obvious by the individual
+words. By counting the occurrences of n-gram pairs and comparing them to
+the counts of the words individually, we can find those that tend to
+appear together. For example:</p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> collocations(words):</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="im">from</span> operator <span class="im">import</span> itemgetter</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Count the words and bigrams</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  wfd <span class="op">=</span> nltk.FreqDist(words)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  pfd <span class="op">=</span> nltk.FreqDist(nltk.bigrams(words))  <span class="co"># bigrams is the same as nltk.ngrams(words, 2)</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Compute the scores for each pair</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  scored <span class="op">=</span> [((w1, w2), score(w1, w2, wfd, pfd)) <span class="cf">for</span> w1, w2 <span class="kw">in</span> pfd]</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">## sort according to the score</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>  scored.sort(key<span class="op">=</span>itemgetter(<span class="dv">1</span>), reverse<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> [p <span class="cf">for</span> (p, s) <span class="kw">in</span> scored]</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> score(word1, word2, wfd, pfd, power<span class="op">=</span><span class="dv">3</span>):</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">&#39;&#39;&#39;return the collocation score f(w1,w2)^power/(f(w1)*f(w2))&#39;&#39;&#39;</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  freq1 <span class="op">=</span> wfd[word1]</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  freq2 <span class="op">=</span> wfd[word2]</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  freq12 <span class="op">=</span> pfd[(word1, word2)]</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> freq12 <span class="op">**</span> power <span class="op">/</span> <span class="bu">float</span>(freq1 <span class="op">*</span> freq2)</span></code></pre></div>
+<p>And in use:</p>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">from</span> nltk.corpus <span class="im">import</span> gutenberg</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> words <span class="op">=</span> [w <span class="cf">for</span> w <span class="kw">in</span> gutenberg.words(<span class="st">&#39;melville-moby_dick.txt&#39;</span>) <span class="cf">if</span> <span class="bu">len</span>(w) <span class="op">&gt;</span> <span class="dv">2</span>]</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(collocations(words)[:<span class="dv">10</span>])</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>[(<span class="st">&#39;Moby&#39;</span>, <span class="st">&#39;Dick&#39;</span>), (<span class="st">&#39;Sperm&#39;</span>, <span class="st">&#39;Whale&#39;</span>), (<span class="st">&#39;White&#39;</span>, <span class="st">&#39;Whale&#39;</span>), (<span class="st">&#39;Dough&#39;</span>, <span class="st">&#39;Boy&#39;</span>),</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>(<span class="st">&#39;Mrs&#39;</span>, <span class="st">&#39;Hussey&#39;</span>), (<span class="st">&#39;Sag&#39;</span>, <span class="st">&#39;Harbor&#39;</span>), (<span class="st">&#39;Father&#39;</span>, <span class="st">&#39;Mapple&#39;</span>), (<span class="st">&#39;New&#39;</span>, <span class="st">&#39;Bedford&#39;</span>),</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>(<span class="st">&#39;Fast&#39;</span>, <span class="st">&#39;Fish&#39;</span>), (<span class="st">&#39;have&#39;</span>, <span class="st">&#39;been&#39;</span>)]</span></code></pre></div>
+<p>For further information (not required reading), see:</p>
+<ul>
+<li><a
+href="http://mlwiki.org/index.php/Collocation_Extraction">http://mlwiki.org/index.php/Collocation_Extraction</a></li>
+<li><a
+href="http://www.collocations.de/">http://www.collocations.de/</a></li>
+</ul>
+<h3 id="parts-of-speech">Parts-of-Speech</h3>
+<p>I assume you are familiar with word categories, namely “parts of
+speech”. If not, please read or skim the <a
+href="https://en.wikipedia.org/wiki/Part_of_speech">Wikipedia
+article</a>. Then please read the following sections of the NLTK book
+about part-of-speech tagging:</p>
+<ul>
+<li><a href="http://www.nltk.org/book/ch05.html">NLTK 5 – Categorizing
+and Tagging Words</a>
+<ul>
+<li><a href="http://www.nltk.org/book/ch05.html#using-a-tagger">NLTK 5.1
+– Using a Tagger</a></li>
+<li><a href="http://www.nltk.org/book/ch05.html#tagged-corpora">NLTK 5.2
+– Tagged Corpora</a></li>
+</ul></li>
+</ul>
+<h2 id="testing-your-knowledge">Testing Your Knowledge</h2>
+<h3 id="questions">Questions</h3>
+<ul>
+<li><p><strong>Q:</strong> If you have a list of length <code>m</code>,
+how many bigrams will it have? Trigrams? n-grams in general?</p></li>
+<li><p><strong>Q:</strong> How might you deal with the problem of
+getting an n-gram from a sequence where the length of the sequence is
+less than <code>n</code>?</p></li>
+<li><p><strong>Q:</strong> Do all languages use the same parts of
+speech? Does a single language have a clear and complete set of
+parts-of-speech?</p></li>
+<li><p><strong>Q:</strong> What is a <em>tagset</em>? What are examples
+of tagsets?</p></li>
+</ul>
+<h3 id="practical-work">Practical Work</h3>
+<ul>
+<li><p>Write a recursive function <code>fib(x)</code> to compute the <a
+href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci
+number</a> of <code>x</code>. Calling <code>fib(1)</code> should return
+1, <code>fib(5)</code> returns 5, <code>fib(8)</code> returns 21, and so
+on. What happens if you call <code>fib(20)</code>, <code>fib(30)</code>,
+or <code>fib(40)</code>? (use Ctrl-C to kill a stuck process). Now try
+rewriting the recursive function as an iterative function. Can you go
+higher than <code>fib(40)</code>?</p></li>
+<li><p>Write a function <code>bigrams(xs)</code> that takes a list
+<code>xs</code> and returns a list of bigrams from
+<code>xs</code>.</p></li>
+<li><p>Write a function that takes a string of <code>word/TAG</code>
+formatted pairs and returns the list of (word, tag) tuples (hint: use
+<code>nltk.str2tuple()</code>)</p></li>
+<li><p>Write a function that uses <code>nltk.map_tag()</code> to map a
+list of (word, tag) pairs to the universal tagset.</p></li>
+</ul>
+</main>
+</body>
+</html>
