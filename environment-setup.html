@@ -342,8 +342,8 @@ environment, you can change Visual Studio Code’s settings so PowerShell
 can run these scripts. One thing to try is to open the settings by
 typing <kbd>Ctrl-,</kbd> or use the menu <em>File</em> &gt;
 <em>Preferences</em> &gt; <em>Settings</em>, then search for the
-following setting:</p>
-<pre><code>`terminal.integrated.shellArgs.windows`</code></pre>
+following setting:
+<code>terminal.integrated.shellArgs.windows</code></p>
 <figure>
 <img src="static/windows-find-executionpolicy-setting.png"
 alt="Finding the Setting" />
@@ -364,8 +364,8 @@ applies when a terminal is started and not one that is running, you will
 need to close the terminal (click the garbage bin icon), then start a
 new terminal. If that doesn’t work, try restarting Visual Studio Code.
 Now, in the new terminal, try to execute the following:</p>
-<div class="sourceCode" id="cb13"><pre
-class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span><span class="dt">\e</span>nv<span class="dt">\S</span>cripts<span class="dt">\A</span>ctivate.ps1</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span><span class="dt">\e</span>nv<span class="dt">\S</span>cripts<span class="dt">\A</span>ctivate.ps1</span></code></pre></div>
 <p>If successful, you’ll see (env) at the beginning of the next prompt.
 If you see any errors, please let me know. While the environment is
 active, using <code>python</code> (instead of <code>python3</code> or
@@ -380,11 +380,11 @@ can do this by navigating to the ‘Apps and programs’ section of the
 settings page and deselecting the shortcut option there.</p>
 <p>Another concern with Windows is that <code>bash</code> commands are
 not enabled by default in PowerShell, resulting in errors. The
-<code>Bash</code> program is installed by Git and used for committing
-and pushing changes, among other things. To ensure that bash commands
-are enabled, run the following command in your terminal:</p>
-<div class="sourceCode" id="cb14"><pre
-class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> set-ExecutionPolicy RemoteSigned <span class="at">-Scope</span> CurrentUser</span></code></pre></div>
+<em>Bash</em> program is installed by Git and used for committing and
+pushing changes, among other things. To ensure that <code>bash</code>
+commands are enabled, run the following command in your terminal:</p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> set-ExecutionPolicy RemoteSigned <span class="at">-Scope</span> CurrentUser</span></code></pre></div>
 <p><em>Thanks to <a
 href="https://www.c-sharpcorner.com/article/how-to-fix-ps1-can-not-be-loaded-because-running-scripts-is-disabled-on-this-sys/">THIS</a>
 blog post and related Stack Overflow answer</em>: <a
@@ -398,8 +398,8 @@ Dependency</h4>
 <p>We will use <a href="https://pytest.org/">pytest</a> for automatic
 evaluation of some of our homework assignments. Once the virtual
 environment is active, run the following command:</p>
-<div class="sourceCode" id="cb15"><pre
-class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pytest</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pytest</span></code></pre></div>
 <p>If it says the <code>pip</code> command is not found, ensure your
 virtual environment is active. If it is and still cannot find it, then
 try <code>pip3</code> or <code>python -m pip</code> instead. If it still
@@ -411,8 +411,8 @@ Module</h4>
 <p>Create a new file in Visual Studio Code (<kbd>Ctrl-n</kbd> or
 <em>File</em> &gt; <em>New File</em>). Type the following into the
 file:</p>
-<div class="sourceCode" id="cb16"><pre
-class="sourceCode python terminal"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;hello&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode python terminal"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;hello&#39;</span>)</span></code></pre></div>
 <p>Then save (<kbd>Ctrl-s</kbd> or <em>File</em> &gt; <em>Save</em>) the
 file to <code>hello.py</code> in your current workspace. Once it is
 saved, you should see the code become colored (syntax-highlighting).
@@ -433,19 +433,27 @@ to learn how to create complete programs that run without errors. For
 this reason, you should avoid using the “play” button for the time
 being.</p>
 <h2 id="workflow">Workflow</h2>
-<p>The workflow we will follow makes use of three elements: the <em>file
-explorer</em>, the <em>editor</em>, and the <em>terminal</em>. You
-should become comfortable with moving between these elements as you
-develop your code. Your file explorer is where your programming files
-are located, along with various subfolders for organizational purposes.
-When you open a file to work on it, it opens in your editor, which
-allows you to write/modify code. After saving your work, you switch to
-the terminal to run the file and check that it functions. Going back and
-forth gives you immediate feedback and allows you to catch errors in
-order to fix them and achieve working code. For more details, a brief
-guide related to this course is provided in <a
-href="using-vscode.html">Using VS Code</a>, with additional links to
-more comprehensive resources.</p>
+<p>The workflow we will follow makes use of three elements: the
+<mark style="background-color: pink"><strong>file
+explorer</strong></mark>, the
+<mark style="background-color: lightgreen"><strong>editor</strong></mark>,
+and the
+<mark style="background-color: lightblue"><strong>terminal</strong></mark>.
+You should become comfortable with moving between these elements as you
+develop your code. Your
+<mark style="background-color: pink"><strong>file
+explorer</strong></mark> is where your programming files are located,
+along with various subfolders for organizational purposes. When you open
+a file to work on it, it opens in your
+<mark style="background-color: lightgreen"><strong>editor</strong></mark>,
+which allows you to write/modify code. After saving your work, you
+switch to the
+<mark style="background-color: lightblue"><strong>terminal</strong></mark>
+to run the file and check that it functions. Going back and forth gives
+you immediate feedback and allows you to catch errors in order to fix
+them and achieve working code. For more details, a brief guide related
+to this course is provided in <a href="using-vscode.html">Using VS
+Code</a>, with additional links to more comprehensive resources.</p>
 </main>
 </body>
 </html>

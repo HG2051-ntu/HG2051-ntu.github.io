@@ -125,6 +125,10 @@ pre.sourceCode {
   color: #dddddd;
 }
 
+code:not([class^=sourceCode]) {
+  background-color: #f4f4f4;
+}
+
 span.py, span.nlp, span.eng {
   color: white;
   font-weight: bold;
