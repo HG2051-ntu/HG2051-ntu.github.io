@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>HG2051 – HG2051 AY2022-23 – Midterm Review</title>
+  <title>HG2051 – HG2051 – Midterm Review</title>
   <style type="text/css">
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -81,12 +81,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">HG2051 AY2022-23 – Midterm Review</h1>
+<h1 class="title">HG2051 – Midterm Review</h1>
 </header>
 <nav id="TOC">
 <ul>
-<li><a href="#mid-term-quiz-topics"
-id="toc-mid-term-quiz-topics">Mid-term Quiz Topics</a></li>
+<li><a href="#mid-term-review-topics"
+id="toc-mid-term-review-topics">Mid-term Review Topics</a></li>
 <li><a href="#learning-objectives" id="toc-learning-objectives">Learning
 Objectives</a>
 <ul>
@@ -127,7 +127,7 @@ Techniques</a></li>
 </ul>
 </nav>
 <main>
-<h1 id="mid-term-quiz-topics">Mid-term Quiz Topics</h1>
+<h1 id="mid-term-review-topics">Mid-term Review Topics</h1>
 <ul>
 <li><span class="py">Python/Programming</span>
 <ul>
@@ -146,7 +146,8 @@ Techniques</a></li>
 <code>any()</code>, <code>all()</code>)</li>
 <li>Functions (arguments, default arguments, <code>return</code>)</li>
 <li>Raw data (<code>open()</code>, <code>str.encode()</code>,
-<code>bytes.decode()</code>, <code>urllib.request.urlopen()</code>)</li>
+<code>bytes.decode()</code>,
+<code>urllib.request.urlopen().read()</code>)</li>
 <li>Pandas (<code>read_csv()</code>, <code>read_excel</code>,
 <code>to_csv()</code>, <code>to_excel</code>)</li>
 </ul></li>
@@ -269,7 +270,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a hr
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> myfunction(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="dv">6</span></span></code></pre></div>
 <h3 id="data-types">Data Types</h3>
-<h4 id="int"><span class="py"><code>int</code></span></h4>
+<h4 id="int"><span class="py">int</span></h4>
 <p>Integer types represent positive or negative whole numbers.</p>
 <div class="sourceCode" id="cb9"><pre
 class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="dv">1024</span>           <span class="co"># literal integers are base-10</span></span>
@@ -282,7 +283,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a hr
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="dv">5</span></span>
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="dv">20</span> <span class="op">//</span> <span class="dv">3</span>        <span class="co"># floor division drops any remainder</span></span>
 <span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="dv">6</span></span></code></pre></div>
-<h4 id="float"><span class="py"><code>float</code></span></h4>
+<h4 id="float"><span class="py">float</span></h4>
 <p>Floating-point numbers represent numbers with a fractional
 component.</p>
 <div class="sourceCode" id="cb10"><pre
@@ -298,7 +299,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a h
 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="fl">6.666666666666667</span></span>
 <span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="dv">20</span> <span class="op">/</span> <span class="dv">5</span>         <span class="co"># even when there&#39;s no remainder</span></span>
 <span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="fl">4.0</span></span></code></pre></div>
-<h4 id="str"><span class="py"><code>str</code></span></h4>
+<h4 id="str"><span class="py">str</span></h4>
 <p>Strings are sequences of characters.</p>
 <div class="sourceCode" id="cb11"><pre
 class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="st">&#39;a string&#39;</span>         <span class="co"># strings are surrounded by single quotes</span></span>
@@ -318,7 +319,7 @@ href="https://docs.python.org/3/library/stdtypes.html#str.split">str.split()</a>
 href="https://docs.python.org/3/library/stdtypes.html#str.lower">str.lower()</a>
 – return the string with all cased characters downcased</li>
 </ul>
-<h4 id="list"><span class="py"><code>list</code></span></h4>
+<h4 id="list"><span class="py">list</span></h4>
 <p>Lists are mutable sequences of values.</p>
 <div class="sourceCode" id="cb12"><pre
 class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> []           <span class="co"># make an empty list</span></span>
@@ -337,7 +338,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a h
 <span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    <span class="dv">1</span></span>
 <span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="dv">4</span> <span class="kw">in</span> x           <span class="co"># use &#39;in&#39; to check for membership</span></span>
 <span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>    <span class="va">False</span></span></code></pre></div>
-<h4 id="tuple"><span class="py"><code>tuple</code></span></h4>
+<h4 id="tuple"><span class="py">tuple</span></h4>
 <p>Tuples are immutable sequences of values.</p>
 <div class="sourceCode" id="cb13"><pre
 class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> ()                       <span class="co"># make an empty tuple</span></span>
@@ -357,7 +358,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a h
 <span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span>, <span class="dv">2</span>)</span>
 <span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> x.count(<span class="dv">1</span>)               <span class="co"># many list operations work on tuples (but not mutating ones)</span></span>
 <span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    <span class="dv">2</span></span></code></pre></div>
-<h4 id="set"><span class="py"><code>set</code></span></h4>
+<h4 id="set"><span class="py">set</span></h4>
 <p>Sets are containers of unique values.</p>
 <div class="sourceCode" id="cb14"><pre
 class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="bu">set</span>()              <span class="co"># use the function to create an empty set (&#39;{}&#39; creates a dictionary)</span></span>
@@ -377,7 +378,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a h
 <span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    {<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>}</span>
 <span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;&gt;</span> <span class="dv">2</span> <span class="kw">in</span> x             <span class="co"># check for membership</span></span>
 <span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>    <span class="va">True</span></span></code></pre></div>
-<h4 id="dict"><span class="py"><code>dict</code></span></h4>
+<h4 id="dict"><span class="py">dict</span></h4>
 <p>Dictionaries are much like sets but they associate keys to
 values.</p>
 <div class="sourceCode" id="cb15"><pre
