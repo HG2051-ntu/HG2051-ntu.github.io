@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>HG2051 – HG2051 (AY23/24) Project 2: Group assignment</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css?v=1" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">HG2051 (AY23/24) Project 2: Group assignment</h1>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#introduction" id="toc-introduction">Introduction</a></li>
+<li><a href="#project-2-text-classification"
+id="toc-project-2-text-classification">Project 2: Text
+classification</a></li>
+<li><a href="#output" id="toc-output">Output</a></li>
+</ul>
+</nav>
+<main>
+<h2 id="introduction">Introduction</h2>
+<p>This project constitutes 30% of your final grade for HG2051. Please
+work on the final program in groups of 2-3 and report together.</p>
+<ul>
+<li><p>The goal of this assignment is to demonstrate your programming
+and problem-solving abilities through teamwork. If your team has an idea
+for another project that you would like to do instead, talk to me for
+approval.</p></li>
+<li><p>This project involves text classification using machine learning
+tools. As with the individual project, your team will be required to
+submit data, output, and annotated code along with a short writeup that
+describes your goals, process, and results. Your code will be assessed
+based on its functionality and simplicity.</p></li>
+</ul>
+<h2 id="project-2-text-classification">Project 2: Text
+classification</h2>
+<p>Text classification is a general term for automatically identifying
+properties of a text based on its linguistic content. For this project
+you will develop a program that classifies short SMS messages based on
+whether they are <code>spam</code> or not (<code>ham</code>). The
+initial project code in this repository will help you to get started,
+along the following lines:</p>
+<ol type="1">
+<li><p>The corpora you will primarily be using are located in the
+<code>datasets</code> subfolder of your repository, and a brief
+explanation of each are given here:</p>
+<p><code>SMSSpamCollection.txt</code> - this is the full UCI dataset,
+which is compiled from various sources. It contains both
+<code>ham</code> and <code>spam</code> labeled messages. You can view
+and read more about the dataset <a
+href="https://archive.ics.uci.edu/dataset/228/sms+spam+collection">here</a>.</p>
+<p><code>SMSSpamCollection_500.txt</code> - this is a set of the first
+500 messages from the dataset above, and is used in your starter code
+for testing.</p>
+<p><code>sms_corpus_NUS-ham.txt</code> - this is the full SMS corpus
+developed by NUS Singapore for machine learning &amp; NLP. All of these
+messages are actual messages collected in Singapore from study
+participants. I have reformatted the data to match the format of the
+other datasets. You can read more <a
+href="https://github.com/kite1988/nus-sms-corpus">here</a>.</p>
+<p><code>email_corpus_lingspam.txt</code> - this is a set of real emails
+from the Linguist List (a listserve site for dissemination information
+about linguistics) along with spam emails. I have reformatted the data
+to match the other datasets, including <code>ham</code> and
+<code>spam</code> labels. This is the dataset you will be using for
+evaluation, and you should not use it for training your classifier. You
+can download the original dataset <a
+href="http://nlp.cs.aueb.gr/software_and_datasets/lingspam_public.tar.gz">here</a>.
+The zipped folder contains a <code>readme</code> file explaining the
+data.</p></li>
+</ol>
+<p>The <a
+href="https://archive.ics.uci.edu/ml/datasets/sms+spam+collection">SMS
+spam collection from UCI</a> will be the set of data that you will use
+for training and testing the classifier. Since each of the messages in
+this corpus has already been classified as <code>spam</code> or
+<code>ham</code>, this allows us to see how well a basic Naive Bayes
+NLTK classifier works.</p>
+<ol start="2" type="1">
+<li><p>Create a list of <code>spam</code> words and <code>ham</code>
+words based on the labels of the short texts. You can either use the
+same dataset of messages or another that you can find online. Once you
+have sorted and filtered the words, perhaps via frequency distributions,
+write a function that uses these words in conjunction with the NLTK
+classifier to classify the messages and improve on the base score (83%
+accuracy on emails). This process is known as feature
+selection/engineering - the goal of the project is to implement other
+“features” that you can identify which might improve your
+classification. Some ideas for sentiment analysis of movie reviews can
+be found <a
+href="https://realpython.com/python-nltk-sentiment-analysis/#selecting-useful-features">here</a>.
+Keep in mind that successfully differentiating between real and fake
+messages/emails may require different features than for differentiating
+between the sentiment of movie reviews.</p></li>
+<li><p>Once you have determined the features that you want to extract,
+write a function that automatically extracts these features from the
+text as a dictionary. Then use the function to create a list of tuples,
+where the first item of the tuple is the dictionary of features and the
+second item is the category/classification (“ham” or “spam”) of the
+text.</p></li>
+<li><p>Split the dataset for training and validation to see how/whether
+your features improve classification using, i.e. the Naive Bayes
+classification algorithm in NLTK. It is important that whatever
+classifier you use, the training data is kept separate from the
+testing/validation set, otherwise you are simply letting the model
+“memorize” inputs (overfitting) and it will not generalize well to other
+datasets.</p></li>
+<li><p>Once you have a model that you think works pretty well on the SMS
+dataset, test its accuracy on the email dataset (which you have not used
+for training) to see how well it classifies email texts as ham/spam. At
+this point, you can train your classifier on the complete SMS dataset,
+since your email dataset is being used for testing (it is ‘unseen’).
+Additionally, you can incorporate other datasets (like the complete NUS
+SMS dataset or other datasets you can find online) into your training
+data. If you do use other datasets, make sure to include them in the git
+repository (under the <code>datasets</code> folder) and include links to
+your sources in your code/writeup. Your team’s ultimate goal is to
+improve the accuracy of your classifier on the unseen email
+dataset.</p></li>
+<li><p>This code is simply a starting point for exploration. What other
+features can you think of and implement to improve accuracy? How does
+the accuracy improve with different splits? Try to implement other
+classifiers and see how they perform on this dataset. Are there other
+lexical resources/corpora or algorithms within NLTK or from other
+sources that can improve your results? What is the best accuracy you can
+get? How does the genre of text (sms/emails) affect your classifier’s
+results?</p></li>
+<li><p>With your group, write a roughly 5-page paper (no longer than 10
+pages) describing your goals, data, process, and results, and discussing
+some of the concerns identified in point 6. This paper should include
+relevant linguistic information and citations for your sources. Submit
+the paper as a PDF along with your annotated/commented Python code in a
+Github repository. The PDF should also be submitted via
+TurnItIn.</p></li>
+</ol>
+<h2 id="output">Output</h2>
+<p>Your final updated repository should include a <code>README.md</code>
+file (replace this one) with a brief summary of the project and a list
+of the items in the repository along with a brief description, a single
+python script or a set of scripts/folders containing code to build your
+classifier and assess its performance on the
+<code>email_corpus_lingspam</code> dataset, an <code>output.txt</code>
+file that contains the accuracy results of 10 runs of your final
+classifier being trained on the SMS+ dataset and evaluated on the email
+corpus dataset, and a PDF of your 5-10 page paper describing your goals,
+data, process, and results.</p>
+</main>
+</body>
+</html>
