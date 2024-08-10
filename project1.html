@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>HG2051 – HG2051 (AY23/24) Project 1: Individual assignment</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css?v=1" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">HG2051 (AY23/24) Project 1: Individual assignment</h1>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#introduction" id="toc-introduction">Introduction</a></li>
+<li><a href="#project-1-machine-translation"
+id="toc-project-1-machine-translation">Project 1: Machine
+translation</a>
+<ul>
+<li><a href="#organize-your-data" id="toc-organize-your-data">Organize
+your data</a></li>
+<li><a href="#translate-each-sentence-using-the-dictionary"
+id="toc-translate-each-sentence-using-the-dictionary">Translate each
+sentence using the dictionary</a></li>
+<li><a href="#output" id="toc-output">Output</a></li>
+</ul></li>
+<li><a href="#bonus" id="toc-bonus">Bonus</a></li>
+</ul>
+</nav>
+<main>
+<h2 id="introduction">Introduction</h2>
+<p>This project constitutes 30% of your final grade for HG2051. Please
+work on the final program and report individually. Your code will be
+assessed based on its functionality and simplicity/efficiency.</p>
+<ul>
+<li><p>The goal of this assignment is to demonstrate your programming
+and reasoning abilities by working on a problem individually. If you
+have an idea for another project that you would like to do instead, talk
+to me for approval.</p></li>
+<li><p>This project involves sorting and developing lexical resources
+for multiple languages. Submission requirements include your data,
+output, and annotated code along with a short writeup describing your
+goals, process, and results.</p></li>
+</ul>
+<h2 id="project-1-machine-translation">Project 1: Machine
+translation</h2>
+<p>Machine translation involves automatically translating from one
+language to another. While automated translation systems have increased
+in complexity in recent years, you will be creating and evaluating a
+simple Python tool, using a bilingual dictionary to translate text from
+one language to another.</p>
+<h3 id="organize-your-data">Organize your data</h3>
+<p>The first step in developing a translation tool is finding texts that
+can be used to validate it. For this we need “parallel texts” in the
+languages we want to translate between, i.e. texts that are “translation
+equivalents” and ideally can be aligned.</p>
+<h4 id="get-the-base-text-for-our-source-language">Get the base text for
+our source language</h4>
+<p>For this project we will use the Universal Declaration of Human
+Rights as our base text, and our source language will be English. The
+UDHR base text for English can be found <a
+href="https://www.unicode.org/udhr/d/udhr_eng.txt">here</a>.</p>
+<h4 id="choose-your-target-language">Choose your target language</h4>
+<p>Choose another UDHR text in a language other than English from the <a
+href="https://www.unicode.org/udhr/translations.html">UDHR unicode
+page</a>.</p>
+<p>The language you choose should have a Latin-based script and be one
+for which a dictionary is readily available (see below). For evaluation
+purposes, you may want to choose a language that you have some
+familiarity with, i.e. <a
+href="https://www.unicode.org/udhr/d/udhr_fra.txt">French</a>.</p>
+<h4 id="find-or-develop-a-bilingual-dictionary">Find or develop a
+bilingual dictionary</h4>
+<p>Next, find a bilingual dictionary resource that lists words in
+English and their corresponding words in the non-English language you
+chose. Some options can be found <a
+href="https://www.dicts.info/uddl.php">here</a> but you may also want to
+look for other sources or develop your own.</p>
+<h3 id="translate-each-sentence-using-the-dictionary">Translate each
+sentence using the dictionary</h3>
+<p>Using your bilingual source (wordlist/dictionary), translate each
+English sentence in your aligned text to the target language
+word-by-word. Then translate each target language sentence into English
+using the same resource. Your result should therefore be four times as
+long as the original UDHR text, where each sentence/line has four
+corresponding alignments: 1. the English sentence from the source text
+2. the target language sentence from the target text 3. the
+English-to-target translation 4. the target-to-English translation.</p>
+<p>Evaluate the translation and consider how you can improve its
+quality. See if you can write additional code that will improve the
+quality of the translation.</p>
+<h3 id="output">Output</h3>
+<p>Your submission should include several text files and a writeup, more
+details of which will be given in your individual GitHub repository. In
+your writeup, consider the quality of the translations you were able to
+achieve using a dictionary. Are there other methods you can think of
+that would generate a better translation? How does this method of
+translation compare with other machine translation systems like Google
+Translate? How well does the UDHR text lend itself to translation? Are
+there other kinds/genres of texts you could try where your machine
+translator would perform better? (You can use these questions as a
+starting point for your discussion)</p>
+<h2 id="bonus">Bonus</h2>
+<p>The NLTK library has a <code>comtrans</code> module that provides
+machine learning tools for translation. You can use this module with an
+aligned corpus to train a model to translate between a source and target
+language. To receive additional credit for this project, use the aligned
+UDHR texts that you created in the first part to train a translation
+model. Then use that model to translate from the source to the target
+text. This will require some research on your part to understand the
+module and how to format your aligned texts appropriately.</p>
+<p>Write this output to another text file containing the aligned English
+sentences, target language sentences and the English-to-target
+translations. In your PDF writeup, discuss how well it performs in
+relation to your simpler dictionary-based translation, and consider
+reasons why. Your writeup page limit is increased to 6 pages to allow
+for the bonus discussion.</p>
+</main>
+</body>
+</html>
