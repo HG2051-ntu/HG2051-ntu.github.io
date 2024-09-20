@@ -61,8 +61,8 @@ schedule:
   - week: 7
     date: 26 Sep
     topic: Mid-review; Working with Software Projects
-  # url: week7.html
-    notes: "Coding challenge" # [PT 6](https://docs.python.org/3/tutorial/modules.html), [6.4](https://docs.python.org/3/tutorial/modules.html#packages);
+    url: week7.html
+    notes: "Coding challenge; [PT 6](https://docs.python.org/3/tutorial/modules.html), [6.4](https://docs.python.org/3/tutorial/modules.html#packages)"
     #[Midterm Quiz](static/quiz1_modelsolution.py)"
 
   - week: --
