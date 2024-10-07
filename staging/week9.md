@@ -17,6 +17,7 @@ title: 'Week 9'
 
 ## In-class topics
 
+- Quiz 1 review
 - Project 1
 - Project 2
 - General questions

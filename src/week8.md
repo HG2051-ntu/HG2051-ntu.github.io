@@ -31,8 +31,6 @@ structure are they in? How can I access the information I need?
 - Develop using a clear feedback system.
 - Address errors as they arise. Google errors if you don't understand them.
 
->> Demo: Quiz 1
-
 ## Reading
 
 Please see the slides from M. W. Goodman's 2019 workshop on regular expressions
