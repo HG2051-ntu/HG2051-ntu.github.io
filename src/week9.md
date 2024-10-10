@@ -20,6 +20,7 @@ title: 'Week 9'
 - Quiz 1 review
 - Project 1
 - Project 2
+- N-grams and collocations
 - General questions
 
 ## Reading
