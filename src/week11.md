@@ -45,6 +45,7 @@ a way that does not **overfit** to the training data.
 *   [NLTK 6.2 – Further Examples of Supervised Classification](http://www.nltk.org/book/ch06.html#further-examples-of-supervised-classification)
 *   [NLTK 6.5 – Naive Bayes Classifiers](http://www.nltk.org/book/ch06.html#naive-bayes-classifiers)
 *   [NLTK 6.6 – Maximum Entropy Classifiers](http://www.nltk.org/book/ch06.html#maximum-entropy-classifiers)
+*   [What is AI? Part 1: Automated Inference](https://youtu.be/Hu1E9qJsXQ4)
 
 Testing Your Knowledge
 ----------------------
