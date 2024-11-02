@@ -105,6 +105,11 @@ schedule:
     topic: Ethics, Language Models, and Software Libraries
   # url: week12.html
 
+  - week: 12
+    date: 15 Nov
+    topic: Alternate Final Quiz date
+    notes: "Coding challenge"
+
   - week: 13
     date: 21 Nov
     topic: Review and Final Quiz
