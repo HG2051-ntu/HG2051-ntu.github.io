@@ -103,7 +103,7 @@ schedule:
   - week: 12
     date: 14 Nov
     topic: Ethics, Language Models, and Software Libraries
-  # url: week12.html
+    url: week12.html
 
   - week: 12
     date: 15 Nov
