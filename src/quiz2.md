@@ -18,7 +18,7 @@ You will also need to know:
  - how to use `nltk` for processing text (i.e. frequency distributions)
  - how to download data from the internet (urls)
  - how to tag words for part of speech
- - how to use resources for languages other than English
+ - how to use resources for languages other than English (`spacy` NLP)
  - how to install libraries in your virtual environment using `pip` from the command line
  - how to use the `pandas` library to manipulate dataframes
 
