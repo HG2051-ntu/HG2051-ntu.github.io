@@ -106,13 +106,13 @@ schedule:
 
   - week: 12
     date: 15 Nov
-    topic: Alternate Final Quiz date
+    topic: Alternate Final Quiz date (9:30am TR+29)
     notes: "[Coding challenge](quiz2.html)"
 
   - week: 13
     date: 21 Nov
     topic: Review and Final Quiz
-    # url: final-review.html
+    url: final-review.html
     notes: "[Coding challenge](quiz2.html)"
 
   - week: --
