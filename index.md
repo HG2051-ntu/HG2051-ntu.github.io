@@ -15,7 +15,7 @@ abstract: >
   fast, flexible, and accurate quantitative analyses. Students will
   learn a programming language (Python) along with techniques for
   processing human language data. No previous programming experience
-  is required: we will teach you the basics of programming and
+  is required: you will learn the basics of programming and
   computational linguistics along with some good software engineering
   practices.
 
@@ -169,7 +169,7 @@ previous years. Below are some archives of the previous courses:
 - Hiram Ring:
   [2022](https://hg2051-ntu.github.io/AY2022/),
   [2023](https://hg2051-ntu.github.io/AY2023/),
-  [2024 Semester 1](https://hg2051-ntu.github.io/AY2024Sem1/)
+  [2024 (Sem 1)](https://hg2051-ntu.github.io/AY2024Sem1/)
 - Michael Wayne Goodman:
   [2019](https://compling.hss.ntu.edu.sg/courses/hg2051/),
   [2020](https://ntu-hg2051.github.io/)
