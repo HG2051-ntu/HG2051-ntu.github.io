@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>HG2051 – Using Visual Studio Code</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #f8f8f2;  }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #a6e22e; } /* Attribute */
+code span.bn { color: #ae81ff; } /* BaseN */
+code span.bu { color: #66d9ef; } /* BuiltIn */
+code span.cf { color: #f92672; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #e6db74; } /* Char */
+code span.cn { color: #ae81ff; } /* Constant */
+code span.co { color: #88846f; font-style: italic; } /* Comment */
+code span.cv { color: #88846f; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #e6db74; font-style: italic; } /* Documentation */
+code span.dt { color: #66d9ef; } /* DataType */
+code span.dv { color: #ae81ff; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #b08000; } /* Float */
+code span.fu { color: #a6e22e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #e6db74; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #f92672; font-weight: bold; } /* Keyword */
+code span.op { color: #f92672; } /* Operator */
+code span.ot { } /* Other */
+code span.pp { color: #66d9ef; } /* Preprocessor */
+code span.sc { color: #ae81ff; } /* SpecialChar */
+code span.ss { color: #ffe792; } /* SpecialString */
+code span.st { color: #ffe792; } /* String */
+code span.va { color: #f8f8f2; } /* Variable */
+code span.vs { color: #e6db74; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css?v=1" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Using Visual Studio Code</h1>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#getting-started" id="toc-getting-started">Getting
+Started</a>
+<ul>
+<li><a href="#file-explorer" id="toc-file-explorer">File
+explorer</a></li>
+<li><a href="#editor" id="toc-editor">Editor</a></li>
+<li><a href="#terminal" id="toc-terminal">Terminal</a></li>
+</ul></li>
+<li><a href="#the-command-palette" id="toc-the-command-palette">The
+Command Palette</a></li>
+<li><a href="#accepting-assignments"
+id="toc-accepting-assignments">Accepting Assignments</a></li>
+<li><a href="#working-on-assignments"
+id="toc-working-on-assignments">Working on Assignments</a></li>
+<li><a href="#submitting-assignments"
+id="toc-submitting-assignments">Submitting Assignments</a></li>
+</ul>
+</nav>
+<main>
+<h2 id="getting-started">Getting Started</h2>
+<p>There is a wealth of introductory information available at <a
+href="https://code.visualstudio.com/docs/"
+class="uri">https://code.visualstudio.com/docs/</a>, including guides
+and videos.</p>
+<p>In addition, when you start Visual Studio Code and get the welcome
+screen, there’s a “Learn” section with some interactive ways to learn
+about the program from within the program.</p>
+<p>For the purposes of our workflow, we will make use of three elements:
+the <mark style="background-color: pink"><strong>file
+explorer</strong></mark>, the
+<mark style="background-color: lightgreen"><strong>editor</strong></mark>,
+and the
+<mark style="background-color: lightblue"><strong>terminal</strong></mark>.
+By the end of the course you should be comfortable moving between these
+elements to develop your code.</p>
+<figure>
+<img src="static/dev-environment.png" style="width:100.0%"
+alt="Three elements of the development environment" />
+<figcaption aria-hidden="true"><em>Three elements of the development
+environment</em></figcaption>
+</figure>
+<h3 id="file-explorer">File explorer</h3>
+<p>This is where your programming files are located, along with various
+subfolders for organizational purposes. When you set up your environment
+you created a virtual environment (<code>env</code> in the image above)
+which is essentially a subfolder that stores all the libraries and
+packages you use in your code. You should not need to access this
+subfolder, so you can ignore it. You will create subfolders for each of
+your homework assignments and projects, however, so it’s good to be
+aware of how the <mark style="background-color:
+pink"><strong>file explorer</strong></mark> is organized.</p>
+<h3 id="editor">Editor</h3>
+<p>When you open a file to work on, it opens in your <mark
+style="background-color: lightgreen"><strong>editor</strong></mark>,
+which allows you to write/modify code. Visual Studio Code, like many
+editors, can recognize the syntax/commands of various programming
+languages. If your file is saved with a <code>.py</code> extension, it
+will recognize the file as being written in the Python programming
+language and will provide various colors and highlighting that makes the
+code easier to read and debug. The line numbers are also helpful for
+allowing you to find errors quickly when you are running your code.</p>
+<h3 id="terminal">Terminal</h3>
+<p>After saving your work (<kbd>Ctrl-s</kbd> or <kbd>Cmd-s</kbd>), the
+<mark style="background-color: lightblue"><strong>terminal</strong></mark>
+is where you can run the file. This is also known as the “command line
+interface” (CLI) since it is used for running commands. As you type
+commands, notice the prefix that precedes them, composed of 3 parts
+separated by spaces in the screenshot above.</p>
+<ol type="1">
+<li>The first part <code>(env)</code> identifies that the virtual
+environment is active. This should always be the case when you are
+running code. The environment was activated by the command
+<code>source env/bin/activate</code>.</li>
+<li>The second part is the name of the user and the name of the computer
+being used.</li>
+<li>The third part <code>HG2051</code> is the name of the folder
+(location) where the commands are being run.</li>
+</ol>
+<p>The command line or <mark style="background-color: lightblue">
+<strong>terminal</strong></mark> is where you will run your code to
+check that it functions. To run a Python file, simply type the command
+<code>python</code> (or <code>python3</code>) followed by a space and
+the name of the python script (typing the extension is optional). To
+speed things up, you are usually able to simply type the first few
+characters of the name of the script and use the <kbd>Tab</kbd> key to
+autocomplete it. Then press <kbd>Enter</kbd> or <kbd>Return</kbd> to run
+the script. If there are no errors, you will see nothing in the terminal
+unless you have written <code>print()</code> statements into the
+code.</p>
+<p>Going back and forth between each of these elements of your
+development environment gives you immediate feedback and allows you to
+catch errors in order to fix them and achieve working code. We will be
+following this workflow throughout the course to improve as coders.</p>
+<p>If you are still unclear on how these elements are connected, a good
+overview can be found <a
+href="https://faculty.washington.edu/otoomet/info201-book/command-line.html">here</a>
+- this overview starts with the terminal or command line and explains
+how to use commands to navigate your folder structure.</p>
+<h2 id="the-command-palette">The Command Palette</h2>
+<p>One additional feature I would like to point out in VSCode is the
+“command palette”, which is opened by <kbd>F1</kbd> on all platforms, or
+<kbd>Ctrl-Shift-P</kbd> on Windows/Linux or <kbd>⇧⌘P</kbd> on macOS, or
+via the menu <em>View</em> &gt; <em>Command Palette</em>. This acts like
+a search of menu items and allows access to some features not in the
+menus. In particular, when you have a Python interpreter selected, you
+can search for “Python: Create Terminal” (or some abbreviation, e.g.,
+<code>pyterm</code> is probably sufficient), which opens a terminal with
+the appropriate virtual environment already active. Another useful
+command is “Python: Configure Tests”, which helps you setup
+<code>pytest</code> for testing your code. Since we are primarily using
+the terminal, we will not be spending much time using the command
+palette, but it is a good thing to be aware of as you develop your
+coding skills.</p>
+<figure>
+<img src="static/command-palette.png" alt="Using the Command Palette" />
+<figcaption aria-hidden="true"><em>Using the Command
+Palette</em></figcaption>
+</figure>
+<h2 id="accepting-assignments">Accepting Assignments</h2>
+<p>When you receive a link to accept a new homework assignment, you will
+be directed to GitHub and it will give you the URL of your newly created
+project. Now we can download (“clone”) the repository. From the project
+page, copy the URL of the Git repository via the green “Code”
+button:</p>
+<figure>
+<img src="static/github-git-url.png" style="width:100.0%"
+alt="Copy the Repository URL" />
+<figcaption aria-hidden="true"><em>Copy the Repository
+URL</em></figcaption>
+</figure>
+<p>Now go to Visual Studio Code and select the terminal. Make sure that
+your location is the HG2051 base directory that you created earlier.
+Type the command <code>git clone</code> followed by a space, and then
+<kbd>Ctrl-v</kbd> or <kbd>Cmd-v</kbd> to paste in the URL, then
+<kbd>Enter</kbd>. This will “clone” your project into a subdirectory of
+your current directory, and allow you to push any saved/committed
+changes to the online repository.</p>
+<figure>
+<img src="static/vscode-git-clone.png" style="width:100.0%"
+alt="Clone the Repository" />
+<figcaption aria-hidden="true"><em>Clone the
+Repository</em></figcaption>
+</figure>
+<p>Once it has downloaded, you’ll see its folder in the explorer
+sidebar. Visual Studio Code should ask if you wish to open the folder or
+add it to the current workspace. Please choose “Open” or “Open in New
+Window”. Please do <em>not</em> choose “Add to Workspace” as that will
+complicate our setup (it activates a feature called “multi-root
+workspaces” which we are not using).</p>
+<h2 id="working-on-assignments">Working on Assignments</h2>
+<p>With an assignment cloned and its folder opened in Visual Studio
+Code, ensure that your virtual environment for the course is activated.
+Follow the instructions for <a
+href="environment-setup.html#virtual-environment">creating a virtual
+environment</a> if you have not done so. When you’re done, you should
+see <code>(env)</code> at the beginning of the terminal window prompt if
+it has been activated. If not, activate it using the activation command
+for your operating system, ensuring that you do so from the base HG2051
+directory you created earlier. Now navigate to your assignment folder
+using the <code>cd [assignment-subfolder]</code> command in the terminal
+to change directories.</p>
+<p>At this point you should install the dependencies:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span></code></pre></div>
+<p>Set up Visual Studio Code for testing by opening the command palette
+and searching for “Python: Configure Tests”. For the testing framework,
+select “pytest”. For the testing location, choose <code>.</code> (root
+directory). If successful, you will see a beaker icon on the left. When
+you click that icon, you’ll get to the testing view. Click the
+“double-green-triangle” icon at the top of this view to run all tests.
+If any failed, the filenames will appear with a red “X” in a circle.
+Clicking on such a filename shows you the tests that failed in the
+editor area. Hovering over a red-squiggly line on the failed test will
+show you the exact error message.</p>
+<figure>
+<img src="static/testing.png"
+alt="Using Visual Studio Code to Run Tests" />
+<figcaption aria-hidden="true"><em>Using Visual Studio Code to Run
+Tests</em></figcaption>
+</figure>
+<p>To complete your assignment, edit the code in the main Python files
+(e.g., <code>hw1.py</code>) and run the tests again until more or all of
+them pass. When you’re satisfied, you can proceed to submit the
+assignment.</p>
+<p>Do <strong>not</strong> edit the given test files (e.g.,
+<code>hw1_test.py</code>). Changing the tests instead of the code may
+constitute academic dishonesty and can have severe consequences.
+However, it is acceptable and even encouraged that you augment the tests
+with your own. You should create a separate file for this, just ensure
+it has <code>_test.py</code> in the name, such as
+<code>my_test.py</code>.</p>
+<h2 id="submitting-assignments">Submitting Assignments</h2>
+<p>When you’ve saved some files in your assignment, you’ll notice the
+SCM icon (a Git graph with 3 nodes on the left) has a number in a circle
+indicating how many files have been modified. This is a visual way of
+identifying and committing changes in your repository. However, we will
+focus first on understanding the terminal commands related to Git (we
+will cover this in the first few classes).</p>
+<p>For now, after you’ve made some changes and saved your file, type the
+command <code>git status</code>. This will show you what has changed in
+your current directory’s contents, including subfolders. To have Git
+update any files you first need to <em>add</em> them to the tracker
+using <code>git add [name-of-file]</code> and then <em>commit</em> all
+your added files with a message that reminds you of your changes using
+<code>git commit -m "your message here"</code> (don’t forget the
+quotes). You can also simply type <code>git add .</code> to add all the
+changes in a directory at once. You are then ready to update the online
+repository with the command <code>git push</code>.</p>
+<figure>
+<img src="static/commit-and-sync.png" style="width:100.0%"
+alt="Committing and Syncing Changes" />
+<figcaption aria-hidden="true"><em>Committing and Syncing
+Changes</em></figcaption>
+</figure>
+</main>
+</body>
+</html>
