@@ -11,14 +11,14 @@ Python dependencies, software preferences, etc.; test out the creation
 of a [virtual environment](#virtual-environment); and [make sure it all
 works](#test-it-out). Our goal by the end is to have a coding environment
 that enables a programmer's [workflow](#workflow) so we can learn to
-code efficiently and write programs that work.
+code efficiently and write programs that function.
 
 ## Python
 
 For running the code we write, we will need a [Python][python]
 interpreter. This is perhaps the most challenging to set up because each
 platform does it differently. Make sure you get Python version 3.7 or
-higher (3.11.1 is the highest stable version as of this writing). At the
+higher (3.13.1 is the highest stable version as of this writing). At the
 current time, NLTK requires Python versions 3.7, 3.8, 3.9 or 3.10. I
 recommend installing Python 3.10, since that's what I'll be working with.
 
@@ -66,6 +66,12 @@ Once it's installed, run the following command in your terminal:
 
 ```{.bash .terminal}
 brew install python3
+```
+
+or, to be more specific about the version, you can try this:
+
+```{.bash .terminal}
+brew install python@3.10
 ```
 
 Some more information about installing Python with Homebrew is
@@ -171,12 +177,12 @@ you've made some kinds of programming mistakes.
 
 Now that the software is installed, we need a place to work in. This
 workspace is a folder (directory) somewhere on your computer (e.g., on
-the Desktop or whatever makes sense to you). Create it in whatever
+the Desktop or wherever makes sense to you). Create it in any
 method you like (e.g., in Windows Explorer or Finder or in a terminal).
-For these instructions I will assume you named it "HG2051". This also
+For these instructions I will assume you named it **"HG2051"**. This also
 assumes that you know what folders are and how files/folders are organized
 on your computer. We will be going over the basics of this in the first
-week of class, but for now you should try to avoid folder names with
+week of class, but to make it easier you should avoid folder names with
 spaces in them.
 
 Once your folder is created, open Visual Studio Code and open the folder you
@@ -194,8 +200,8 @@ platform you're using.
 
 ## Virtual Environment
 
-The next step here is to create a virtual environment, which is a
-subfolder that contains the Python packages we will use for this course.
+The next step is to create a virtual environment, which is a subfolder that
+contains the Python packages we will use for this course.
 We will use one virtual environment for the whole course, though it is
 typical to use different environments for different projects.
 
@@ -217,15 +223,15 @@ following. If it did not succeed, please contact me.
 
 Now notice in the Explorer side bar that the "env" folder is created. In
 the terminal, I also executed the `ls` command, which lists the contents
-of the current folder, showing that the "env" folder exists. You don't
+of the current folder, showing that the **"env"** folder exists. You don't
 need to worry about the contents of the "env" directory except for the
 following:
 
 * Activation script
-  - (Windows) -- `env/Scripts/Activate.ps1`
+  - (Windows) -- `env\Scripts\Activate.ps1`
   - (macOS/Linux) -- `env/bin/activate`
 * Python interpreter
-  - (Windows) -- `env/Scripts/python.exe`
+  - (Windows) -- `env\Scripts\python.exe`
   - (macOS/Linux) -- `env/bin/python`
 
 If you see a pop-up like the following (perhaps when editing a Python
@@ -293,7 +299,7 @@ version included in the virtual environment.
 
 With newer versions of Windows, you may need to additionally disable
 the setting that tries to install Python from the Microsoft Store. You
-can do this by navigating to the 'Apps and programs' section of the
+can do this by navigating to the **'Apps and programs'** section of the
 settings page and deselecting the shortcut option there.
 
 Another concern with Windows is that `bash` commands are not enabled by
@@ -327,7 +333,7 @@ environment is active. If it is and still cannot find it, then try
 `pip3` or `python -m pip` instead. If it still complains after that,
 then please contact me.
 
-If it is successful, you'll see 10 or so packages be installed in
+If it is successful, you'll see 10 or so packages being installed in
 addition to pytest. The others are pytest's dependencies.
 
 #### Create a `hello.py` Module
