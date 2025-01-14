@@ -50,6 +50,10 @@ See
 [here](https://docs.python.org/3/using/windows.html#the-full-installer)
 for more information.
 
+On newer versions of Windows, you may also need to disable the auto-installer
+for Python via the app store via `Settings > App settings > App execution aliases`
+or by going to "start" and typing "Manage App Execution Aliases". (see [this post](https://stackoverflow.com/questions/65348890/python-was-not-found-run-without-arguments-to-install-from-the-microsoft-store) for a screenshot).
+
 #### macOS
 
 macOS machines come with Python 2.7, but this is an old and unsupported
@@ -61,7 +65,8 @@ Terminal app, and type the following at the prompt:
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-This command will download the installer for Homebrew and then run it.
+This command will download the installer for Homebrew and then run it. It may
+take some time, as it might need to download XCode tools as well.
 Once it's installed, run the following command in your terminal:
 
 ```{.bash .terminal}
@@ -227,10 +232,10 @@ of the current folder, showing that the **"env"** folder exists. You don't
 need to worry about the contents of the "env" directory except for the
 following:
 
-* Activation script
+* Activation script location
   - (Windows) -- `env\Scripts\Activate.ps1`
   - (macOS/Linux) -- `env/bin/activate`
-* Python interpreter
+* Python interpreter location
   - (Windows) -- `env\Scripts\python.exe`
   - (macOS/Linux) -- `env/bin/python`
 
@@ -266,53 +271,35 @@ We can do this by searching for `terminal` in the Command Palette
 (<kbd>[Cmd]Ctrl-Shift-P</kbd>) and selecting PowerShell as the default.
 Then, to allow  the current session to activate the virtual environment,
 you can change Visual Studio Code's settings so PowerShell can run these
-scripts. One thing to try is to open the settings by typing <kbd>Ctrl-,</kbd>
-or use the menu *File* > *Preferences* > *Settings*, then search for the
-following setting: `terminal.integrated.shellArgs.windows`
+scripts.
 
-![*Finding the Setting*](static/windows-find-executionpolicy-setting.png)
-
-First select "User" so the change affects all your workspaces and not
-just the current folder. Then click on "Edit in settings.json" and
-change the value from the default of `null` to `"-ExecutionPolicy
-ByPass"`:
-
-![*Changing the Setting*](static/windows-configure-executionpolicy.png)
-
-Save the settings file and close. Since this is a setting that applies
-when a terminal is started and not one that is running, you will need to
-close the terminal (click the garbage bin icon), then start a new
-terminal. If that doesn't work, try restarting Visual Studio Code. Now,
-in the new terminal, try to execute the following:
+First, close the terminal (click the garbage bin icon), and start a new
+terminal to ensure we're working with a fresh instance. Now, in the new
+terminal, try to execute the following:
 
 ```{.bash .terminal}
 .\env\Scripts\Activate.ps1
 ```
 
-If successful, you'll see (env) at the beginning of the next prompt. If
-you see any errors, please let me know. While the environment is active,
-using `python` (instead of `python3` or `py`) should use the Python
-version included in the virtual environment.
-
-*Thanks to the following Stack Overflow answer*:
-<https://stackoverflow.com/a/61281420/1441112>
-
-With newer versions of Windows, you may need to additionally disable
-the setting that tries to install Python from the Microsoft Store. You
-can do this by navigating to the **'Apps and programs'** section of the
-settings page and deselecting the shortcut option there.
-
-Another concern with Windows is that `bash` commands are not enabled by
+If this doesn't work, it may be because `bash` commands are not enabled by
 default in PowerShell, resulting in errors. The *Bash* program is
 installed by Git and used for committing and pushing changes, among other
 things. To ensure that `bash` commands are enabled, run the following
 command in your terminal:
 
 ```{.bash .terminal}
-$ set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 *Thanks to [THIS](https://www.c-sharpcorner.com/article/how-to-fix-ps1-can-not-be-loaded-because-running-scripts-is-disabled-on-this-sys/) blog post and related Stack Overflow answer*:
 <https://stackoverflow.com/questions/1098786/run-bash-script-from-windows-powershell>
+
+If successful, you'll see (env) at the beginning of the next prompt. If
+you see any errors, please let me know. While the environment is active,
+using `python` (instead of `python3` or `py`) should use the Python
+version included in the virtual environment.
+
+*Also consider the following Stack Overflow answer in case you are still having issues*:
+<https://stackoverflow.com/a/61281420/1441112>
 
 ## Test It Out
 

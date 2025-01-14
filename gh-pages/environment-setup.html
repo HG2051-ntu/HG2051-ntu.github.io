@@ -136,6 +136,12 @@ will be what you can use for this course.</p>
 <p>See <a
 href="https://docs.python.org/3/using/windows.html#the-full-installer">here</a>
 for more information.</p>
+<p>On newer versions of Windows, you may also need to disable the
+auto-installer for Python via the app store via
+<code>Settings &gt; App settings &gt; App execution aliases</code> or by
+going to “start” and typing “Manage App Execution Aliases”. (see <a
+href="https://stackoverflow.com/questions/65348890/python-was-not-found-run-without-arguments-to-install-from-the-microsoft-store">this
+post</a> for a screenshot).</p>
 <h4 id="macos">macOS</h4>
 <p>macOS machines come with Python 2.7, but this is an old and
 unsupported version that will not work for our class. The best way to
@@ -145,7 +151,9 @@ type the following at the prompt:</p>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/bin/bash</span> <span class="at">-c</span> <span class="st">&quot;</span><span class="va">$(</span><span class="ex">curl</span> <span class="at">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/master/install.sh<span class="va">)</span><span class="st">&quot;</span></span></code></pre></div>
 <p>This command will download the installer for Homebrew and then run
-it. Once it’s installed, run the following command in your terminal:</p>
+it. It may take some time, as it might need to download XCode tools as
+well. Once it’s installed, run the following command in your
+terminal:</p>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install python3</span></code></pre></div>
 <p>or, to be more specific about the version, you can try this:</p>
@@ -299,12 +307,12 @@ lists the contents of the current folder, showing that the
 <strong>“env”</strong> folder exists. You don’t need to worry about the
 contents of the “env” directory except for the following:</p>
 <ul>
-<li>Activation script
+<li>Activation script location
 <ul>
 <li>(Windows) – <code>env\Scripts\Activate.ps1</code></li>
 <li>(macOS/Linux) – <code>env/bin/activate</code></li>
 </ul></li>
-<li>Python interpreter
+<li>Python interpreter location
 <ul>
 <li>(Windows) – <code>env\Scripts\python.exe</code></li>
 <li>(macOS/Linux) – <code>env/bin/python</code></li>
@@ -342,58 +350,33 @@ We can do this by searching for <code>terminal</code> in the Command
 Palette (<kbd>[Cmd]Ctrl-Shift-P</kbd>) and selecting PowerShell as the
 default. Then, to allow the current session to activate the virtual
 environment, you can change Visual Studio Code’s settings so PowerShell
-can run these scripts. One thing to try is to open the settings by
-typing <kbd>Ctrl-,</kbd> or use the menu <em>File</em> &gt;
-<em>Preferences</em> &gt; <em>Settings</em>, then search for the
-following setting:
-<code>terminal.integrated.shellArgs.windows</code></p>
-<figure>
-<img src="static/windows-find-executionpolicy-setting.png"
-alt="Finding the Setting" />
-<figcaption aria-hidden="true"><em>Finding the Setting</em></figcaption>
-</figure>
-<p>First select “User” so the change affects all your workspaces and not
-just the current folder. Then click on “Edit in settings.json” and
-change the value from the default of <code>null</code> to
-<code>"-ExecutionPolicy ByPass"</code>:</p>
-<figure>
-<img src="static/windows-configure-executionpolicy.png"
-alt="Changing the Setting" />
-<figcaption aria-hidden="true"><em>Changing the
-Setting</em></figcaption>
-</figure>
-<p>Save the settings file and close. Since this is a setting that
-applies when a terminal is started and not one that is running, you will
-need to close the terminal (click the garbage bin icon), then start a
-new terminal. If that doesn’t work, try restarting Visual Studio Code.
-Now, in the new terminal, try to execute the following:</p>
+can run these scripts.</p>
+<p>First, close the terminal (click the garbage bin icon), and start a
+new terminal to ensure we’re working with a fresh instance. Now, in the
+new terminal, try to execute the following:</p>
 <div class="sourceCode" id="cb13"><pre
 class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span><span class="dt">\e</span>nv<span class="dt">\S</span>cripts<span class="dt">\A</span>ctivate.ps1</span></code></pre></div>
-<p>If successful, you’ll see (env) at the beginning of the next prompt.
-If you see any errors, please let me know. While the environment is
-active, using <code>python</code> (instead of <code>python3</code> or
-<code>py</code>) should use the Python version included in the virtual
-environment.</p>
-<p><em>Thanks to the following Stack Overflow answer</em>: <a
-href="https://stackoverflow.com/a/61281420/1441112"
-class="uri">https://stackoverflow.com/a/61281420/1441112</a></p>
-<p>With newer versions of Windows, you may need to additionally disable
-the setting that tries to install Python from the Microsoft Store. You
-can do this by navigating to the <strong>‘Apps and programs’</strong>
-section of the settings page and deselecting the shortcut option
-there.</p>
-<p>Another concern with Windows is that <code>bash</code> commands are
-not enabled by default in PowerShell, resulting in errors. The
+<p>If this doesn’t work, it may be because <code>bash</code> commands
+are not enabled by default in PowerShell, resulting in errors. The
 <em>Bash</em> program is installed by Git and used for committing and
 pushing changes, among other things. To ensure that <code>bash</code>
 commands are enabled, run the following command in your terminal:</p>
 <div class="sourceCode" id="cb14"><pre
-class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> set-ExecutionPolicy RemoteSigned <span class="at">-Scope</span> CurrentUser</span></code></pre></div>
+class="sourceCode bash terminal"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">set-ExecutionPolicy</span> RemoteSigned <span class="at">-Scope</span> CurrentUser</span></code></pre></div>
 <p><em>Thanks to <a
 href="https://www.c-sharpcorner.com/article/how-to-fix-ps1-can-not-be-loaded-because-running-scripts-is-disabled-on-this-sys/">THIS</a>
 blog post and related Stack Overflow answer</em>: <a
 href="https://stackoverflow.com/questions/1098786/run-bash-script-from-windows-powershell"
 class="uri">https://stackoverflow.com/questions/1098786/run-bash-script-from-windows-powershell</a></p>
+<p>If successful, you’ll see (env) at the beginning of the next prompt.
+If you see any errors, please let me know. While the environment is
+active, using <code>python</code> (instead of <code>python3</code> or
+<code>py</code>) should use the Python version included in the virtual
+environment.</p>
+<p><em>Also consider the following Stack Overflow answer in case you are
+still having issues</em>: <a
+href="https://stackoverflow.com/a/61281420/1441112"
+class="uri">https://stackoverflow.com/a/61281420/1441112</a></p>
 <h2 id="test-it-out">Test It Out</h2>
 <p>If all was successful, you should be able to do the following two
 things.</p>
