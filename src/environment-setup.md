@@ -13,6 +13,14 @@ works](#test-it-out). Our goal by the end is to have a coding environment
 that enables a programmer's [workflow](#workflow) so we can learn to
 code efficiently and write programs that function.
 
+In the instructions below, the headings are intended to help organize the
+text. Some instructions will be different depending on your operating system
+(Windows/Mac/Linux) so make sure you are following the relevant instructions.
+Our end result should be the same: a single course folder that we can open
+in VSCode as a workspace, and three windows in the workspace for viewing,
+editing, and running Python scripts.
+
+
 ## Python
 
 For running the code we write, we will need a [Python][python]
