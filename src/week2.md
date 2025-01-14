@@ -83,3 +83,30 @@ Try to answer the following questions:
   over the count of all tokens)
 - What is the set of unique words?
 - What is the set of unique letters?
+
+
+# A basic introduction to Artificial Intelligence
+
+The last few years have seen increasing interest in the field of "Artificial
+Intelligence" or "A.I.", but many people do not really know what this is, ascribing
+some form of intelligence to automated processes. To get an overview of what
+current systems do, you can [watch this brief explainer](https://youtu.be/Hu1E9qJsXQ4).
+
+This course is currently oriented toward teaching the basics of programming in
+Python, but given that Python is one of the most popular coding languages for
+training machine learning models that underpin the recent advancements in AI, it
+is worth being aware of AI capabilities. This is particularly relevant for
+linguistics, since it is the manipulation of *language* by AI systems that has captured
+the attention and interest of the world.
+
+Current systems like ChatGPT have been  trained to allow them to respond with language
+that a human would plausibly use. But this use of language does not correspond
+particularly well to the ability to "reason" about the world. At the same time, the
+fact that language is strongly correlated (for many people) with intelligence, shows
+how important the study of language is to our understanding of human intelligence.
+
+The basics you are learning here are important to understanding the logic of the computer
+and the tools and techniques you need to get a computer to perform tasks automatically.
+As you develop your knowledge of both programming and linguistics, you may also
+think of ways to contribute to the development of Artificial Intelligence (or Automated
+Inference) systems.

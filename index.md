@@ -28,9 +28,9 @@ schedule:
 
   - week: 2
     date: 20 Jan
-    topic: Basic Types and Data Structures; Using Python to Count Things; Lists
-  #  url: week2.html
-  #  notes: "[PyT 3.1](https://docs.python.org/3/tutorial/introduction.html#using-python-as-a-calculator); [NLTK 1](https://www.nltk.org/book/ch01.html)"
+    topic: Basic Types and Data Structures; Using Python to Count Things; Lists<br>What is AI?
+    url: week2.html
+    notes: "[PyT 3.1](https://docs.python.org/3/tutorial/introduction.html#using-python-as-a-calculator); [NLTK 1](https://www.nltk.org/book/ch01.html); [What is AI?](https://youtu.be/Hu1E9qJsXQ4)"
 
   - week: 3
     date: 27 Jan
