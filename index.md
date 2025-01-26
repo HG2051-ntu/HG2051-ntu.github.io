@@ -42,8 +42,9 @@ schedule:
   - week: 4
     date: 3 Feb
     topic: Text Corpora and Conditional Frequencies
-  #  url: week4.html
-  #  notes: "[DIP 2.2](https://diveintopython3.problemsolving.io/native-datatypes.html#booleans),  [2.8](https://diveintopython3.problemsolving.io/native-datatypes.html#none); [PT 5.3](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences), [5.5](https://docs.python.org/3/tutorial/datastructures.html#dictionaries), [4.7.1](https://docs.python.org/3/tutorial/controlflow.html#default-argument-values)-[2](https://docs.python.org/3/tutorial/controlflow.html#keyword-arguments); [NLTK 2.1](http://www.nltk.org/book/ch02.html#accessing-text-corpora)-[2](http://www.nltk.org/book/ch02.html#conditional-frequency-distributions); [lecture](static/week4-lecture.py), [practice](static/week4-practice.py)"
+    url: week4.html
+    notes: "[DIP 2.2](https://diveintopython3.problemsolving.io/native-datatypes.html#booleans),  [2.8](https://diveintopython3.problemsolving.io/native-datatypes.html#none); [PT 5.3](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences), [5.5](https://docs.python.org/3/tutorial/datastructures.html#dictionaries), [4.7.1](https://docs.python.org/3/tutorial/controlflow.html#default-argument-values)-[2](https://docs.python.org/3/tutorial/controlflow.html#keyword-arguments); [NLTK 2.1](http://www.nltk.org/book/ch02.html#accessing-text-corpora)-[2](http://www.nltk.org/book/ch02.html#conditional-frequency-distributions)"
+    #"; [lecture](static/week4-lecture.py), [practice](static/week4-practice.py)"
 
   - week: 5
     date: 10 Feb
