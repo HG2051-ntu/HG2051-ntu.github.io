@@ -64,7 +64,8 @@ schedule:
     date: 24 Feb
     topic: Mid-review; Working with Software Projects
   #  url: week7.html
-  #  notes: "[Coding challenge](quiz1.html); [PT 6](https://docs.python.org/3/tutorial/modules.html), [6.4](https://docs.python.org/3/tutorial/modules.html#packages)"
+    notes: "Coding challenge (Quiz 1)"
+  #"; [PT 6](https://docs.python.org/3/tutorial/modules.html), [6.4](https://docs.python.org/3/tutorial/modules.html#packages)"
     #[Midterm Quiz](static/quiz1_modelsolution.py)"
 
   - week: --
@@ -110,7 +111,8 @@ schedule:
     date: 21 Apr
     topic: Review and Final Quiz
   #  url: final-review.html
-  #  notes: "[Coding challenge](quiz2.html)"
+    notes: "Coding challenge (Quiz 2)"
+    #"[Coding challenge](quiz2.html)"
 
   #- week: --
   #  date: 28 Nov
