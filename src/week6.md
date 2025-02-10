@@ -58,7 +58,7 @@ class.
   - [NLTK 3.1 -- Accessing Text from the Web and from Disk](http://www.nltk.org/book/ch03.html#accessing-text-from-the-web-and-from-disk) (maybe just skim this one)
 
 * String Formatting
-  - [PT 7.1 -- Fancier Output Formatting](https://docs.python.org/3/tutorial/inputoutput.html#fancier-output-formatting)
+  - [PT 7.1 -- Fancier Output  Formatting](https://docs.python.org/3/tutorial/inputoutput.html#fancier-output-formatting)
   - [PT 7.1.1 -- Formatted String Literals](https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals)
   - [PT 7.1.2 -- The String format() Method](https://docs.python.org/3/tutorial/inputoutput.html#the-string-format-method)
   - [PT 7.1.3 -- Manual String Formatting](https://docs.python.org/3/tutorial/inputoutput.html#manual-string-formatting)
