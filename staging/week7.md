@@ -13,6 +13,11 @@ title: 'Week 7'
 
 (color key: [Python/Programming]{.py} [NLP/CL]{.nlp} [Software Engineering]{.eng})
 
+## Guest lecture
+
+This week we will have a guest lecture from a visiting scholar. An online tutorial
+will be provided beforehand that covers HW6 and the topics below.
+
 ## Review and Quiz
 
 For the review, please see the [midterm review](midterm-review.html).
