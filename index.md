@@ -63,7 +63,7 @@ schedule:
     date: 24 Feb
     topic: Guest Lecture; <br>Mid-review; Working with Software Projects (pre-recorded)
     url: week7.html
-    notes: "Coding challenge (Quiz 1); [PT 6](https://docs.python.org/3/tutorial/modules.html), [6.4](https://docs.python.org/3/tutorial/modules.html#packages)"
+    notes: "[Coding challenge (Quiz 1)](quiz1.html); [PT 6](https://docs.python.org/3/tutorial/modules.html), [6.4](https://docs.python.org/3/tutorial/modules.html#packages)"
     #[Midterm Quiz](static/quiz1_modelsolution.py)"
 
   - week: --

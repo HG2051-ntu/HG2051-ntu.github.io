@@ -1,5 +1,5 @@
 ---
-title: 'HG2051 (AY24/25) Quiz 1: Coding challenge'
+title: 'HG2051 (AY24 Sem2) Quiz 1: Coding challenge'
 ---
 
 ## What you need to know
@@ -15,7 +15,7 @@ You will want to know:
 You will also need to know:
 
  - how to work with the `nltk` library
- - how to access corpora such as the `gutenberg` corpus
+ - how to access corpora such as the `gutenberg` corpus and the `swadesh` corpus
  - how to access information in lexical resources such as `wordnet`
 
 Finally, the quiz will require you to read/write information from/to a file.
