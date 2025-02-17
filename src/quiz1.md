@@ -35,7 +35,7 @@ of file locations, some terminal commands, and other basics of computer science.
 ## Additional information and submission
 
 The quiz is open-book, open-internet, but I will be monitoring for social media
-use and collusion. You will have 1.5 hours to complete the challenge. Final
+use and collusion. You will have 1.5-2 hours to complete the challenge. Final
 commits to your repository will be late after this time period and marked down
 accordingly. Your final submission will be assessed on whether the requirements
 are satisfied (whether the program runs and produces the specified output) as
