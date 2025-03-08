@@ -19,19 +19,13 @@ Machine translation involves automatically translating from one language to anot
 
 The first step in developing a translation tool is finding texts that can be used to validate it. For this we need “parallel texts” in the languages we want to translate between, i.e. texts that are “translation equivalents” and ideally can be aligned.
 
-#### Get the base text for our source language
+#### Get the base text for our source/target languages
 
-For this project we will use the Universal Declaration of Human Rights as our base text, and our source language will be English. The UDHR base text for English can be found [here](https://research.ics.aalto.fi/cog/data/udhr/txt/eng.txt).
-
-#### Choose your target language
-
-Choose another UDHR text in a language other than English from the [UDHR main page](https://research.ics.aalto.fi/cog/data/udhr/).
-
-For ease of evaluation, the language you choose should have a Latin-based script and be one for which a dictionary is readily available (see below). For evaluation purposes, you may want to choose a language that you have some familiarity with, i.e. [French](https://research.ics.aalto.fi/cog/data/udhr/txt/frn.txt).
+For this project we will use the Universal Declaration of Human Rights as our base text, and our source language will be English. Your target language will be another language with a Latin-based script that has a corresponding text of the UDHR.
 
 #### Find or develop a bilingual dictionary
 
-Next, find a bilingual dictionary resource that lists words in English and their corresponding words in the non-English language you chose. Some options can be found [here](https://www.dicts.info/uddl.php) but you may also want to look for other sources or develop your own.
+Next, you will find a bilingual dictionary resource that lists words in English and their corresponding words in the non-English language you chose.
 
 ### Translate each sentence using the dictionary
 
