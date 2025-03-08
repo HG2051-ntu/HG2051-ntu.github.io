@@ -74,8 +74,9 @@ schedule:
   - week: 8
     date: 10 Mar
     topic: Algorithmic Thinking and Regular Expressions
-  #  url: week8.html
-  #  notes: "[NLTK 3.4](http://www.nltk.org/book/ch03.html#regular-expressions-for-detecting-word-patterns), [5](http://www.nltk.org/book/ch03.html#useful-applications-of-regular-expressions), [6](http://www.nltk.org/book/ch03.html#normalizing-text), [7](http://www.nltk.org/book/ch03.html#regular-expressions-for-tokenizing-text), [8](http://www.nltk.org/book/ch03.html#segmentation); [lecture](static/week8-lecture.py); [practice](static/week8-practice.py)"
+    url: week8.html
+    notes: "[NLTK 3.4](http://www.nltk.org/book/ch03.html#regular-expressions-for-detecting-word-patterns), [5](http://www.nltk.org/book/ch03.html#useful-applications-of-regular-expressions), [6](http://www.nltk.org/book/ch03.html#normalizing-text), [7](http://www.nltk.org/book/ch03.html#regular-expressions-for-tokenizing-text), [8](http://www.nltk.org/book/ch03.html#segmentation)"
+    #"; [lecture](static/week8-lecture.py); [practice](static/week8-practice.py)"
 
   - week: 9
     date: 17 Mar
@@ -98,7 +99,8 @@ schedule:
     date: 7 Apr
     topic: Classification
   #  url: week11.html
-  #  notes: "[NLTK 6.2](http://www.nltk.org/book/ch06.html#further-examples-of-supervised-classification), [5](http://www.nltk.org/book/ch06.html#naive-bayes-classifiers), [6](http://www.nltk.org/book/ch06.html#maximum-entropy-classifiers), [What is AI?](https://youtu.be/Hu1E9qJsXQ4); [Project 1](project1.html) due, 11:59pm; [practice](static/week11-practice.py), [enamdict](static/code/enamdict)"
+    notes: "[Project 1](project1.html) due, 11:59pm"
+  #"[NLTK 6.2](http://www.nltk.org/book/ch06.html#further-examples-of-supervised-classification), [5](http://www.nltk.org/book/ch06.html#naive-bayes-classifiers), [6](http://www.nltk.org/book/ch06.html#maximum-entropy-classifiers), [What is AI?](https://youtu.be/Hu1E9qJsXQ4); [Project 1](project1.html) due, 11:59pm; [practice](static/week11-practice.py), [enamdict](static/code/enamdict)"
 
   - week: 12
     date: 14 Apr
