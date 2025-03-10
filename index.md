@@ -75,14 +75,14 @@ schedule:
     date: 10 Mar
     topic: Algorithmic Thinking and Regular Expressions
     url: week8.html
-    notes: "[NLTK 3.4](http://www.nltk.org/book/ch03.html#regular-expressions-for-detecting-word-patterns), [5](http://www.nltk.org/book/ch03.html#useful-applications-of-regular-expressions), [6](http://www.nltk.org/book/ch03.html#normalizing-text), [7](http://www.nltk.org/book/ch03.html#regular-expressions-for-tokenizing-text), [8](http://www.nltk.org/book/ch03.html#segmentation)"
-    #"; [lecture](static/week8-lecture.py); [practice](static/week8-practice.py)"
+    notes: "[NLTK 3.4](http://www.nltk.org/book/ch03.html#regular-expressions-for-detecting-word-patterns), [5](http://www.nltk.org/book/ch03.html#useful-applications-of-regular-expressions), [6](http://www.nltk.org/book/ch03.html#normalizing-text), [7](http://www.nltk.org/book/ch03.html#regular-expressions-for-tokenizing-text), [8](http://www.nltk.org/book/ch03.html#segmentation); [lecture](static/week8-lecture.py); [practice](static/week8-practice.py)"
 
   - week: 9
     date: 17 Mar
     topic: N-Grams and Collocations
-  #  url: week9.html
-  #  notes: "[NLTK 4.5](http://www.nltk.org/book/ch04.html#higher-order-functions), [5](http://www.nltk.org/book/ch05.html); [lecture](static/week9-lecture.py); [practice](static/week9-practice.py)"
+    url: week9.html
+    notes: "[NLTK 4.5](http://www.nltk.org/book/ch04.html#higher-order-functions), [5](http://www.nltk.org/book/ch05.html)"
+    #"; [lecture](static/week9-lecture.py); [practice](static/week9-practice.py)"
 
   - week: 10
     date: 24 Mar
