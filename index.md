@@ -91,7 +91,7 @@ schedule:
     #"; [practice](static/week10-practice.py)"
 
   - week: 11
-    date: 3 Apr (rescheduled)
+    date: 3 Apr<br>(resched.)
     topic: Classification
   #  url: week11.html
   #  notes: "[NLTK 6.2](http://www.nltk.org/book/ch06.html#further-examples-of-supervised-classification), [5](http://www.nltk.org/book/ch06.html#naive-bayes-classifiers), [6](http://www.nltk.org/book/ch06.html#maximum-entropy-classifiers), [What is AI?](https://youtu.be/Hu1E9qJsXQ4); [Project 1](project1.html) due, 11:59pm; [practice](static/week11-practice.py), [enamdict](static/code/enamdict)"
