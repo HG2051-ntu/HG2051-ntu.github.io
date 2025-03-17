@@ -81,17 +81,17 @@ schedule:
     date: 17 Mar
     topic: N-Grams and Collocations
     url: week9.html
-    notes: "[NLTK 4.5](http://www.nltk.org/book/ch04.html#higher-order-functions), [5](http://www.nltk.org/book/ch05.html)"
-    #"; [lecture](static/week9-lecture.py); [practice](static/week9-practice.py)"
+    notes: "[NLTK 4.5](http://www.nltk.org/book/ch04.html#higher-order-functions), [5](http://www.nltk.org/book/ch05.html); [lecture](static/week9-lecture.py); [practice](static/week9-practice.py)"
 
   - week: 10
     date: 24 Mar
     topic: Part-of-speech Tagging
-  #  url: week10.html
-  #  notes: "[NLTK 5.4](http://www.nltk.org/book/ch05.html#automatic-tagging), [5](http://www.nltk.org/book/ch05.html#n-gram-tagging), [7](http://www.nltk.org/book/ch05.html#how-to-determine-the-category-of-a-word); [practice](static/week10-practice.py)"
+    url: week10.html
+    notes: "[NLTK 5.4](http://www.nltk.org/book/ch05.html#automatic-tagging), [5](http://www.nltk.org/book/ch05.html#n-gram-tagging), [7](http://www.nltk.org/book/ch05.html#how-to-determine-the-category-of-a-word)"
+    #"; [practice](static/week10-practice.py)"
 
   - week: --
-    date: 31 Mar
+    date: 31 Mar (Rescheduled to Thurs, 3 Apr)
     topic: Hari Raya
     cancelled: true
 
@@ -114,10 +114,10 @@ schedule:
     notes: "Coding challenge (Quiz 2)"
     #"[Coding challenge](quiz2.html)"
 
-  #- week: --
-  #  date: 28 Nov
-  #  topic: Project 2 due, 11:59pm
-  #  url: project2.html
+  - week: --
+    date: 28 Apr
+    topic: Project 2 due, 11:59pm
+    url: project2.html
   # url: week14.html
   # notes: ""
   #  cancelled: true
