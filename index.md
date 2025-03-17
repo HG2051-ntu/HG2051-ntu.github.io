@@ -90,32 +90,28 @@ schedule:
     notes: "[NLTK 5.4](http://www.nltk.org/book/ch05.html#automatic-tagging), [5](http://www.nltk.org/book/ch05.html#n-gram-tagging), [7](http://www.nltk.org/book/ch05.html#how-to-determine-the-category-of-a-word)"
     #"; [practice](static/week10-practice.py)"
 
-  - week: --
-    date: 31 Mar (Rescheduled to Thurs, 3 Apr)
-    topic: Hari Raya
-    cancelled: true
-
   - week: 11
-    date: 7 Apr
+    date: 3 Apr (rescheduled)
     topic: Classification
+  #  url: week11.html
+  #  notes: "[NLTK 6.2](http://www.nltk.org/book/ch06.html#further-examples-of-supervised-classification), [5](http://www.nltk.org/book/ch06.html#naive-bayes-classifiers), [6](http://www.nltk.org/book/ch06.html#maximum-entropy-classifiers), [What is AI?](https://youtu.be/Hu1E9qJsXQ4); [Project 1](project1.html) due, 11:59pm; [practice](static/week11-practice.py), [enamdict](static/code/enamdict)"
+
+  - week: 12
+    date: 7 Apr
+    topic: Ethics, Language Models, and Software Libraries
   #  url: week11.html
     notes: "[Project 1](project1.html) due, 11:59pm"
   #"[NLTK 6.2](http://www.nltk.org/book/ch06.html#further-examples-of-supervised-classification), [5](http://www.nltk.org/book/ch06.html#naive-bayes-classifiers), [6](http://www.nltk.org/book/ch06.html#maximum-entropy-classifiers), [What is AI?](https://youtu.be/Hu1E9qJsXQ4); [Project 1](project1.html) due, 11:59pm; [practice](static/week11-practice.py), [enamdict](static/code/enamdict)"
 
-  - week: 12
-    date: 14 Apr
-    topic: Ethics, Language Models, and Software Libraries
-  #  url: week12.html
-
   - week: 13
-    date: 21 Apr
+    date: 14 Apr
     topic: Review and Final Quiz
   #  url: final-review.html
     notes: "Coding challenge (Quiz 2)"
     #"[Coding challenge](quiz2.html)"
 
   - week: --
-    date: 28 Apr
+    date: 21 Apr
     topic: Project 2 due, 11:59pm
     url: project2.html
   # url: week14.html
