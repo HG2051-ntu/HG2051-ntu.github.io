@@ -98,14 +98,14 @@ schedule:
   - week: 12
     date: 7 Apr
     topic: Ethics, Language Models, and Software Libraries
-    url: week11.html
-    notes: "[Project 1](project1.html) due, 11:59pm; [NLTK 6.2](http://www.nltk.org/book/ch06.html#further-examples-of-supervised-classification), [5](http://www.nltk.org/book/ch06.html#naive-bayes-classifiers), [6](http://www.nltk.org/book/ch06.html#maximum-entropy-classifiers), [What is AI?](https://youtu.be/Hu1E9qJsXQ4)"
+    url: week12.html
+    notes: "[Project 1](project1.html) due, 11:59pm; [NLTK 6.2](http://www.nltk.org/book/ch06.html#further-examples-of-supervised-classification), [5](http://www.nltk.org/book/ch06.html#naive-bayes-classifiers), [6](http://www.nltk.org/book/ch06.html#maximum-entropy-classifiers), [How do computers learn?](https://youtu.be/SVSFvqYzvuo)"
     #"; [Project 1](project1.html) due, 11:59pm; [practice](static/week11-practice.py), [enamdict](static/code/enamdict)"
 
   - week: 13
     date: 14 Apr
     topic: Review and Final Quiz
-  #  url: final-review.html
+    url: final-review.html
     notes: "Coding challenge (Quiz 2)"
     #"[Coding challenge](quiz2.html)"
 

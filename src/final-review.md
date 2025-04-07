@@ -1,5 +1,5 @@
 ---
-title: 'HG2051 AY2024-25 – Final Review'
+title: 'HG2051 AY2024-25 Sem 2 – Final Review'
 ---
 
 # Final Review
