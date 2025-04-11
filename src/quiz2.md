@@ -1,5 +1,5 @@
 ---
-title: 'HG2051 (AY24/25) Quiz 2: Coding challenge'
+title: 'HG2051 (AY24/25) Sem 2 Quiz 2: Coding challenge'
 ---
 
 ## What you need to know
