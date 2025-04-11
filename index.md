@@ -106,7 +106,7 @@ schedule:
     date: 14 Apr
     topic: Review and Final Quiz
     url: final-review.html
-    notes: "Coding challenge (Quiz 2)[Coding challenge](quiz2.html)"
+    notes: "Coding challenge [(Quiz 2)](quiz2.html)"
 
   - week: --
     date: 21 Apr
