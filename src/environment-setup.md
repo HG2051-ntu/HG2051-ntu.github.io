@@ -2,7 +2,7 @@
 title: Configuring a Development Environment
 ---
 
-For this course we will all use the same software, namely **Python**,
+For this course we will use the same software, namely **Python**,
 **Git**, and **Visual Studio Code**, so that we all have nearly the same
 experience, regardless of platform (Windows, macOS, Linux). We will also
 create a *workspace* on our computers for storing work, Python dependencies,
