@@ -13,6 +13,7 @@ and write programs that function.
 
 In order to avoid confusion, there are two sets of instructions for setting
 up the different operating systems:
+
 - [Windows setup](environment-setup_maclinux.html)
 - [MacOS and Linux setup](environment-setup_win.html)
 
