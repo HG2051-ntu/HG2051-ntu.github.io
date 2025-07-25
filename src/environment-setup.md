@@ -14,8 +14,8 @@ and write programs that function.
 In order to avoid confusion, there are two sets of instructions for setting
 up the different operating systems:
 
-- [Windows setup](environment-setup_maclinux.html)
-- [MacOS and Linux setup](environment-setup_win.html)
+- [Windows setup](environment-setup_win.html)
+- [MacOS and Linux setup](environment-setup_maclinux.html)
 
 As always, I recommend reading through all instructions to understand the
 goals and process before trying to follow and implement the instructions. Our
