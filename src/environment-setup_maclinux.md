@@ -1,26 +1,11 @@
 ---
-title: Configuring a Development Environment
+title: Configuring a Development Environment (Mac/Linux)
 ---
 
-For this course we will all use the same software, namely
-[Python](#python), [Git](#git), and [Visual Studio
-Code](#visual-studio-code), so that we all have nearly the same
-experience, regardless of platform (Windows, macOS, Linux). We will also
-create a [workspace](#workspace) on our computers for storing work,
-Python dependencies, software preferences, etc.; test out the creation
-of a [virtual environment](#virtual-environment); and [make sure it all
-works](#test-it-out). Our goal by the end is to have a coding environment
-that enables a programmer's [workflow](#workflow) so we can learn to
-code efficiently and write programs that function.
-
-In the instructions below, the headings are intended to help organize the
-text. Some instructions will be different depending on your operating system
-(Windows/Mac/Linux) so make sure you are following the relevant instructions.
-Our end result should be the same: a single course folder that we can open
-in VSCode as a workspace, and three windows in the workspace for viewing,
-editing, and running Python scripts.
 
 ## Mac and Linux
+
+### Python
 
 For running the code we write, we will need a [Python][python]
 interpreter. This is perhaps the most challenging to set up because each
