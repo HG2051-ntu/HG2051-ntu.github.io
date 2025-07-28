@@ -68,24 +68,24 @@ tagging model, and/or write parsing rules based on your understanding of the
 language. The starter code also illustrates how you can evaluate on the "gold
 standard" data.
 
-> BONUS: in addition to POS tagging, a central concern when parsing language is
+> **BONUS**: *in addition to POS tagging, a central concern when parsing language is
 understanding dependencies between word classes. Develop a parser for the language
 that identifies dependencies between words, i.e. phrasal heads and their
 subordinate elements (for example, nouns are heads of noun phrases, but
 dependents of verb phrases, how would you link a particular noun with its head,
-and in what role relation [subject, object, etc]?)
+and in what role relation [subject, object, etc]?)*
 
 ### Output
 
 Your final repository should include:
 
- - a) code that trains a tagger on existing data, then parses the (unseen)
+ - code that trains a tagger on existing data, then parses the (unseen)
  "gold standard" data for the language and outputs tagged data, evaluating
  the automatic tags against the known tags of the "gold standard" data. Code
  should be self-contained, i.e. I should be able to run it in my terminal and
  get output
 
- - b) a subfolder containing all the data used for training/testing and
+ - a subfolder containing all the data used for training/testing and
  evaluation, with clear names for each file
- 
- - c) a writeup that lays out the task, process, and results as well as discussion
+
+ - a writeup that lays out the task, process, and results as well as discussion
