@@ -1,20 +1,12 @@
-# Languages in the *taggedPBC* available for HG2051 projects
+---
+title: Languages in the *taggedPBC* available for HG2051 projects
+---
 
-This file outlines a subset of the languages represented by CoNNL-U formatted 
-corpora in the current version of the *taggedPBC* and is automatically generated 
-based on the `stats_All.xlsx` file found under the 
-[scripts/data/output](https://github.com/lingdoc/taggedPBC/tree/main/scripts/data/output/) folder.
+This page outlines a subset of the languages represented by CoNNL-U formatted corpora in the current version of the *taggedPBC* and is automatically generated based on the `stats_All.xlsx` file found under the [scripts/data/output](https://github.com/lingdoc/taggedPBC/tree/main/scripts/data/output/) folder.
 
-This subset is selected based on languages that are not present in the Universal Dependencies 
-Treebanks project, as well as languages that are not in commonly used NLP libraries (SpaCy, 
-Trankit) and have not previously been part of projects in HG2051 (Language and the Computer) 
-as taught at NTU Singpore.
+The subset of languages is selected based on languages that are not present in the Universal Dependencies Treebanks project, as well as languages that are not in commonly used NLP libraries (SpaCy, Trankit) and have not previously been part of projects in HG2051 (Language and the Computer) as taught at NTU Singpore.
 
-The current document organizes languages by language phylum/family and ISO 639-3 code. 
-Additional information includes the full name of the language and region, and links to 
-the individual corpus in the *taggedPBC*, the respective ISO 639-3 page, Glottolog, and 
-Ethnologue. Isolates are listed within a single group, and single languages that represent 
-an individual family are also listed together at the end of this document.
+The current document organizes languages by language phylum/family and ISO 639-3 code. Additional information includes the full name of the language and region, and links to the individual corpus in the *taggedPBC*, the respective ISO 639-3 page, Glottolog, and Ethnologue. Isolates are listed within a single group, and single languages that represent an individual family are also listed together at the end of this document.
 
 <details>
 <summary>Afro-Asiatic</summary>
