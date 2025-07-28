@@ -4,14 +4,14 @@ title: Languages in the *taggedPBC* available for HG2051 projects
 
 This page outlines a subset of the languages represented by CoNNL-U formatted corpora in the current version of the *taggedPBC* and is automatically generated based on the `stats_All.xlsx` file found under the [scripts/data/output](https://github.com/lingdoc/taggedPBC/tree/main/scripts/data/output/) folder.
 
-The subset of languages is selected based on languages that are not present in the Universal Dependencies Treebanks project, as well as languages that are not in commonly used NLP libraries (SpaCy, Trankit) and have not previously been part of projects in HG2051 (Language and the Computer) as taught at NTU Singpore.
+The subset is selected based on languages with more than 1800 verses in their corpus that are not present in the Universal Dependencies Treebanks project, as well as languages that are not in commonly used NLP libraries (SpaCy, Trankit) and have not previously been part of projects in HG2051 (Language and the Computer) as taught at NTU Singpore.
 
 The current document organizes languages by language phylum/family and ISO 639-3 code. Additional information includes the full name of the language and region, and links to the individual corpus in the *taggedPBC*, the respective ISO 639-3 page, Glottolog, and Ethnologue. Isolates are listed within a single group, and single languages that represent an individual family are also listed together at the end of this document.
 
 <details>
 <summary>Afro-Asiatic</summary>
 
- ### Afro-Asiatic languages in the *taggedPBC*:
+### Afro-Asiatic languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -87,7 +87,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Algic</summary>
 
- ### Algic languages in the *taggedPBC*:
+### Algic languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -107,7 +107,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Angan</summary>
 
- ### Angan languages in the *taggedPBC*:
+### Angan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -121,7 +121,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Arawakan</summary>
 
- ### Arawakan languages in the *taggedPBC*:
+### Arawakan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -153,7 +153,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Arawan</summary>
 
- ### Arawan languages in the *taggedPBC*:
+### Arawan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -165,7 +165,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Athabaskan-Eyak-Tlingit</summary>
 
- ### Athabaskan-Eyak-Tlingit languages in the *taggedPBC*:
+### Athabaskan-Eyak-Tlingit languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -180,7 +180,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Atlantic-Congo</summary>
 
- ### Atlantic-Congo languages in the *taggedPBC*:
+### Atlantic-Congo languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -575,7 +575,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Austroasiatic</summary>
 
- ### Austroasiatic languages in the *taggedPBC*:
+### Austroasiatic languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -611,7 +611,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Austronesian</summary>
 
- ### Austronesian languages in the *taggedPBC*:
+### Austronesian languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -932,7 +932,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Aymaran</summary>
 
- ### Aymaran languages in the *taggedPBC*:
+### Aymaran languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -943,7 +943,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Barbacoan</summary>
 
- ### Barbacoan languages in the *taggedPBC*:
+### Barbacoan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -956,7 +956,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Boran</summary>
 
- ### Boran languages in the *taggedPBC*:
+### Boran languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -967,7 +967,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Border</summary>
 
- ### Border languages in the *taggedPBC*:
+### Border languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -978,7 +978,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Bosavi</summary>
 
- ### Bosavi languages in the *taggedPBC*:
+### Bosavi languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -989,7 +989,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Cariban</summary>
 
- ### Cariban languages in the *taggedPBC*:
+### Cariban languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1007,7 +1007,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Central Sudanic</summary>
 
- ### Central Sudanic languages in the *taggedPBC*:
+### Central Sudanic languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1034,7 +1034,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Chibchan</summary>
 
- ### Chibchan languages in the *taggedPBC*:
+### Chibchan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1051,7 +1051,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Chicham</summary>
 
- ### Chicham languages in the *taggedPBC*:
+### Chicham languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1064,7 +1064,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Chocoan</summary>
 
- ### Chocoan languages in the *taggedPBC*:
+### Chocoan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1078,7 +1078,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Dagan</summary>
 
- ### Dagan languages in the *taggedPBC*:
+### Dagan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1091,7 +1091,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Dravidian</summary>
 
- ### Dravidian languages in the *taggedPBC*:
+### Dravidian languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1121,7 +1121,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>East Bird's Head</summary>
 
- ### East Bird's Head languages in the *taggedPBC*:
+### East Bird's Head languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1133,7 +1133,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Eastern Trans-Fly</summary>
 
- ### Eastern Trans-Fly languages in the *taggedPBC*:
+### Eastern Trans-Fly languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1144,7 +1144,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Eskimo-Aleut</summary>
 
- ### Eskimo-Aleut languages in the *taggedPBC*:
+### Eskimo-Aleut languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1158,7 +1158,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Guahiboan</summary>
 
- ### Guahiboan languages in the *taggedPBC*:
+### Guahiboan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1170,7 +1170,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Guaicuruan</summary>
 
- ### Guaicuruan languages in the *taggedPBC*:
+### Guaicuruan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1183,7 +1183,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Gunwinyguan</summary>
 
- ### Gunwinyguan languages in the *taggedPBC*:
+### Gunwinyguan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1194,7 +1194,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Heibanic</summary>
 
- ### Heibanic languages in the *taggedPBC*:
+### Heibanic languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1206,7 +1206,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Hmong-Mien</summary>
 
- ### Hmong-Mien languages in the *taggedPBC*:
+### Hmong-Mien languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1218,7 +1218,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Huitotoan</summary>
 
- ### Huitotoan languages in the *taggedPBC*:
+### Huitotoan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1229,7 +1229,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Ijoid</summary>
 
- ### Ijoid languages in the *taggedPBC*:
+### Ijoid languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1240,7 +1240,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Indo-European</summary>
 
- ### Indo-European languages in the *taggedPBC*:
+### Indo-European languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1355,7 +1355,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Kamula-Elevala</summary>
 
- ### Kamula-Elevala languages in the *taggedPBC*:
+### Kamula-Elevala languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1366,7 +1366,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Khoe-Kwadi</summary>
 
- ### Khoe-Kwadi languages in the *taggedPBC*:
+### Khoe-Kwadi languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1377,7 +1377,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Koiarian</summary>
 
- ### Koiarian languages in the *taggedPBC*:
+### Koiarian languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1391,7 +1391,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Kru</summary>
 
- ### Kru languages in the *taggedPBC*:
+### Kru languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1414,7 +1414,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Kunimaipan</summary>
 
- ### Kunimaipan languages in the *taggedPBC*:
+### Kunimaipan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1426,7 +1426,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Lengua-Mascoy</summary>
 
- ### Lengua-Mascoy languages in the *taggedPBC*:
+### Lengua-Mascoy languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1438,7 +1438,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Mande</summary>
 
- ### Mande languages in the *taggedPBC*:
+### Mande languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1470,7 +1470,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Mataguayan</summary>
 
- ### Mataguayan languages in the *taggedPBC*:
+### Mataguayan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1485,7 +1485,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Mayan</summary>
 
- ### Mayan languages in the *taggedPBC*:
+### Mayan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1518,7 +1518,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Misumalpan</summary>
 
- ### Misumalpan languages in the *taggedPBC*:
+### Misumalpan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1529,7 +1529,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Mixe-Zoque</summary>
 
- ### Mixe-Zoque languages in the *taggedPBC*:
+### Mixe-Zoque languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1548,7 +1548,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Mongolic-Khitan</summary>
 
- ### Mongolic-Khitan languages in the *taggedPBC*:
+### Mongolic-Khitan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1559,7 +1559,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Nakh-Daghestanian</summary>
 
- ### Nakh-Daghestanian languages in the *taggedPBC*:
+### Nakh-Daghestanian languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1572,7 +1572,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Ndu</summary>
 
- ### Ndu languages in the *taggedPBC*:
+### Ndu languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1585,7 +1585,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Nilotic</summary>
 
- ### Nilotic languages in the *taggedPBC*:
+### Nilotic languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1623,7 +1623,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>North Halmahera</summary>
 
- ### North Halmahera languages in the *taggedPBC*:
+### North Halmahera languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1636,7 +1636,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Nuclear Torricelli</summary>
 
- ### Nuclear Torricelli languages in the *taggedPBC*:
+### Nuclear Torricelli languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1652,7 +1652,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Nuclear Trans New Guinea</summary>
 
- ### Nuclear Trans New Guinea languages in the *taggedPBC*:
+### Nuclear Trans New Guinea languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1772,7 +1772,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Nuclear-Macro-Je</summary>
 
- ### Nuclear-Macro-Je languages in the *taggedPBC*:
+### Nuclear-Macro-Je languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1788,7 +1788,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Otomanguean</summary>
 
- ### Otomanguean languages in the *taggedPBC*:
+### Otomanguean languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1881,7 +1881,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Pama-Nyungan</summary>
 
- ### Pama-Nyungan languages in the *taggedPBC*:
+### Pama-Nyungan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1901,7 +1901,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Pano-Tacanan</summary>
 
- ### Pano-Tacanan languages in the *taggedPBC*:
+### Pano-Tacanan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1921,7 +1921,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Quechuan</summary>
 
- ### Quechuan languages in the *taggedPBC*:
+### Quechuan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1957,7 +1957,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Ramu</summary>
 
- ### Ramu languages in the *taggedPBC*:
+### Ramu languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1969,7 +1969,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Saliban</summary>
 
- ### Saliban languages in the *taggedPBC*:
+### Saliban languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1980,7 +1980,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Sepik</summary>
 
- ### Sepik languages in the *taggedPBC*:
+### Sepik languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -1998,7 +1998,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Sino-Tibetan</summary>
 
- ### Sino-Tibetan languages in the *taggedPBC*:
+### Sino-Tibetan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -2120,7 +2120,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Songhay</summary>
 
- ### Songhay languages in the *taggedPBC*:
+### Songhay languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -2133,7 +2133,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Surmic</summary>
 
- ### Surmic languages in the *taggedPBC*:
+### Surmic languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -2146,7 +2146,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Ta-Ne-Omotic</summary>
 
- ### Ta-Ne-Omotic languages in the *taggedPBC*:
+### Ta-Ne-Omotic languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -2165,7 +2165,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Tai-Kadai</summary>
 
- ### Tai-Kadai languages in the *taggedPBC*:
+### Tai-Kadai languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -2181,7 +2181,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Tarascan</summary>
 
- ### Tarascan languages in the *taggedPBC*:
+### Tarascan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -2192,7 +2192,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Teberan</summary>
 
- ### Teberan languages in the *taggedPBC*:
+### Teberan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -2203,7 +2203,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Tor-Orya</summary>
 
- ### Tor-Orya languages in the *taggedPBC*:
+### Tor-Orya languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -2214,7 +2214,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Totonacan</summary>
 
- ### Totonacan languages in the *taggedPBC*:
+### Totonacan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -2231,7 +2231,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Tucanoan</summary>
 
- ### Tucanoan languages in the *taggedPBC*:
+### Tucanoan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -2255,7 +2255,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Tupian</summary>
 
- ### Tupian languages in the *taggedPBC*:
+### Tupian languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -2281,7 +2281,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Turkic</summary>
 
- ### Turkic languages in the *taggedPBC*:
+### Turkic languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -2307,7 +2307,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Uralic</summary>
 
- ### Uralic languages in the *taggedPBC*:
+### Uralic languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -2318,7 +2318,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Uto-Aztecan</summary>
 
- ### Uto-Aztecan languages in the *taggedPBC*:
+### Uto-Aztecan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -2352,7 +2352,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Yanomamic</summary>
 
- ### Yanomamic languages in the *taggedPBC*:
+### Yanomamic languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -2365,7 +2365,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Yareban</summary>
 
- ### Yareban languages in the *taggedPBC*:
+### Yareban languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -2376,7 +2376,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Zamucoan</summary>
 
- ### Zamucoan languages in the *taggedPBC*:
+### Zamucoan languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -2387,7 +2387,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Isolates</summary>
 
- ### Isolates in the *taggedPBC*:
+### Isolates in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
@@ -2443,7 +2443,7 @@ The current document organizes languages by language phylum/family and ISO 639-3
 <details>
 <summary>Single languages</summary>
 
- ### Single languages in the *taggedPBC*:
+### Single languages in the *taggedPBC*:
 
 |ISO 639-3|Name|Verses in corpus|Macroarea|Branch|Subgroup|Links|
 |--|--|--|--|--|--|--|
