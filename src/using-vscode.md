@@ -53,11 +53,14 @@ in the screenshot above.
 
 1. The first part `(env)` identifies that the virtual environment is active.
 This should always be the case when you are running code. The environment was
-activated by the command `source env/bin/activate`.
+activated by the command `source env/bin/activate` (if on Mac/Linux) or by
+running `./env/Scripts/Activate.ps1` (if on Windows).
 2. The second part is the name of the user and the name of the computer being
 used.
 3. The third part `HG2051` is the name of the folder (location) where the
-commands are being run.
+commands are being run. If you want to run scripts from a different location
+you will likely need to navigate in the terminal to that location using the
+`cd` ("change directory") command.
 
 The command line or <mark style="background-color: lightblue">
 **terminal**</mark> is where you will run your code to check that
@@ -77,7 +80,7 @@ workflow throughout the course to improve as coders.
 If you are still unclear on how these elements are connected, a good overview
 can be found [here](https://faculty.washington.edu/otoomet/info201-book/command-line.html) -
 this overview starts with the terminal or command line and explains how to use
-commands to navigate your folder structure. 
+commands to navigate your folder structure.
 
 ## The Command Palette
 
