@@ -65,11 +65,13 @@ deploy:
 	rm -rf "AY2022"
 	rm -rf "AY2023"
 	rm -rf "AY2024Sem1"
+	rm -rf "AY2024Sem2"
 
 clean:
 	rm -rf "$(BRANCH)"
 	rm -rf "AY2022"
 	rm -rf "AY2023"
 	rm -rf "AY2024Sem1"
+	rm -rf "AY2024Sem2"
 
 .PHONY: html clean

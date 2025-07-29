@@ -1,14 +1,14 @@
 ---
-title: 'HG2051 (AY25 Sem 1) Project 1: Individual assignment'
+title: 'HG2051 Project 1: Individual assignment'
 ---
 
 # Introduction
 
-This project constitutes 30% of your final grade for HG2051. Please work on the final program and report individually. Your code will be assessed based on its functionality and simplicity/efficiency. Your writeup will be assessed based on its organization, clarity, and comprehensiveness as well as the quality of the reflections and discussion.
+This project constitutes 30% of your final grade for HG2051. Please work on the final program and report individually. Your code will be assessed based on its functionality, simplicity, and efficiency. Your writeup will be assessed based on its organization, clarity, and comprehensiveness as well as the quality of the reflections and discussion.
 
 *   The goal of this assignment is to demonstrate your programming and reasoning abilities by working on a problem individually. If you have an idea for another project that you would like to do instead, talk to me for approval.
 
-*   This project involves developing resources for an under-resourced language. Submission requirements include your data, output, and annotated code along with a short writeup describing your goals, process, and results. Additionally, this project dovetails with the group project, which means you may want to determine your group ahead of time so that all members can choose related languages to work on for the individual project.
+*   Project 1 involves developing resources for an under-resourced language. Submission requirements include your data, output, and annotated code along with a short writeup describing your goals, process, and results. Additionally, this project dovetails with the group project ([Project 2](project2.html)), which means you may want to determine your group ahead of time so that all members can choose related languages to work on for the individual project.
 
 
 ## Project 1: Part of Speech tagging for low-resource languages
