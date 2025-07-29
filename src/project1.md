@@ -19,9 +19,9 @@ Part of speech (POS) tagging is a way to automatically identify the word class o
 
 * Our primary data source will be the *[taggedPBC](https://github.com/lingdoc/taggedPBC/)*, a dataset that has been created to support crosslinguistic research. This dataset has been automatically tagged for POS and dependencies by leveraging machine translation models to transfer information from English to nearly 2,000 languages. However, due to the nature of the source and target languages, there is a large amount of noise in this dataset: while nouns and verbs are identified with decent accuracy across languages, other word types are not, partly due to the fact that English contains word classes (like articles) *not present* in many languages, while at the same time it does not contain word classes (like numeral classifiers) that *are present* in many languages.
 
-> for an example of what the data looks like, click [here](https://github.com/lingdoc/taggedPBC/blob/main/corpora/conllu/nyb-eng-tagged-nyb-x-bible_parsed.conllu).
+> *For an example of what the data looks like, click [here](https://github.com/lingdoc/taggedPBC/blob/main/corpora/conllu/nyb-eng-tagged-nyb-x-bible_parsed.conllu).*
 
-* This means that there is much room to improve the annotations of each individual corpus in this dataset. While the "gold-standard" typically involves hand-tagging corpora, automated pipelines can greatly speed up this process.
+* This means that there is much room to improve the annotations of each individual corpus in this dataset. While the "gold standard" typically involves hand-tagging corpora, automated pipelines can greatly speed up this process.
 
 The initial project code in your personal repository for this assignment will help you to get started, along the following lines.
 
