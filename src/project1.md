@@ -6,14 +6,14 @@ title: 'HG2051 Project 1: Individual assignment'
 
 This project constitutes 30% of your final grade for HG2051. Please work on the final program and report individually. Your code will be assessed based on its functionality, simplicity, and efficiency. Your writeup will be assessed based on its organization, clarity, and comprehensiveness as well as the quality of the reflections and discussion.
 
-*   The goal of this assignment is to demonstrate your programming and reasoning abilities by working on a problem individually. If you have an idea for another project that you would like to do instead, talk to me for approval.
+*   The goal of this assignment is to demonstrate your programming and reasoning abilities by working on a problem individually. If you have an idea for another project that you would like to do instead, talk to the instructor for approval.
 
 *   Project 1 involves developing resources for an under-resourced language. Submission requirements include your data, output, and annotated code along with a short writeup describing your goals, process, and results. Additionally, this project dovetails with the group project ([Project 2](project2.html)), which means you may want to determine your group ahead of time so that all members can choose related languages to work on for the individual project.
 
 
-## Project 1: Part of Speech tagging for low-resource languages
+## Project 1: Dataset development for Part of Speech tagging for low-resource languages
 
-Part of speech (POS) tagging is a way to automatically identify the word class of a particular lexical item in a string of text. A decent part of speech tagger can help to facilitate other downstream tasks such as machine translation. Languages that are widely used have more resources in this regard, but what about for languages with few speakers?
+Part of speech (POS) tagging is a way to automatically identify the word class of a particular lexical item in a string of text. A decent part of speech tagger can help to facilitate other downstream tasks such as machine translation. Languages that are widely used have more resources in this regard, but what about for languages with few speakers or little documentation?
 
 * The purpose of this project is to expand on annotated data that can be used to train a POS-tagger for a language with few NLP resources. The project will help you think through the steps necessary for developing the correct kind of data, as well as how to write code that can assist with this annotation, and will additionally require you to gain some expertise in the low-resource language you have chosen. In Project 2, the data may be used to actually develop a POS-tagger for this language using existing tools in the NLTK library.
 
@@ -39,11 +39,11 @@ Once your language choice has been approved, download the linked CoNNL-U corpus 
 
 #### Understand the code
 
-Starter code in your repo parses the CoNLL-U file and allows you to modify the output. You should first read through the code and try to understand how it works: how does the code extract existing words and POS tags? how are particular verses extracted?
+Starter code in your repo parses the CoNLL-U file and creates a new file for editing. You should first read through the code and try to understand how it works: how does the code extract verses? Additional code at [taggedPBC/recipes/](https://github.com/lingdoc/taggedPBC/tree/main/recipes) illustrates other ways to access the corpora and generate output.
 
 #### Understand the language
 
-Look for existing research on this language. Since the data comes from a Bible translation, there should be at least one or two papers describing some aspect(s) of the language. Existing research may be found via the `Ethnologue` and `Glottolog` links in the [list of languages](project_lgs_HG2051.html).
+Look for existing research on this language. Since the data comes from a Bible translation, there should be at least one or two papers describing some aspect(s) of the language. Existing research may be found via the `Ethnologue` and `Glottolog` links in the [list of languages](project_lgs_HG2051). You can also find wordlists for most of these languages on the [ASJP Database](https://asjp.clld.org) site.
 
 #### Identify POS tags in the dataset
 

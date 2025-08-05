@@ -23,9 +23,10 @@
 <li><a href="#introduction" id="toc-introduction">Introduction</a>
 <ul>
 <li><a
-href="#project-1-part-of-speech-tagging-for-low-resource-languages"
-id="toc-project-1-part-of-speech-tagging-for-low-resource-languages">Project
-1: Part of Speech tagging for low-resource languages</a>
+href="#project-1-dataset-development-for-part-of-speech-tagging-for-low-resource-languages"
+id="toc-project-1-dataset-development-for-part-of-speech-tagging-for-low-resource-languages">Project
+1: Dataset development for Part of Speech tagging for low-resource
+languages</a>
 <ul>
 <li><a href="#choose-your-language-and-data"
 id="toc-choose-your-language-and-data">Choose your language and
@@ -52,7 +53,7 @@ discussion.</p>
 <li><p>The goal of this assignment is to demonstrate your programming
 and reasoning abilities by working on a problem individually. If you
 have an idea for another project that you would like to do instead, talk
-to me for approval.</p></li>
+to the instructor for approval.</p></li>
 <li><p>Project 1 involves developing resources for an under-resourced
 language. Submission requirements include your data, output, and
 annotated code along with a short writeup describing your goals,
@@ -62,14 +63,15 @@ may want to determine your group ahead of time so that all members can
 choose related languages to work on for the individual project.</p></li>
 </ul>
 <h2
-id="project-1-part-of-speech-tagging-for-low-resource-languages">Project
-1: Part of Speech tagging for low-resource languages</h2>
+id="project-1-dataset-development-for-part-of-speech-tagging-for-low-resource-languages">Project
+1: Dataset development for Part of Speech tagging for low-resource
+languages</h2>
 <p>Part of speech (POS) tagging is a way to automatically identify the
 word class of a particular lexical item in a string of text. A decent
 part of speech tagger can help to facilitate other downstream tasks such
 as machine translation. Languages that are widely used have more
-resources in this regard, but what about for languages with few
-speakers?</p>
+resources in this regard, but what about for languages with few speakers
+or little documentation?</p>
 <ul>
 <li><p>The purpose of this project is to expand on annotated data that
 can be used to train a POS-tagger for a language with few NLP resources.
@@ -139,16 +141,20 @@ Make sure to <code>add</code>, <code>commit</code>, and
 with the corpus. This will be the main data file that your work is based
 on.</p>
 <h4 id="understand-the-code">Understand the code</h4>
-<p>Starter code in your repo parses the CoNLL-U file and allows you to
-modify the output. You should first read through the code and try to
-understand how it works: how does the code extract existing words and
-POS tags? how are particular verses extracted?</p>
+<p>Starter code in your repo parses the CoNLL-U file and creates a new
+file for editing. You should first read through the code and try to
+understand how it works: how does the code extract verses? Additional
+code at <a
+href="https://github.com/lingdoc/taggedPBC/tree/main/recipes">taggedPBC/recipes/</a>
+illustrates other ways to access the corpora and generate output.</p>
 <h4 id="understand-the-language">Understand the language</h4>
 <p>Look for existing research on this language. Since the data comes
 from a Bible translation, there should be at least one or two papers
 describing some aspect(s) of the language. Existing research may be
 found via the <code>Ethnologue</code> and <code>Glottolog</code> links
-in the <a href="project_lgs_HG2051.html">list of languages</a>.</p>
+in the <a href="project_lgs_HG2051">list of languages</a>. You can also
+find wordlists for most of these languages on the <a
+href="https://asjp.clld.org">ASJP Database</a> site.</p>
 <h4 id="identify-pos-tags-in-the-dataset">Identify POS tags in the
 dataset</h4>
 <p>Examine the POS tags present in the dataset. Based on existing

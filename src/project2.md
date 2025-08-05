@@ -12,41 +12,73 @@ problem-solving abilities through teamwork. If your team has an idea for
 another project that you would like to do instead, talk to the instructor
 for approval.
 
-- Project 2 involves developing a POS-tagger for a low-resource language. As
-with the [individual project](project1.html), your team will be required to
+- Project 2 involves developing a POS-tagger for a (low-resource) language. As
+with the [individual project](project1), your team will be required to
 submit data, output, and annotated code along with a short writeup that
 describes your goals, process, and results. Your code will be assessed based
 on its functionality and simplicity. Your writeup will be assessed on its
 organization, clarity, comprehensiveness, and quality of the discussion.
 
-## Project 2: Part of Speech tagging
+There are two possible options for completing Project 2. Both involve developing
+a POS tagger. The first (Project 2a) uses annotated data from Project 1 to
+develop a POS tagger for a low-resource language. The second (Project 2b) uses
+annotated data from the Universal Dependencies Treebanks project to train a POS
+tagger. If you were successful in annotating one of the languages your team
+members chose for Project 1, this is the preferred choice. If not, you can
+focus on using the hand-annotated data from a UDT corpus for training/testing.
+Make sure to read through both projects below to understand the scope of the
+tasks.
+
+## Preliminaries
 
 As noted in Project 1, part of speech (POS) tagging is a way to automatically
 identify the word class of a particular lexical item in a string of text. A
 decent part of speech tagger can help to facilitate other downstream tasks such
 as machine translation. In the individual project you focused on the process of
 developing materials for POS tagging for a low-resource language. In this
-project you will work with other students to train a POS-tagger using the data
-you annotated, as well as additional data that you will develop or source.
+project you will work with other students to train a POS-tagger using a
+combination of the data you annotated and additional data that you will develop
+or source.
 
-Automated POS-tagging is the process of automatically identifying or classifying
-word types in sentences. Typically this is done on the basis of FDA (Function,
-Distribution, Associated grammatical categories), as per your Morphosyntax
-course. There are two basic approaches:
+Typically, identifying or classifying word types in sentences is done on the
+basis of FDA (Function, Distribution, Associated grammatical categories), as
+per your Morphology and Syntax course. There are two basic approaches to
+automated POS tagging:
 
   1. rule-based
   2. statistical inference.
 
 The first approach can be useful for complex cases, particularly when the
-language has been analyzed, while the second involves machine learning and
-can be helpful when little is known about the language. Some taggers benefit
+language has been analyzed, while the second often involves machine learning
+and can be helpful when little is known about the language. Some taggers benefit
 from a hybrid approach, and this can be an iterative process.
+
+## Project 2a: Part of Speech tagging for low-resource languages
+
+For Project 2a you will work with the data that you or a group member annotated
+previously. If you planned ahead, you would have all worked on languages within
+the same family - this familiarity should allow you to be successful in the
+group task.
 
 ### Choose the language
 
-- In your group, choose one of the low-resource languages that members of your
+- In your group, choose one of the low-resource languages that a member of your
 group worked on for Project 1. Using the dataset, develop a POS-tagger for the
-chosen language.
+chosen language. Then use the trained tagger to re-tag the complete corpus in
+the *taggedPBC*.
+
+## Project 2b: Part of Speech tagging using a UDT dataset
+
+For Project 2b you will work with data from the Universal Dependencies Treebanks
+project for a language that is also found in the *taggedPBC*. This will allow
+you to use hand-tagged data to train a tagger for a relatively low-resource
+language.
+
+### Choose the language
+
+- A list of languages available is given [here](project_lgs_UD_HG2051)
+with links to the respective treebanks. Using this dataset, develop a POS-tagger.
+Then use this trained tagger to re-tag the respective *taggedPBC* corpus.
 
 ### Determine your approach
 
