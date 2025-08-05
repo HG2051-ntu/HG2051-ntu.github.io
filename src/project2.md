@@ -80,24 +80,34 @@ language.
 with links to the respective treebanks. Using this dataset, develop a POS-tagger.
 Then use this trained tagger to re-tag the respective *taggedPBC* corpus.
 
+## Guide for both project options
+
+For both projects, the goal is to develop a POS tagger and use it to tag the
+remaining data in the respective *taggedPBC* corpus for the language you chose.
+You will evaluate the result on several grounds. The following guide will
+walk you through the process.
+
 ### Determine your approach
 
 - Decide how you want to approach the task of developing an automated POS tagger:
 will you train a tagger from data, or write rules, or try some combination of the two?
 
 - You also need to consider evaluation/validation of your tagger, which will be
-based on the hand-tagged sentences/verses that were annotated in Project 1. The
-annotated verses will be data that your tool has not trained on, and will serve
-as the "gold standard" evaluation set. In order to train/develop your tagger,
-you will need to find or develop additional tagged data, either through other
-sources or via hand-annotation. For best results, your training/development data
-should be many more sentences (at least twice as many) as your evaluation set.
+based either on the hand-tagged sentences/verses that were annotated in Project
+1 or on a portion of the hand-tagged sentences of the UDT corpus for the
+language that you chose. The set of annotated verses will be data that your tool
+has not trained on, and will serve as the "gold standard" evaluation set. In
+order to train/develop your tagger, you may need to find or develop additional
+tagged data, either through other sources or via hand-annotation. For best
+results, your training/development data should be many more sentences (at least
+twice as many) as your evaluation set.
 
 ### Write code to train and evaluate your tagger
 
 - Together with your group, develop code that parses the training/development
-data and tags the annotated dataset from Project 1 for POS, evaluating its accuracy
-by comparing the newly generated tags with the gold-standard tags.
+data and re-tags either the annotated dataset from Project 1 or a set of 20 sentences
+from the UDT for POS, evaluating its accuracy by comparing the newly generated
+tags with the "gold standard" tags.
 
 - Starter code in your repository shows how you can use tools in the NLTK library
 for training POS-taggers. You can also use other tools/libraries to train a
@@ -114,17 +124,30 @@ subordinate elements (for example, nouns are heads of noun phrases, but
 dependents of verb phrases, how would you link a particular noun with its head,
 and in what role relation [subject, object, etc]?)*
 
+### Predict tags for the *taggedPBC* corpus
+
+- Using the POS tagger that you trained, predict tags for the verses in the
+*taggedPBC* for the language that you chose. Code is included to illustrate the
+basics of this process.
+
+- Compare the result with the initial state of the corpus, by examining the
+number/type of each POS tag in your final corpus. Was your POS-tagger able to
+increase the number of identified items in a given word class? Was it able to
+identify a larger number of classes?
+
 ### Output
 
 Your final repository should include:
 
  - code that trains a tagger on existing data, then parses the (unseen)
  "gold standard" data for the language and outputs tagged data, evaluating
- the automatic tags against the known tags of the "gold" data. Code should
- be self-contained, i.e. I should be able to run it in my terminal and
- get output
+ the automatic tags against the known tags of the "gold" data. In addition,
+ your code should re-tag the initial corpus and collect statistics on the
+ POS tags in both the initial and the resulting corpora. Code should be
+ self-contained, i.e. I should be able to run it in my terminal and get output
 
  - a subfolder containing all the data used for training/testing and
  evaluation, with clear names for each file
 
- - a writeup that lays out the task, process, and results as well as discussion
+ - a writeup that lays out the task, process, and results, as well as discussion
+ of the challenges, concerns, and potential improvements
