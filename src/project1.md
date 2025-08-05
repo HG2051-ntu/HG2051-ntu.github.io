@@ -8,7 +8,7 @@ This project constitutes 30% of your final grade for HG2051. Please work on the 
 
 *   The goal of this assignment is to demonstrate your programming and reasoning abilities by working on a problem individually. If you have an idea for another project that you would like to do instead, talk to the instructor for approval.
 
-*   Project 1 involves developing resources for an under-resourced language. Submission requirements include your data, output, and annotated code along with a short writeup describing your goals, process, and results. Additionally, this project dovetails with the group project ([Project 2](project2.html)), which means you may want to determine your group ahead of time so that all members can choose related languages to work on for the individual project.
+*   Project 1 involves developing resources for an under-resourced language. Submission requirements include your data, output, and annotated code along with a short writeup describing your goals, process, and results. Additionally, this project dovetails with the group project ([Project 2](project2)), which means you may want to determine your group ahead of time so that all members can choose related languages to work on for the individual project.
 
 
 ## Project 1: Dataset development for Part of Speech tagging for low-resource languages
@@ -27,7 +27,7 @@ The initial project code in your personal repository for this assignment will he
 
 ### Choose your language and data
 
-The first step in developing a POS-tagger is finding texts that can be used to train and validate it. For this we are using the *taggedPBC* data, but we need to choose a language to work on. To find a language, please view options at the following URL: [HG2051 Project languages](project_lgs_HG2051.html)
+The first step in developing a POS-tagger is finding texts that can be used to train and validate it. For this we are using the *taggedPBC* data, but we need to choose a language to work on. To find a language, please view options at the following URL: [HG2051 Project languages](project_lgs_HG2051)
 
 Listed languages are organized by language family. Selecting the language family on the linked page will show you the names of the languages of that family that are found in the *taggedPBC*, along with basic information, a direct link to the corpus, and links to additional sources regarding the language. As this project is a precursor to your group project, you may want to find others who are interested in working on languages within the same family, since this will help you to pool your expertise for Project 2. These languages have also been selected based on their lack of available resources, to ensure that we are maximizing our contributions to the field of NLP.
 
